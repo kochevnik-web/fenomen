@@ -163,6 +163,10 @@ a, .hover_amime {
     color: #FFFFFF;
 }
 
+.header_phone_number {
+    font-size: 20px;
+}
+
 #intro {
     background: url(../img/main_bg.png)no-repeat center top;
     height: 900px;

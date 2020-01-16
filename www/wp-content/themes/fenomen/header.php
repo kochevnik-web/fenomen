@@ -25,7 +25,7 @@
 	<header id="masthead" class="color-white position-fixed w-100">
 		<div class="top_header py-3">
 			<div class="container container-big">
-				<div class="row">
+				<div class="row align-items-center">
 					<div class="col-md-3">
 						<div class="select_city">
 							<div class="select_city_title">
@@ -49,7 +49,7 @@
 						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
 					<div class="col-md-2">
-					
+						<div class="header_phone_number font-weight-bold text-right">+ 7 383 235-93-99</div>
 					</div>
 				</div>
 			</div>
