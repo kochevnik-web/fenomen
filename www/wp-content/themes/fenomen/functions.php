@@ -16,6 +16,8 @@
 		echo '</pre>';
 	}
 
+	require_once get_template_directory() . '/inc/custom-fields.php';
+
 if ( ! function_exists( 'fenomen_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
