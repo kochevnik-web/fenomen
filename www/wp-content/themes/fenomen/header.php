@@ -45,10 +45,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2">
-					
+					<div class="col-md-3 text-right">
+						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-2">
 					
 					</div>
 				</div>

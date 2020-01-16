@@ -38,7 +38,7 @@ body {
 }
 
 a, .hover_amime {
-    transition: all 0.5s 0.1s ease;
+    transition: all 0.3s 0.1s ease;
 }
 
 .cursor-pointer {
@@ -146,6 +146,21 @@ a, .hover_amime {
 
 .select_city_map_header-link:hover {
     opacity: .8;
+}
+
+.btn_header_phone {
+    font-size: 14px;
+    border-radius: 20px;
+    border: 2px solid #FFFFFF;
+    height: 40px;
+    padding: 0 20px;
+    background: #FFFFFF;    
+}
+
+.btn_header_phone:hover {
+    border: 2px solid #FFFFFF;
+    background: transparent;
+    color: #FFFFFF;
 }
 
 #intro {
