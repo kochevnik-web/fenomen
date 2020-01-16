@@ -1,0 +1,81 @@
+@font-face{
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Light.eot');
+    src: url('../fonts/CeraPro-Light.eot?iefix') format('eot'),
+    url('../fonts/CeraPro-Light.woff') format('woff'),
+    url('../fonts/CeraPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Cera Pro light';
+    src: url('../fonts/CeraPro-Thin.eot');
+    src: url('../fonts/CeraPro-Thin.eot?iefix') format('eot'),
+    url('../fonts/CeraPro-Thin.woff') format('woff'),
+    url('../fonts/CeraPro-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Cera Pro Medium';
+    src: url('../fonts/CeraPro-Medium.eot');
+    src: url('../fonts/CeraPro-Medium.eot?iefix') format('eot'),
+    url('../fonts/CeraPro-Medium.woff') format('woff'),
+    url('../fonts/CeraPro-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cera Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.font-weight-bold {
+    font-family: 'Cera Pro Medium';
+}
+
+.select_city_move {
+    display: inline-block;
+    border-bottom: 2px dashed #FFE600;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 4px;
+}
+
+.select_city_move:hover {
+    opacity: 0.7;
+}
+
+.color {
+    color: #FFE600;
+}
+
+.color-white{
+    color: #FFFFFF;
+}
+
+.top_header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.select_city_title {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+#intro {
+    background: url(../img/main_bg.png)no-repeat center top;
+    height: 900px;
+    background-size: contain;
+}

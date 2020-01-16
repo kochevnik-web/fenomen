@@ -105,9 +105,9 @@ add_action( 'after_setup_theme', 'fenomen_content_width', 0 );
  */
 function fenomen_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'fenomen' ),
+		'name'          => esc_html__( 'Сайтбар', 'fenomen' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'fenomen' ),
+		'description'   => esc_html__( 'Область сайтбара', 'fenomen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'fenomen_widgets_init' );
 function fenomen_scripts() {
 	wp_enqueue_style( 'fenomen-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'fenomen', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 

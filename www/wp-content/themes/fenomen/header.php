@@ -22,9 +22,30 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fenomen' ); ?></a>
-
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="color-white position-fixed w-100">
+		<div class="top_header py-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="select_city">
+							<div class="select_city_title">
+								Выберите город:
+							</div>
+							<span class="select_city_move cursor-pointer color arrow-down position-relative font-weight-bold">Новосибирск, м. Заельцовская</span>
+						</div>
+					</div>
+					<div class="col-md-3">
+					
+					</div>
+					<div class="col-md-3">
+					
+					</div>
+					<div class="col-md-3">
+					
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -54,5 +75,13 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<section id="intro">
+		<div class="container">
+			<div class="row">
+
+			</div>
+		</div>
+	</section>
 
 	<div id="content" class="site-content">
