@@ -31,7 +31,7 @@
 							<div class="select_city_title">
 								Выберите город:
 							</div>
-							<span class="select_city_move cursor-pointer color arrow-down position-relative font-weight-bold">Новосибирск, м. Заельцовская</span>
+							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold">Новосибирск, м. Заельцовская</span>
 						</div>
 					</div>
 					<div class="col-md-3">
