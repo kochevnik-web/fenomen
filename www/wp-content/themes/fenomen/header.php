@@ -49,8 +49,23 @@
 						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
 					<div class="col-md-2">
-						<div class="header_phone_number font-weight-bold text-right"><?php echo get_option( '	
-options_header_fenomen_phone' ); ?></div>
+						<div class="header_phone_number font-weight-bold text-right">
+							<?php echo get_option( 'options_header_fenomen_phone' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom_header py-3">
+			<div class="container container-big">
+				<div class="row align-items-center">
+					<div class="col-12">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo d-flex" rel="home">
+							<img src="<?= get_template_directory_uri() . '/img/logo.svg' ?>" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+						<nav>
+
+						</nav>
 					</div>
 				</div>
 			</div>
