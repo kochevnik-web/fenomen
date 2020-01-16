@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site-branding">
+		<div class="">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
