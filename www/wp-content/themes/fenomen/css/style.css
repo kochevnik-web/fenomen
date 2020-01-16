@@ -37,6 +37,10 @@ body {
     color: #000000;
 }
 
+a, .hover_amime {
+    transition: all 0.5s 0.1s ease;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -83,6 +87,12 @@ body {
     margin-top: -4px;
 }
 
+@media (min-width: 1200px) {
+    .container.container-big {
+        max-width: 1200px;
+    }
+}
+
 .top_header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -116,6 +126,26 @@ body {
     border-right: 4px solid transparent;
     border-bottom: 5px solid #FFE600;
     margin-top: -3px;
+}
+
+.select_city_map_header {
+    line-height: 20px;
+}
+
+.select_city_map_header-text {
+    font-size: 12px;
+}
+
+.select_city_map_header-text p {
+    margin-bottom: 0;
+}
+
+.select_city_map_header-link {
+    border-bottom: 1px dashed #FFE600;
+}
+
+.select_city_map_header-link:hover {
+    opacity: .8;
 }
 
 #intro {

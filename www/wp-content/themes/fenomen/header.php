@@ -24,20 +24,28 @@
 <div id="page" class="site">
 	<header id="masthead" class="color-white position-fixed w-100">
 		<div class="top_header py-3">
-			<div class="container">
+			<div class="container container-big">
 				<div class="row">
 					<div class="col-md-3">
 						<div class="select_city">
 							<div class="select_city_title">
 								Выберите город:
 							</div>
-							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold">Новосибирск, м. Заельцовская</span>
+							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold hover_amime">Новосибирск, м. Заельцовская</span>
 						</div>
 					</div>
-					<div class="col-md-3">
-					
+					<div class="col-md-4">
+						<div class="select_city_map_header d-flex align-items-center">
+							<div class="select_city_map_header-marker mr-3">
+								<img src="<?= get_template_directory_uri() . '/img/marker_header.svg' ?>" alt="Смотреть на карте">
+							</div>
+							<div class="select_city_map_header-text">
+								<p>Адрес школы: <span class="color cursor-pointer font-weight-bold select_city_map_header-link hover_amime">Смотреть на карте</span></p>
+								<p>м. Заельцовская, 2-ая Союза Молодежи 32, оф. 268</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-2">
 					
 					</div>
 					<div class="col-md-3">
