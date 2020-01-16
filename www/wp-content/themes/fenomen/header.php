@@ -49,7 +49,8 @@
 						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
 					<div class="col-md-2">
-						<div class="header_phone_number font-weight-bold text-right">+ 7 383 235-93-99</div>
+						<div class="header_phone_number font-weight-bold text-right"><?php echo get_option( '	
+options_header_fenomen_phone' ); ?></div>
 					</div>
 				</div>
 			</div>
