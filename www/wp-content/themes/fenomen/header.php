@@ -58,36 +58,27 @@
 		</div>
 		<div class="bottom_header py-3">
 			<div class="container container-big">
-				<div class="row align-items-center">
-					<div class="col-12">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo d-flex" rel="home">
+				<div class="row">
+					<div class="col-12 d-flex align-items-center">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo inline-block mr-5" rel="home">
 							<img src="<?= get_template_directory_uri() . '/img/logo.svg' ?>" alt="<?php bloginfo( 'name' ); ?>">
 						</a>
-						<nav>
-
+						<nav id="site-navigation" class="flex-grow-1">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'main-menu',
+								'menu_id'        => 'primary-menu',
+								'fallback_cb'    => '',
+								'menu_class'     => 'fenomen_main_menu list-unstyled m-0 d-flex justify-content-between'
+							) );
+						?>
 						</nav>
+						<?php do_action( 'fenomen_action_after_main_nav' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$fenomen_description = get_bloginfo( 'description', 'display' );
-			if ( $fenomen_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $fenomen_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fenomen' ); ?></button>

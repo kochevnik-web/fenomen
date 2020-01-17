@@ -167,6 +167,24 @@ a, .hover_amime {
     font-size: 20px;
 }
 
+#primary-menu li a {
+    color: #FFFFFF;
+    opacity: .6;
+}
+
+#primary-menu li a:hover {
+    color: #FFFFFF;
+    opacity: 1;
+    text-decoration: none;
+}
+
+#primary-menu li.current-menu-item a {
+    color: #FFE600;
+    opacity: 1;
+    text-decoration: none;
+    font-family: 'Cera Pro Medium';
+}
+
 #intro {
     background: url(../img/main_bg.png)no-repeat center top;
     height: 900px;
