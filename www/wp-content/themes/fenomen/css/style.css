@@ -184,6 +184,65 @@ a, .hover_amime {
     text-decoration: none;
     font-family: 'Cera Pro Medium';
 }
+.sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.22);
+    margin: 0;
+    left: 0;
+    min-width: 220px;
+    padding: 0;
+    top: 35px;
+}
+
+#primary-menu li .sub-menu li {
+    border-radius: 6px;
+}
+
+#primary-menu li .sub-menu li a {
+    color: #000000;
+    opacity: 1;
+    display: block;
+    padding: 10px 15px;
+}
+
+#primary-menu li .sub-menu li a:hover {
+    background: rgba(255, 234, 44, 0.35);
+}
+
+.menu-item-has-children {
+    position: relative;
+}
+
+.menu-item-has-children a {
+    padding-bottom: 20px;
+}
+
+.menu-item-has-children:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    transition: all 0.3s 0.1s ease;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #FFFFFF;
+    margin-top: -1px;
+    opacity: .6;
+    top: 50%;
+    right: -15px;
+}
+
+.menu-item-has-children:hover .sub-menu, .sub-menu:hover {
+    display: block;
+}
+
+.menu-item-has-children:hover:after {
+    opacity: 1;
+}
 
 #intro {
     background: url(../img/main_bg.png)no-repeat center top;

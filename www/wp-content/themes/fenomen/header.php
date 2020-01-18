@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bottom_header py-3">
+		<div class="bottom_header py-2">
 			<div class="container container-big">
 				<div class="row">
 					<div class="col-12 d-flex align-items-center">
