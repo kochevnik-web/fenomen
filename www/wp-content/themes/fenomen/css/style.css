@@ -37,6 +37,13 @@ body {
     color: #000000;
 }
 
+body.no-scroll {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+ }
+
 a, .hover_amime {
     transition: all 0.3s 0.1s ease;
 }
@@ -107,7 +114,7 @@ a, .hover_amime {
     border-bottom: 2px dashed #FFE600;
     font-size: 14px;
     line-height: 18px;
-    padding: 0 15px 4px 0;
+    padding: 0 15px 0 0;
 }
 
 .select_city_move:hover {
@@ -165,6 +172,10 @@ a, .hover_amime {
 
 .header_phone_number {
     font-size: 20px;
+}
+
+.logo:hover {
+    opacity: .7;
 }
 
 #primary-menu li a {
@@ -242,6 +253,18 @@ a, .hover_amime {
 
 .menu-item-has-children:hover:after {
     opacity: 1;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background: #FFFFFF;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: #FFFFFF;
+}
+
+#site-nav {
+    display: block;
 }
 
 #intro {

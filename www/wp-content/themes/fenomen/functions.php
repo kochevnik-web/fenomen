@@ -133,9 +133,12 @@ add_action( 'widgets_init', 'fenomen_widgets_init' );
 function fenomen_scripts() {
 	wp_enqueue_style( 'fenomen-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/css/hamburgers.min.css' );
 	wp_enqueue_style( 'fenomen', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'fenomen-media', get_template_directory_uri() . '/css/media.css' );
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'fenomen', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

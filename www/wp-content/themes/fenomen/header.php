@@ -26,7 +26,7 @@
 		<div class="top_header py-3">
 			<div class="container container-big">
 				<div class="row align-items-center">
-					<div class="col-md-3">
+					<div class="col-md-6 col-xl-3 mb-2 mb-xl-0">
 						<div class="select_city">
 							<div class="select_city_title">
 								Выберите город:
@@ -34,8 +34,8 @@
 							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold hover_amime">Новосибирск, м. Заельцовская</span>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="select_city_map_header d-flex align-items-center">
+					<div class="col-md-6 col-xl-4">
+						<div class="select_city_map_header d-flex align-items-center justify-content-end justify-content-xl-start">
 							<div class="select_city_map_header-marker mr-3">
 								<img src="<?= get_template_directory_uri() . '/img/marker_header.svg' ?>" alt="Смотреть на карте">
 							</div>
@@ -45,10 +45,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 text-right">
+					<div class="col-md-6 col-xl-3 text-left text-xl-right">
 						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-6 col-xl-2">
 						<div class="header_phone_number font-weight-bold text-right">
 							<?php echo get_option( 'options_header_fenomen_phone' ); ?>
 						</div>
@@ -59,36 +59,40 @@
 		<div class="bottom_header py-2">
 			<div class="container container-big">
 				<div class="row">
-					<div class="col-12 d-flex align-items-center">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo inline-block mr-5" rel="home">
+					<div class="col-12 d-flex align-items-center justify-content-between">
+						<div class="d-block d-lg-none">
+							<div class="hamburger hamburger-1 hamburger--spin">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+						</div>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo inline-block mr-lg-5" rel="home">
 							<img src="<?= get_template_directory_uri() . '/img/logo.svg' ?>" alt="<?php bloginfo( 'name' ); ?>">
 						</a>
-						<nav id="site-navigation" class="flex-grow-1">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'main-menu',
-								'menu_id'        => 'primary-menu',
-								'fallback_cb'    => '',
-								'menu_class'     => 'fenomen_main_menu list-unstyled m-0 d-flex justify-content-between'
-							) );
-						?>
-						</nav>
+						<div id="site-nav" class="flex-grow-1">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'main-menu',
+									'menu_id'        => 'primary-menu',
+									'fallback_cb'    => '',
+									'menu_class'     => 'fenomen_main_menu list-unstyled m-0 d-flex justify-content-between flex-column flex-lg-row align-items-center'
+								) );
+							?>
+							<div class="d-block d-lg-none">
+								<div class="hamburger hamburger-2 hamburger--spin is-active position-fixed">
+									<div class="hamburger-box">
+										<div class="hamburger-inner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<?php do_action( 'fenomen_action_after_main_nav' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fenomen' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<section id="intro">
