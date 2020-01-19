@@ -100,6 +100,10 @@ a, .hover_amime {
     }
 }
 
+header {
+    position: fixed;
+}
+
 .top_header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

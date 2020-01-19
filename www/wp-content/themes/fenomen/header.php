@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header id="masthead" class="color-white position-fixed w-100">
+	<header id="masthead" class="color-white w-100">
 		<div class="top_header py-3">
 			<div class="container container-big">
 				<div class="row align-items-center">

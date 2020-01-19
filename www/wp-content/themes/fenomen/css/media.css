@@ -16,6 +16,7 @@
 
     .hamburger-2 {
         top: 60px;
+        opacity: 0;
     }
 
     #site-nav.open {
@@ -70,5 +71,12 @@
 
     #primary-menu li .sub-menu li a:hover {
         background: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        background: #3aa4fb;
     }
 }
