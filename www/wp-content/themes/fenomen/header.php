@@ -26,7 +26,7 @@
 		<div class="top_header py-3">
 			<div class="container container-big">
 				<div class="row align-items-center">
-					<div class="col-md-6 col-xl-3 mb-2 mb-xl-0">
+					<div class="col-md-6 col-xl-3 mb-2 mb-xl-0 d-none d-md-block">
 						<div class="select_city">
 							<div class="select_city_title">
 								Выберите город:
@@ -34,7 +34,7 @@
 							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold hover_amime">Новосибирск, м. Заельцовская</span>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-4">
+					<div class="col-md-6 col-xl-4 mb-2 mb-md-0">
 						<div class="select_city_map_header d-flex align-items-center justify-content-end justify-content-xl-start">
 							<div class="select_city_map_header-marker mr-3">
 								<img src="<?= get_template_directory_uri() . '/img/marker_header.svg' ?>" alt="Смотреть на карте">
@@ -45,11 +45,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-3 text-left text-xl-right">
+					<div class="col-md-6 col-xl-3 text-center text-md-left text-xl-right mb-2 mb-md-0">
 						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
 					</div>
 					<div class="col-md-6 col-xl-2">
-						<div class="header_phone_number font-weight-bold text-right">
+						<div class="header_phone_number font-weight-bold text-center text-md-right">
 							<?php echo get_option( 'options_header_fenomen_phone' ); ?>
 						</div>
 					</div>
