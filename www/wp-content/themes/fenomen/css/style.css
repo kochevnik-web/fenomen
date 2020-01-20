@@ -102,6 +102,16 @@ a, .hover_amime {
 
 header {
     position: fixed;
+    transition: all 0.4s ease 0s;
+}
+
+header.slideup {
+    background: rgba(58, 164, 251, 0.75);
+    box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
+}
+
+header.slideup:hover {
+    background: #3aa4fb;
 }
 
 .top_header {

@@ -11,4 +11,18 @@ jQuery(document).ready(function($){
         $(this).css({opacity: '0'});
         $('.hamburger-1').css({opacity: '1'});
     });
+
+    if($(this).scrollTop() > 250){
+        $('header').addClass('slideup');
+    } else {
+        $('header').removeClass('slideup');
+    }
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 250){
+            $('header').addClass('slideup');
+        } else {
+            $('header').removeClass('slideup');
+        }
+    });
 });
