@@ -95,12 +95,4 @@
 
 	</header><!-- #masthead -->
 
-	<section id="intro">
-		<div class="container">
-			<div class="row">
-
-			</div>
-		</div>
-	</section>
-
 	<div id="content" class="site-content">

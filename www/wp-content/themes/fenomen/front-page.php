@@ -18,19 +18,20 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+		<section id="intro">
+			<div class="container">
+				<div class="intro_bg">
+					<div class="row">
+						<div class="col-md-8">
+							<h1 class="color-white"><?php  echo get_post_meta( $post->ID, 'main_tittle', true ); ?></h1>
+						</div>
+					</div>
+					<div class="row">
+	
+					</div>
+				</div>
+			</div>
+		</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

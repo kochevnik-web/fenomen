@@ -28,6 +28,11 @@
     font-style: normal;
 }
 
+.h1, h1 {
+    font-size: 40px;
+    font-family: 'Cera Pro Medium';
+}
+
 body {
     font-family: 'Cera Pro';
     font-style: normal;
@@ -56,12 +61,12 @@ a, .hover_amime {
     font-family: 'Cera Pro Medium';
 }
 
-.color {
-    color: #FFE600;
-}
-
 .color-white{
     color: #FFFFFF;
+}
+
+.color {
+    color: #FFE600;
 }
 
 .arrow-down, .arrow-up {
@@ -103,15 +108,12 @@ a, .hover_amime {
 header {
     position: fixed;
     transition: all 0.4s ease 0s;
+    z-index: 1;
 }
 
 header.slideup {
-    background: rgba(58, 164, 251, 0.75);
-    box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
-}
-
-header.slideup:hover {
     background: #3aa4fb;
+    box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
 }
 
 .top_header {
@@ -283,6 +285,11 @@ header.slideup:hover {
 
 #intro {
     background: url(../img/main_bg.png)no-repeat center top;
-    height: 900px;
+    min-height: 900px;
     background-size: contain;
+    padding: 200px 0 150px 0;
+}
+
+.intro_bg {
+    background: url('../img/intro.png')no-repeat center right;
 }
