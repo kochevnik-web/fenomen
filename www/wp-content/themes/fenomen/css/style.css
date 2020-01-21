@@ -33,6 +33,12 @@
     font-family: 'Cera Pro Medium';
 }
 
+.h3, h3 {
+    font-size: 28px;
+    font-family: 'Cera Pro Medium';
+    font-weight: 600;
+}
+
 .h4, h4 {
     font-size: 26px;
     font-family: 'Cera Pro Medium';
@@ -70,8 +76,27 @@ a, .hover_amime {
     color: #FFFFFF;
 }
 
+.color-blue {
+    color: #27A4FF;
+}
+
 .color {
     color: #FFE600;
+}
+
+.btn-primary.btn-yellow, .btn-primary.btn-yellow:active:focus {
+    min-height: 40px;
+    border-radius: 40px;
+    background: #FFE600;
+    color: #000;
+    font-weight: 600;
+    border: 2px solid #FFE600;
+}
+
+.btn-yellow:hover {
+    background: rgba(255, 230, 0, 0.11);
+    border: 2px solid #FFE600;
+    color: #000000;
 }
 
 .arrow-down, .arrow-up {
@@ -328,4 +353,18 @@ header.slideup {
     border: 1px solid #FFE600;
     background: #FFE600;
     color: #000000;
+}
+
+.form {
+    background: #FFFFFF;
+    padding: 100px 0;
+}
+
+.form input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
 }
