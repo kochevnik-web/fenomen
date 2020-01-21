@@ -310,6 +310,10 @@ header.slideup {
     padding: 35px;
 }
 
+.intro_item_content p {
+    min-height: 88px;
+}
+
 .intro_item_btn {
     min-height: 40px;
     border-radius: 40px;
@@ -317,6 +321,7 @@ header.slideup {
     border: 1px solid #F3F3F3;
     color: #000000;
     padding: .375rem 20px;
+    font-weight: 700;
 }
 
 .intro_item_btn:hover {
