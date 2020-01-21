@@ -22,13 +22,13 @@ get_header();
 			<div class="container">
 				<div class="intro_bg">
 					<div class="row">
-						<div class="col-md-8 mb-5">
+						<div class="col-md-8 mb-2 mb-md-5">
 							<h1 class="color-white"><?php  echo get_post_meta( $post->ID, 'main_tittle', true ); ?></h1>
 						</div>
 					</div>
 					<div class="row">
-						<div class="intro_small_title color-white col-12 mb-3 mt-5">Выберите подходящую программу для вашего ребенка:</div>
-						<div class="col-md-4">
+						<div class="intro_small_title color-white col-12 mb-3 mt-3 mt-mf-5">Выберите подходящую программу для вашего ребенка:</div>
+						<div class="col-md-4 mb-4 mb-md-0">
 							<div class="intro_item text-center">
 								<img src="<?= get_template_directory_uri() . '/img/rocket.png' ?>" alt="" class="intro_item_img mb-3">
 								<div class="intro_item_content">
@@ -41,7 +41,7 @@ get_header();
 								<a href="#" class="btn btn-primary intro_item_btn">Подробнее о программе</a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 mb-4 mb-md-0">
 							<div class="intro_item text-center">
 								<img src="<?= get_template_directory_uri() . '/img/rocket.png' ?>" alt="" class="intro_item_img mb-3">
 								<div class="intro_item_content">
@@ -54,7 +54,7 @@ get_header();
 								<a href="#" class="btn btn-primary intro_item_btn">Подробнее о программе</a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 mb-4 mb-md-0">
 							<div class="intro_item text-center">
 								<img src="<?= get_template_directory_uri() . '/img/rocket.png' ?>" alt="" class="intro_item_img mb-3">
 								<div class="intro_item_content">
