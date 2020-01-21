@@ -173,3 +173,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Удаление старых редакций
+ */
+function src_flush_revisions () {
+
+	global $wpdb;
+	$limit     = 100;
+	$timeLimit = 60;
+
+	if ( isset( $timeLimit ) ) {
+		$revision_ids = $wpdb->get_col( $wpdb->prepare( "SELECT `ID` FROM $wpdb->posts WHERE (`post_type` = 'revision') AND `post_date_gmt` < DATE_SUB(NOW(), INTERVAL '$timeLimit' DAY) LIMIT %d", $limit ) );
+
+		foreach ( $revision_ids as $revision_id ) {
+			wp_delete_post_revision( $revision_id );
+		}
+
+	
+	}
+
+}
+
+add_action( 'admin_init', 'src_flush_revisions' );
+
