@@ -49,34 +49,27 @@ get_header();
 		</section>
 		<?php } ?>
 
+		<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
 		<section id="main_form" class="form">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<h3 class="text-center">
-						Запишитесь на <span class="color-blue">бесплатное</span> пробное занятие прямо сейчас
+							<?php echo get_post_meta( $post->ID, 'form_titile', true ); ?>
 						</h3>
-						<div class="sub_title text-center col-md-10 offset-md-1 mb-5">
-						Введите свой номер телефона, наш специалист свяжется с Вами, расскажет о преимуществах школы, ответит на все вопросы и запишет вашего ребенка на бесплатное занятие в удобное для Вас время
+						<div class="sub_title text-center col-md-10 offset-md-1 mb-4 mb-md-5">
+							<?php echo get_post_meta( $post->ID, 'form_subtitle', true ); ?>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<input type="text" placeholder="Ваше имя">
-					</div>
-					<div class="col-md-3">
-						<input type="text" placeholder="Номер телефона">
-					</div>
-					<div class="col-md-3">
-						<input type="text" placeholder="Удобная дата занятия">
-					</div>
-					<div class="col-md-3">
-						<button class="btn btn-primary btn-yellow w-100">Записаться на занятие</button>
-					</div>
-				</div>
+				<?php
+					if ( (bool)get_post_meta( $post->ID, 'form_shortcode', true ) ) {
+						echo do_shortcode( get_post_meta( $post->ID, 'form_shortcode', true ) );
+					}
+				?>
 			</div>
 		</section>
+		<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
