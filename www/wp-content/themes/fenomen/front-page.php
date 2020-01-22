@@ -71,17 +71,25 @@ get_header();
 		</section>
 		<?php } ?>
 
-		<section id="main_video" class="position-relative">
+		<section id="main_video">
 			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="color-white text-center">Обучение шахматам — <br>путь к успеху в учебе и жизни</h2>
-					</div>
-					<div class="col-md-6">
-
-					</div>
-					<div class="col-md-6">
-					
+				<div class="main_video_wrap position-relative">
+					<div class="row">
+						<div class="col-12 mb-4">
+							<h3 class="color-white text-center">Обучение шахматам — <br>путь к успеху в учебе и жизни</h3>
+						</div>
+						<div class="col-md-6">
+							<a class="front_video_img d-flex align-items-center justify-content-center">
+								<span class="front_video_play">
+									<div class="front_video_play_wrap">
+										<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg' ?>" alt="">
+									</div>
+								</span>
+							</a>
+						</div>
+						<div class="col-md-6">
+						
+						</div>
 					</div>
 				</div>
 			</div>
