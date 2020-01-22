@@ -71,9 +71,25 @@ get_header();
 		</section>
 		<?php } ?>
 
+		<section id="main_video" class="position-relative">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="color-white text-center">Обучение шахматам — <br>путь к успеху в учебе и жизни</h2>
+					</div>
+					<div class="col-md-6">
+
+					</div>
+					<div class="col-md-6">
+					
+					</div>
+				</div>
+			</div>
+		</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

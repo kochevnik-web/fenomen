@@ -368,3 +368,8 @@ header.slideup {
     min-height: 40px;
     text-align: center;
 }
+
+#main_video {
+    background: #27A4FF;
+    padding: 70px 0;
+}
