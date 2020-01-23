@@ -74,11 +74,11 @@ get_header();
 		<section id="main_video">
 			<div class="container">
 				<div class="main_video_wrap position-relative">
-					<div class="row">
+					<div class="row main_video_flex">
 						<div class="col-12 mb-4">
 							<h3 class="color-white text-center">Обучение шахматам — <br>путь к успеху в учебе и жизни</h3>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 mb-4 mb-md-0">
 							<a href="https://www.youtube.com/watch?v=vlDzYIIOYmM" class="front_video_img d-flex align-items-center justify-content-center cursor-pointer" data-fancybox>
 								<span class="front_video_play hover_amime">
 									<div class="front_video_play_wrap">
@@ -88,7 +88,26 @@ get_header();
 							</a>
 						</div>
 						<div class="col-md-6">
-						
+							<div class="video_list h-100 d-flex justify-content-between flex-column">
+								<div>
+									<h3 class="video_list_title color">
+										Ваш ребенок:
+									</h3>
+									<ul class="list-unstyled m-0 p-0 color-white mb-4">
+										<li class="d-flex"><span></span>Сформирует логическое и аналитическое мышление</li>
+										<li class="d-flex"><span></span>Научится сравнивать и выбирать</li>
+										<li class="d-flex"><span></span>Разовьет память</li>
+										<li class="d-flex"><span></span>Станет самостоятельным и ответственным</li>
+										<li class="d-flex"><span></span>Разовьет в себе лидерские качества и научится планировать</li>
+										<li class="d-flex"><span></span>Научится концентрироваться на задаче</li>
+									</ul>
+								</div>
+								<div class="text-md-left text-center">
+									<a href="#" class="btn btn-primary btn-yellow">
+										Записаться на бесплатное занятие
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

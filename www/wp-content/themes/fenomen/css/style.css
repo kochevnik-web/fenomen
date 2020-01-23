@@ -426,3 +426,28 @@ header.slideup {
 .front_video_play_wrap img {
     margin-left: 8px;
 }
+
+.main_video_flex {
+    align-items: unset;
+}
+
+.video_list h3 {
+    padding-left: 43px;
+}
+
+.video_list ul li {
+    line-height: 31px;
+}
+
+.video_list ul li span {
+    background: url('../img/cor.svg')no-repeat center center;
+    height: 31px;
+    width: 20px;
+    display: block;
+    float: left;
+    margin-right: 25px;
+}
+
+.video_list a {
+    margin-left: 43px;
+}
