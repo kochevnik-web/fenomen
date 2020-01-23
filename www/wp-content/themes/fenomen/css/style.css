@@ -450,7 +450,7 @@ header.slideup {
     line-height: 31px;
 }
 
-.video_list ul li span {
+.video_list ul li .icon {
     background: url('../img/cor.svg')no-repeat left center;
     height: 31px;
     width: 31px;
