@@ -79,8 +79,8 @@ get_header();
 							<h3 class="color-white text-center">Обучение шахматам — <br>путь к успеху в учебе и жизни</h3>
 						</div>
 						<div class="col-md-6">
-							<a class="front_video_img d-flex align-items-center justify-content-center">
-								<span class="front_video_play">
+							<a class="front_video_img d-flex align-items-center justify-content-center cursor-pointer">
+								<span class="front_video_play hover_amime">
 									<div class="front_video_play_wrap">
 										<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg' ?>" alt="">
 									</div>

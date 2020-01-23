@@ -395,6 +395,14 @@ header.slideup {
     border-radius: 15px;
 }
 
+.front_video_img:hover {
+    box-shadow: inset 0px 0px 40px 20px rgba(0, 0, 0, 0.39);
+}
+
+.front_video_img:hover .front_video_play {
+    box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.22);
+}
+
 .front_video_play {
     display: block;
     text-align: center;
