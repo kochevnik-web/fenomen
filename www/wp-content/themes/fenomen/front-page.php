@@ -114,26 +114,24 @@ get_header();
 							Почему именно шахматная школа Феномен?
 						</h3>
 						<div class="front_more_wrap">
-							<div class="front_more_item white_bg overflow-hidden mb-4">
+							<div class="front_more_item white_bg overflow-hidden">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="front_more_item_content">
-											<h4 class="mb-3">Опытные преподаватели</h4>
-											<ul class="m-0 mb-3 list-unstyled">
-												<li class="d-flex">
+											<h4 class="mb-3 text-center text-md-left">Опытные преподаватели</h4>
+												<div class="d-flex mb-2">
 													<div class="icon"> </div>
-													<div>опыт преподавателей нашей школы от 5 лет</div>
-												</li>
-												<li class="d-flex">
+													<div class="w-100">опыт преподавателей нашей школы от 5 лет</div>
+												</div>
+												<div class="d-flex mb-2">
 													<div class="icon"> </div>
-													<div>знают как интересно и познавательно преподнести информацию</div>
-												</li>
-												<li class="d-flex">
+													<div class="w-100">знают как интересно и познавательно преподнести информацию</div>
+												</div>
+												<div class="d-flex mb-2">
 													<div class="icon"> </div>
-													<div>найдут подход к вашему ребенку</div>
-												</li>
-											</ul>
-											<blockquote>Мы подобрали команду профессиональных преподавателей, которым бы вы доверили своих детей</blockquote>
+													<div class="w-100">найдут подход к вашему ребенку</div>
+												</div>
+											<blockquote class="mt-5">Мы подобрали команду профессиональных преподавателей, которым бы вы доверили своих детей</blockquote>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -141,6 +139,18 @@ get_header();
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="front_words">
+			<div class="container">
+				<div class="front_words_wrap">
+					<div class="row">
+						<div class="col-md-6 offset-md-6">
+							<h2 class="color-white text-uppercase">В НАШЕЙ ШКОЛЕ ВАШ РЕБЕНОК ПОЛЮБИТ ШАХМАТЫ!</h2>
 						</div>
 					</div>
 				</div>

@@ -140,4 +140,12 @@
     .video_list ul li span {
         width: 40px;
     }
+
+    .front_more_item_content {
+        padding: 15px;
+    }
+
+    .front_more_item_content blockquote {
+        font-weight: 600;
+    }
 }
