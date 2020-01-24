@@ -106,6 +106,47 @@ get_header();
 		</section>
 		<?php } ?>
 
+		<section id="front_more" class="gray_bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h3 class="mb-5 text-center">
+							Почему именно шахматная школа Феномен?
+						</h3>
+						<div class="front_more_wrap">
+							<div class="front_more_item white_bg overflow-hidden mb-4">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="front_more_item_content">
+											<h4 class="mb-3">Опытные преподаватели</h4>
+											<ul class="m-0 mb-3 list-unstyled">
+												<li class="d-flex">
+													<div class="icon"> </div>
+													<div>опыт преподавателей нашей школы от 5 лет</div>
+												</li>
+												<li class="d-flex">
+													<div class="icon"> </div>
+													<div>знают как интересно и познавательно преподнести информацию</div>
+												</li>
+												<li class="d-flex">
+													<div class="icon"> </div>
+													<div>найдут подход к вашему ребенку</div>
+												</li>
+											</ul>
+											<blockquote>Мы подобрали команду профессиональных преподавателей, которым бы вы доверили своих детей</blockquote>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<img src="<?= get_template_directory_uri() . '/img/front_more_1.png'; ?>" class="w-100">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
