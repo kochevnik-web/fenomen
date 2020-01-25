@@ -156,41 +156,32 @@ get_header();
 			</div>
 		</section>
 
+		<?php if ( (bool)get_post_meta( $post->ID, 'front_welcome_title', true ) ) { ?>
 		<section id="front_welcome" class="white_bg">
 			<div class="container">
-				<h3 class="text-center">Приходите к нам на пробное занятие</h3>
-				<div class="sub_title text-center mb-5">И посмотрите как проходит обучение</div>
+				<h3 class="text-center"><?= get_post_meta( $post->ID, 'front_welcome_title', true ); ?></h3>
+				<div class="sub_title text-center mb-5"><?= get_post_meta( $post->ID, 'front_welcome_subtitle', true ); ?></div>
 			</div>
 			<div class="container custom_container">
 				<div class="row custom_row">
-					<div class="front_wel_item_wrap" style="width: 55%">
-						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_1.jpg' ?>)no-repeat center center/cover">
+					<?php
+						$front_wel_blocks_count = get_post_meta( $post->ID, 'front_welcome_blocks', true );
+						if ( (bool)$front_wel_blocks_count ) {
+							for ( $i = 0; $i < $front_wel_blocks_count; $i++ ) {
+								$front_wel_blocks_width = (bool)get_post_meta( $post->ID, 'front_welcome_blocks_' . $i . '_width', true ) ? get_post_meta( $post->ID, 'front_welcome_blocks_' . $i . '_width', true ) : 100;
+								$front_wel_blocks_style = (bool)get_post_meta( $post->ID, 'front_welcome_blocks_' . $i . '_back', true ) ? trim( get_post_meta( $post->ID, 'front_welcome_blocks_' . $i . '_back', true ) ) : 'center center';
+					?>
+						<div class="front_wel_item_wrap" style="width: <?= $front_wel_blocks_width; ?>%">
+							<div class="front_wel_item" style="background: url(<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'front_welcome_blocks_' . $i . '_img', true ), 'full' ); ?>)no-repeat <?= $front_wel_blocks_style; ?>/cover">
 
+							</div>
 						</div>
-					</div>
-					<div class="front_wel_item_wrap" style="width: 45%">
-						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_2.jpg' ?>)no-repeat center bottom/cover">
-
-						</div>
-					</div>
-					<div class="front_wel_item_wrap" style="width: 33.333%">
-						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_3.jpg' ?>)no-repeat center center/cover">
-
-						</div>
-					</div>
-					<div class="front_wel_item_wrap" style="width: 33.333%">
-						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_4.jpg' ?>)no-repeat center bottom/cover">
-
-						</div>
-					</div>
-					<div class="front_wel_item_wrap" style="width: 33.333%">
-						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_5.jpg' ?>)no-repeat center center/cover">
-
-						</div>
+					<?php } } ?>
 					</div>
 				</div>
 			</div>
 		</section><!-- #front_welcome -->
+		<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
