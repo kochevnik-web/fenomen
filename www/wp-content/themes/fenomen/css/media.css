@@ -131,6 +131,7 @@
     .front_video_img {
         height: 176px;
         width: 290px;
+        margin: 0 auto;
     }
 
     .main_video_wrap:before {
