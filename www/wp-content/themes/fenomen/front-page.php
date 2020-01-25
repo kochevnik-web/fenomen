@@ -149,8 +149,12 @@ get_header();
 			<div class="container">
 				<div class="front_words_wrap">
 					<div class="row">
-						<div class="col-md-6 offset-md-6">
-							<h2 class="color-white text-uppercase">В НАШЕЙ ШКОЛЕ ВАШ РЕБЕНОК ПОЛЮБИТ ШАХМАТЫ!</h2>
+						<div class="col-md-6">
+							<img src="<?= get_template_directory_uri() . '/img/front_words_child.png'; ?>" alt="" class="w-100">
+						</div>
+						<div class="col-md-6">
+							<h2 class="color-white text-uppercase mb-5 pt-5">В НАШЕЙ ШКОЛЕ<br>ВАШ РЕБЕНОК<br>ПОЛЮБИТ ШАХМАТЫ!</h2>
+							<a href="#" class="btn btn-primary btn-yellow">Записаться на бесплатное занятие</a>
 						</div>
 					</div>
 				</div>

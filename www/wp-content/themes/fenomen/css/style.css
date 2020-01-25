@@ -33,6 +33,11 @@
     font-family: 'Cera Pro Medium';
 }
 
+.h2, h2 {
+    font-size: 36px;
+    font-family: 'Cera Pro Medium';
+}
+
 .h3, h3 {
     font-size: 28px;
     font-family: 'Cera Pro Medium';
@@ -515,7 +520,7 @@ header.slideup {
     position: relative;
     margin-top: -60px;
     z-index: 1;
-    padding: 160px 0 100px 0;
+    padding: 105px 0 0 0;
 }
 
 #front_words:before{
@@ -531,7 +536,7 @@ header.slideup {
     content: '';
     background: url(../img/blue_w_bg.svg)no-repeat right top;
     height: 100%;
-    width: 100%;
+    width: 181px;
     position: absolute;
     top: 0;
     right: 0;
