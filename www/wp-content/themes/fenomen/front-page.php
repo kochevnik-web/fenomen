@@ -145,10 +145,10 @@ get_header();
 				<div class="front_words_wrap">
 					<div class="row flex-clgr">
 						<div class="col-lg-6">
-							<img src="<?= get_template_directory_uri() . '/img/front_words_child.png'; ?>" alt="" class="w-100">
+							<img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'front_words_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'front_words_title', true ); ?>" class="w-100">
 						</div>
 						<div class="col-lg-6 text-center text-lg-left">
-							<h2 class="color-white text-uppercase mb-5 pt-3 pt-lg-5">В НАШЕЙ ШКОЛЕ<br>ВАШ РЕБЕНОК<br>ПОЛЮБИТ ШАХМАТЫ!</h2>
+							<h2 class="color-white text-uppercase mb-5 pt-3 pt-lg-5"><?= get_post_meta( $post->ID, 'front_words_title', true ); ?></h2>
 							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0">Записаться на бесплатное занятие</a>
 						</div>
 					</div>
