@@ -541,3 +541,30 @@ header.slideup {
     top: 0;
     right: 0;
 }
+
+#front_welcome {
+    padding: 70px 0;
+}
+
+.container.custom_container {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.row.custom_row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.front_wel_item_wrap {
+    padding: 10px;
+    height: 280px;
+    position: relative;
+    width: 100%;
+}
+
+.front_wel_item {
+    background: #ccc;
+    border-radius: 10px;
+    height: 100%;
+}

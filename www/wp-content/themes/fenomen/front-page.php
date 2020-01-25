@@ -156,6 +156,42 @@ get_header();
 			</div>
 		</section>
 
+		<section id="front_welcome" class="white_bg">
+			<div class="container">
+				<h3 class="text-center">Приходите к нам на пробное занятие</h3>
+				<div class="sub_title text-center mb-5">И посмотрите как проходит обучение</div>
+			</div>
+			<div class="container custom_container">
+				<div class="row custom_row">
+					<div class="front_wel_item_wrap" style="width: 55%">
+						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_1.jpg' ?>)no-repeat center center/cover">
+
+						</div>
+					</div>
+					<div class="front_wel_item_wrap" style="width: 45%">
+						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_2.jpg' ?>)no-repeat center bottom/cover">
+
+						</div>
+					</div>
+					<div class="front_wel_item_wrap" style="width: 33.333%">
+						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_3.jpg' ?>)no-repeat center center/cover">
+
+						</div>
+					</div>
+					<div class="front_wel_item_wrap" style="width: 33.333%">
+						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_4.jpg' ?>)no-repeat center bottom/cover">
+
+						</div>
+					</div>
+					<div class="front_wel_item_wrap" style="width: 33.333%">
+						<div class="front_wel_item" style="background: url(<?= get_template_directory_uri() . '/img/wel_5.jpg' ?>)no-repeat center center/cover">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #front_welcome -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

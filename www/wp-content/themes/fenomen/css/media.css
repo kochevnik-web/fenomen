@@ -143,6 +143,10 @@
     .video_list .btn {
         margin: 0;
     }
+
+    .front_wel_item_wrap {
+        width: 100%!important;
+    }
 }
 
 @media (max-width: 480px) {
