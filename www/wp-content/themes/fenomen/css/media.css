@@ -6,6 +6,16 @@
     .main_video_flex {
         align-items: center;
     }
+
+    #front_words {
+        min-height: 450px;
+    }
+    #front_words:before {
+        height: 160%;
+    }
+    .front_words_wrap .col-lg-6 {
+        z-index: 1;
+    }
 }
 @media(max-width: 992px) {
     #site-nav {
@@ -88,6 +98,14 @@
 
     .front_video_img {
         height: 201px;
+    }
+
+    .flex-clgr {
+        flex-direction: column-reverse;
+    }
+
+    #front_words:before, #front_words:after {
+        display: none;
     }
 }
 

@@ -143,13 +143,13 @@ get_header();
 		<section id="front_words">
 			<div class="container">
 				<div class="front_words_wrap">
-					<div class="row">
-						<div class="col-md-6">
+					<div class="row flex-clgr">
+						<div class="col-lg-6">
 							<img src="<?= get_template_directory_uri() . '/img/front_words_child.png'; ?>" alt="" class="w-100">
 						</div>
-						<div class="col-md-6">
-							<h2 class="color-white text-uppercase mb-5 pt-5">В НАШЕЙ ШКОЛЕ<br>ВАШ РЕБЕНОК<br>ПОЛЮБИТ ШАХМАТЫ!</h2>
-							<a href="#" class="btn btn-primary btn-yellow">Записаться на бесплатное занятие</a>
+						<div class="col-lg-6 text-center text-lg-left">
+							<h2 class="color-white text-uppercase mb-5 pt-3 pt-lg-5">В НАШЕЙ ШКОЛЕ<br>ВАШ РЕБЕНОК<br>ПОЛЮБИТ ШАХМАТЫ!</h2>
+							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0">Записаться на бесплатное занятие</a>
 						</div>
 					</div>
 				</div>
