@@ -135,10 +135,62 @@ get_header();
 										</div>
 									</div>
 									<div class="col-md-6">
-										<img src="<?= get_template_directory_uri() . '/img/front_more_1.png'; ?>" class="w-100">
+										<img src="<?= get_template_directory_uri() . '/img/front_more_1.jpg'; ?>" class="w-100">
 									</div>
 								</div>
-							</div>
+							</div><!--# front_more_item -->
+
+							<div class="front_more_item white_bg overflow-hidden">
+								<div class="row flex-row-reverse">
+									<div class="col-md-6">
+										<div class="front_more_item_content">
+											<h4 class="mb-3 text-center text-md-left">Опытные преподаватели</h4>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">опыт преподавателей нашей школы от 5 лет</div>
+												</div>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">знают как интересно и познавательно преподнести информацию</div>
+												</div>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">найдут подход к вашему ребенку</div>
+												</div>
+											<blockquote class="mt-5">Мы подобрали команду профессиональных преподавателей, которым бы вы доверили своих детей</blockquote>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<img src="<?= get_template_directory_uri() . '/img/front_more_2.jpg'; ?>" class="w-100">
+									</div>
+								</div>
+							</div><!--# front_more_item -->
+
+							<div class="front_more_item white_bg overflow-hidden">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="front_more_item_content">
+											<h4 class="mb-3 text-center text-md-left">Опытные преподаватели</h4>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">опыт преподавателей нашей школы от 5 лет</div>
+												</div>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">знают как интересно и познавательно преподнести информацию</div>
+												</div>
+												<div class="d-flex mb-2">
+													<div class="icon"> </div>
+													<div class="w-100">найдут подход к вашему ребенку</div>
+												</div>
+											<blockquote class="mt-5">Мы подобрали команду профессиональных преподавателей, которым бы вы доверили своих детей</blockquote>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<img src="<?= get_template_directory_uri() . '/img/front_more_3.jpg'; ?>" class="w-100">
+									</div>
+								</div>
+							</div><!--# front_more_item -->
 						</div>
 					</div>
 				</div>
