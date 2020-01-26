@@ -183,108 +183,126 @@ get_header();
 		</section><!-- #front_welcome -->
 		<?php } ?>
 
+		<?php if ( (bool)get_post_meta( $post->ID, 'reviews_title', true ) ) { ?>
 		<section id="reviews" class="gray_bg">
 			<div class="container">
-				<h3 class="mb-5 text-center">Что говорят родители про школу Феномен</h3>
+				<h3 class="mb-5 text-center"><?= get_post_meta( $post->ID, 'reviews_title', true ); ?></h3>
 				<div class="row mb-4">
-					<div class="col-md-6">
-						<div class="reviews_item reviews_item_text">
-							<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
-								<img src="<?= get_template_directory_uri() . '/img/reviews_1.jpg' ?>" alt="">
-							</div>
-							<div class="reviews_item_text_content">
-								<div class="title">
-								Алена Переясловская
-								</div>
-								<div class="subtitle mb-2">
-								мама Феди, 5 лет
-								</div>
-								<p  class="m-0">
-								Очень важно в возрасте 3-х лет дать ребенку то, что он хочет. Максимальный контакт со сверстниками и основы работы с шахматами — это лучшее, что можно предложить в этом возрасте. Методика преподавания, построенная на игровой форме, всегда нравится юным детям. Феномен — это действительно новый подходк развитию детей.
-								</p>
-							</div>
-						</div><!-- #review -->
-						<div class="reviews_item reviews_item_video">
-							<a href="<?= get_post_meta( $post->ID, 'front_video_link', true ); ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
-								<img src="<?= get_template_directory_uri() . '/img/review_video-2.png' ?>" alt="" class="w-100">
-								<div class="play position-absolute text-center">
-									<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="">
-								</div>
-								<div class="title position-absolute text-right">
-									<div class="title_1">Валентина Белякова</div>
-									<div class="title_2">мама Андрея, 8 лет</div>
-								</div>
-							</a>
-						</div><!-- #review -->
-						<div class="reviews_item reviews_item_text">
-							<div class="reviews_item_text_img">
-								<img src="<?= get_template_directory_uri() . '/img/reviews_2.jpg' ?>" alt="">
-							</div>
-							<div class="reviews_item_text_content">
-								<div class="title">
-								Натали Еприкиян
-								</div>
-								<div class="subtitle mb-2">
-								мама Ксюши, 3 года
-								</div>
-								<p  class="m-0">
-								Добрый день! Хочу выразить Благодарность Анне Владимировне. Спасибо большое за открытый урок, мне все очень понравилось, 
-								а самое главное нравится и с удовольствием бежит на уроки моя дочь. Вижу положительный результат, хоть мы не давно пришли в вашу школу.
-								</p>
-							</div>
-						</div><!-- #review -->
-					</div>
-					<div class="col-md-6">
-						<div class="reviews_item reviews_item_video">
-							<a href="<?= get_post_meta( $post->ID, 'front_video_link', true ); ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
-								<img src="<?= get_template_directory_uri() . '/img/review_video-1.png' ?>" alt="" class="w-100">
-								<div class="play position-absolute text-center">
-									<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="">
-								</div>
-								<div class="title position-absolute text-right">
-									<div class="title_1">Андрей Власенко</div>
-									<div class="title_2">папа Светы, 8 лет</div>
-								</div>
-							</a>
-						</div><!-- #review -->
-						<div class="reviews_item reviews_item_text">
-							<div class="reviews_item_text_img">
-								<img src="<?= get_template_directory_uri() . '/img/reviews_3.jpg' ?>" alt="">
-							</div>
-							<div class="reviews_item_text_content">
-								<div class="title">
-								Елизавета Ясько
-								</div>
-								<div class="subtitle mb-2">
-								мама Вовы, 5 лет
-								</div>
-								<p  class="m-0">
-								Добрый день. Хочу поблагодарить всех сотрудников школы на Адмирала Трибуца 
-								и особенно нашего педагога Александру Андреевну. Она прекрасный человек и педагог, Отлично находит подход к детям. Очень терпелива, видит сильные и слабые стороны ребёнка и развивает их соответственно. Обучение действительно ориентированно на результат. Методика работает, ребёнок начал читать буквально за несколько занятий. Улучшились внимание и усидчивость. В общем нам очень нравится у вас заниматься, будем продолжать.
-								</p>
-							</div>
-						</div><!-- #review -->
-						<div class="reviews_item reviews_item_text">
-							<div class="reviews_item_text_img">
-								<img src="<?= get_template_directory_uri() . '/img/reviews_4.jpg' ?>" alt="">
-							</div>
-							<div class="reviews_item_text_content">
-								<div class="title">
-								Никита Никольченко
-								</div>
-								<div class="subtitle mb-2">
-								папа Насти, 5 лет
-								</div>
-								<p  class="m-0">
-								Шахматы школы Феномен - респект! Это возможность не только получать пятёрки по математике, но и развитие логики и мышления!
-								</p>
-							</div>
-						</div><!-- #review -->
-					</div>
+					<?php
+						$reviews_arr_1 = array();
+						$reviews_arr_2 = array();
+						$reviews_count = get_post_meta( $post->ID, 'fenomen_reviews', true );
+
+						for ( $r = 0; $r < $reviews_count; $r++ ) {
+							$review_name  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_name', true );
+							$review_type  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_type', true );
+							$review_text  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_text', true );
+							$review_link  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_link', true );
+							$review_img   = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_img', true );
+							$review_child = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_child', true );
+
+							if ( $r%2 ) {
+								$reviews_arr_2[$r] = array(
+									'name'  => $review_name,
+									'type'  => $review_type,
+									'text'  => $review_text,
+									'link'  => $review_link,
+									'img'   => $review_img,
+									'child' => $review_child,
+								);
+							} else {
+								$reviews_arr_1[$r] = array(
+									'name'  => $review_name,
+									'type'  => $review_type,
+									'text'  => $review_text,
+									'link'  => $review_link,
+									'img'   => $review_img,
+									'child' => $review_child,
+								);
+							}
+						}
+					?>
+
+					<?php if ( count( $reviews_arr_1 ) > 0 ) { ?>
+						<div class="col-md-6">
+							<?php foreach ( $reviews_arr_1 as $rew_item ) { ?>
+								<?php if ( (bool) $rew_item['name'] ) { ?>
+									<?php if ( $rew_item['type'] == 'text' ) { ?>
+										<div class="reviews_item reviews_item_text">
+											<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
+											</div>
+											<div class="reviews_item_text_content">
+												<div class="title">
+												<?= $rew_item['name']; ?>
+												</div>
+												<div class="subtitle mb-2">
+												<?= $rew_item['child']; ?>
+												</div>
+												<p  class="m-0">
+												<?= $rew_item['text']; ?>
+												</p>
+											</div>
+										</div><!-- #review -->
+									<?php } else { ?>
+										<div class="reviews_item reviews_item_video">
+											<a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
+												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
+												<div class="play position-absolute text-center">
+													<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="Отзыв о Fenomen">
+												</div>
+												<div class="title position-absolute text-right">
+													<div class="title_1"><?= $rew_item['name']; ?></div>
+													<div class="title_2"><?= $rew_item['child']; ?></div>
+												</div>
+											</a>
+										</div><!-- #review -->
+							<?php } } } ?>
+						</div>
+					<?php } ?>
+					<?php if ( count( $reviews_arr_2 ) > 0 ) { ?>
+						<div class="col-md-6">
+							<?php foreach ( $reviews_arr_2 as $rew_item ) { ?>
+								<?php if ( (bool) $rew_item['name'] ) { ?>
+									<?php if ( $rew_item['type'] == 'text' ) { ?>
+										<div class="reviews_item reviews_item_text">
+											<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
+											</div>
+											<div class="reviews_item_text_content">
+												<div class="title">
+												<?= $rew_item['name']; ?>
+												</div>
+												<div class="subtitle mb-2">
+												<?= $rew_item['child']; ?>
+												</div>
+												<p  class="m-0">
+												<?= $rew_item['text']; ?>
+												</p>
+											</div>
+										</div><!-- #review -->
+									<?php } else { ?>
+										<div class="reviews_item reviews_item_video">
+											<a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
+												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
+												<div class="play position-absolute text-center">
+													<img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="Отзыв о Fenomen">
+												</div>
+												<div class="title position-absolute text-right">
+													<div class="title_1"><?= $rew_item['name']; ?></div>
+													<div class="title_2"><?= $rew_item['child']; ?></div>
+												</div>
+											</a>
+										</div><!-- #review -->
+							<?php } } } ?>
+						</div>
+					<?php } ?>
+
 				</div>
 				<div class="text-center"><button class="btn btn-primary btn-blue hover_amime">Загрузить еще отзывы</button></div>
 			</div>
-		</section>
+		</section><!-- #reviews -->
+		<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
