@@ -107,6 +107,29 @@
     #front_words:before, #front_words:after {
         display: none;
     }
+
+    .reviews_item.reviews_item_text {
+        flex-direction: column;
+    }
+
+    .reviews_item_text img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    .reviews_item_video .play {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        background: #FFFFFF;
+        border-radius: 100%;
+        line-height: 50px;
+    }
+    
 }
 
 @media (max-width: 768px) {
