@@ -668,3 +668,7 @@ header.slideup {
 .reviews_item.review_hide {
     display: none;
 }
+
+#docs {
+    padding: 70px 0;
+}

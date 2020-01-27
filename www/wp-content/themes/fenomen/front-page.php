@@ -311,6 +311,38 @@ get_header();
 		</section><!-- #reviews -->
 		<?php } ?>
 
+		<section id="docs" class="white_bg">
+			<div class="container">
+				<h3 class="text-center">Наши сертификаты</h3>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="docs_item">
+							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
+								<img src="thumbnail.jpg" alt="" />
+							</a>
+							<div class="title">Лицензия на осуществление образовательной деятельности</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="docs_item">
+							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
+								<img src="thumbnail.jpg" alt="" />
+							</a>
+							<div class="title">Лицензия на осуществление образовательной деятельности</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="docs_item">
+							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
+								<img src="docs.jpg" alt="" />
+							</a>
+							<div class="title text-center">Лицензия на осуществление образовательной деятельности</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #docs -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
