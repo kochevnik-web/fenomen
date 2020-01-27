@@ -311,37 +311,29 @@ get_header();
 		</section><!-- #reviews -->
 		<?php } ?>
 
+		<?php if ( (bool)get_post_meta( $post->ID, 'front_docs_title', true ) ) { ?>
 		<section id="docs" class="white_bg">
 			<div class="container">
-				<h3 class="text-center">Наши сертификаты</h3>
-				<div class="row">
-					<div class="col-md-4">
+				<h3 class="text-center mb-5"><?= get_post_meta( $post->ID, 'front_docs_title', true ); ?></h3>
+				<div class="row text-center justify-content-center">
+					<?php
+						$docs_count = get_post_meta( $post->ID, 'front_docs', true );
+						if ( $docs_count > 0 ) {
+							for ( $f = 0; $f < $docs_count; $f++ ) {	
+					?>
+					<div class="col-md-6 col-lg-4 mb-4">
 						<div class="docs_item">
-							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
-								<img src="thumbnail.jpg" alt="" />
+							<a href="<?= get_field( 'front_docs_' . $f . '_pdf', $post->ID ); ?>" target="_blank">
+								<img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'front_docs_' . $f . '_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'front_docs_' . $f . '_text', true ); ?>" />
 							</a>
-							<div class="title">Лицензия на осуществление образовательной деятельности</div>
+							<div class="title"><?= get_post_meta( $post->ID, 'front_docs_' . $f . '_text', true ); ?></div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="docs_item">
-							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
-								<img src="thumbnail.jpg" alt="" />
-							</a>
-							<div class="title">Лицензия на осуществление образовательной деятельности</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="docs_item">
-							<a href="<?= get_template_directory_uri() . '/img/docs.pdf' ?>">
-								<img src="docs.jpg" alt="" />
-							</a>
-							<div class="title text-center">Лицензия на осуществление образовательной деятельности</div>
-						</div>
-					</div>
+					<?php } } ?>
 				</div>
 			</div>
 		</section><!-- #docs -->
+		<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

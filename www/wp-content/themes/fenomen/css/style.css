@@ -670,5 +670,9 @@ header.slideup {
 }
 
 #docs {
-    padding: 70px 0;
+    padding: 70px 0 45px 0;
+}
+
+#docs .title {
+    color: #7d7d7d;
 }
