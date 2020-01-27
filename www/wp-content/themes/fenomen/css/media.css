@@ -108,7 +108,7 @@
         display: none;
     }
 
-    .reviews_item.reviews_item_text {
+    .reviews_item.reviews_item_text .reviews_item_wrap {
         flex-direction: column;
     }
 

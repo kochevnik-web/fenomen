@@ -200,6 +200,7 @@ get_header();
 							$review_link  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_link', true );
 							$review_img   = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_img', true );
 							$review_child = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_child', true );
+							$review_hide  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_hide', true );
 
 							if ( $r%2 ) {
 								$reviews_arr_2[$r] = array(
@@ -209,6 +210,7 @@ get_header();
 									'link'  => $review_link,
 									'img'   => $review_img,
 									'child' => $review_child,
+									'hide'  => $review_hide,
 								);
 							} else {
 								$reviews_arr_1[$r] = array(
@@ -218,6 +220,7 @@ get_header();
 									'link'  => $review_link,
 									'img'   => $review_img,
 									'child' => $review_child,
+									'hide'  => $review_hide,
 								);
 							}
 						}
@@ -228,24 +231,26 @@ get_header();
 							<?php foreach ( $reviews_arr_1 as $rew_item ) { ?>
 								<?php if ( (bool) $rew_item['name'] ) { ?>
 									<?php if ( $rew_item['type'] == 'text' ) { ?>
-										<div class="reviews_item reviews_item_text">
-											<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
-												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
-											</div>
-											<div class="reviews_item_text_content">
-												<div class="title">
-												<?= $rew_item['name']; ?>
+										<div class="reviews_item reviews_item_text<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+											<div class="reviews_item_wrap">
+												<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+													<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
 												</div>
-												<div class="subtitle mb-2">
-												<?= $rew_item['child']; ?>
+												<div class="reviews_item_text_content">
+													<div class="title">
+													<?= $rew_item['name']; ?>
+													</div>
+													<div class="subtitle mb-2">
+													<?= $rew_item['child']; ?>
+													</div>
+													<p  class="m-0">
+													<?= $rew_item['text']; ?>
+													</p>
 												</div>
-												<p  class="m-0">
-												<?= $rew_item['text']; ?>
-												</p>
 											</div>
 										</div><!-- #review -->
 									<?php } else { ?>
-										<div class="reviews_item reviews_item_video">
+										<div class="reviews_item reviews_item_video<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
 											<a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
 												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
 												<div class="play position-absolute text-center">
@@ -261,28 +266,30 @@ get_header();
 						</div>
 					<?php } ?>
 					<?php if ( count( $reviews_arr_2 ) > 0 ) { ?>
-						<div class="col-md-6">
+						<div class="col-md-6" id="rev_column">
 							<?php foreach ( $reviews_arr_2 as $rew_item ) { ?>
 								<?php if ( (bool) $rew_item['name'] ) { ?>
 									<?php if ( $rew_item['type'] == 'text' ) { ?>
-										<div class="reviews_item reviews_item_text">
-											<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
-												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
-											</div>
-											<div class="reviews_item_text_content">
-												<div class="title">
-												<?= $rew_item['name']; ?>
+										<div class="reviews_item reviews_item_text<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+											<div class="reviews_item_wrap">
+												<div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+													<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
 												</div>
-												<div class="subtitle mb-2">
-												<?= $rew_item['child']; ?>
+												<div class="reviews_item_text_content">
+													<div class="title">
+													<?= $rew_item['name']; ?>
+													</div>
+													<div class="subtitle mb-2">
+													<?= $rew_item['child']; ?>
+													</div>
+													<p  class="m-0">
+													<?= $rew_item['text']; ?>
+													</p>
 												</div>
-												<p  class="m-0">
-												<?= $rew_item['text']; ?>
-												</p>
 											</div>
 										</div><!-- #review -->
 									<?php } else { ?>
-										<div class="reviews_item reviews_item_video">
+										<div class="reviews_item reviews_item_video<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
 											<a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
 												<img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
 												<div class="play position-absolute text-center">
@@ -299,7 +306,7 @@ get_header();
 					<?php } ?>
 
 				</div>
-				<div class="text-center"><button class="btn btn-primary btn-blue hover_amime">Загрузить еще отзывы</button></div>
+				<div class="text-center"><button class="btn btn-primary btn-blue hover_amime" id="reviews_btn">Загрузить еще отзывы</button></div>
 			</div>
 		</section><!-- #reviews -->
 		<?php } ?>

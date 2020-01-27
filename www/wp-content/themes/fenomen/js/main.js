@@ -25,4 +25,12 @@ jQuery(document).ready(function($){
             $('header').removeClass('slideup');
         }
     });
+
+    $(document).on('click', '#reviews_btn', function(){
+        if($(window).width() <= 992 ) {
+            $('.review_hide').detach().appendTo($('#rev_column'));
+        }
+        $('.review_hide').fadeIn();
+
+    });
 });
