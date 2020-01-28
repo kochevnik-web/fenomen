@@ -335,6 +335,16 @@ get_header();
 		</section><!-- #docs -->
 		<?php } ?>
 
+		<section id="front_instagram">
+			<h3 class="text-center mb-5">Мы в Instagram</h3>
+			<div class="front_instagram_wrap">
+				<div class="front_instagram_phone">
+					<img src="" alt="" class="mb-4">
+					<a href="" class="btn btn-primary btn-yellow">Подписаться</a>
+				</div>
+			</div>
+		</section><!-- #front_instagram -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
