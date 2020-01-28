@@ -337,9 +337,9 @@ get_header();
 
 		<section id="front_instagram">
 			<h3 class="text-center mb-5">Мы в Instagram</h3>
-			<div class="front_instagram_wrap">
-				<div class="front_instagram_phone">
-					<img src="" alt="" class="mb-4">
+			<div class="front_instagram_wrap position-relative">
+				<div class="front_instagram_phone position-absolute d-flex flex-column">
+					<img src="<?= get_template_directory_uri() . '/img/phone.png' ?>" alt="" class="mb-4">
 					<a href="" class="btn btn-primary btn-yellow">Подписаться</a>
 				</div>
 			</div>

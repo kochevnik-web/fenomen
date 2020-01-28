@@ -680,3 +680,40 @@ header.slideup {
 #front_instagram {
     padding: 70px 0;
 }
+
+.front_instagram_wrap {
+    height: 270px;
+    width: 100%;
+    background: url(../img/front_instagram_bg.png)no-repeat center top;
+    margin: 160px 0 180px 0;
+}
+
+.front_instagram_wrap:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.front_instagram_wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+.front_instagram_wrap .btn-yellow{
+    width: 80%;
+    margin-left: 21px;
+}
+
+.front_instagram_phone {
+    left: 50%;
+    top: -103px;
+}

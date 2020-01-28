@@ -170,6 +170,18 @@
     .front_wel_item_wrap {
         width: 100%!important;
     }
+
+    .front_instagram_wrap {
+        background: #FFFFFF;
+    }
+
+    .front_instagram_wrap:before, .front_instagram_wrap:after {
+        display: none;
+    }
+
+    .front_instagram_phone {
+        margin-left: -129px;
+    }
 }
 
 @media (max-width: 480px) {
