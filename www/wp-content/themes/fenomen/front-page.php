@@ -347,6 +347,19 @@ get_header();
 		</section><!-- #front_instagram -->
 		<?php } ?>
 
+		<section id="map">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+					
+					</div>
+					<div class="col-md-6">
+					
+					</div>
+				</div>
+			</div>
+		</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
