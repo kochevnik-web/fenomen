@@ -9,7 +9,7 @@
 	
             acf_add_options_page( array(
                 'page_title' 	  => 'Настройки темы Fenomen',
-                'menu_title'	  => 'Настройки Fenomen',
+                'menu_title'	  => 'Fenomen',
                 'menu_slug' 	  => SETTING_SLUG,
                 'capability'	  => 'edit_posts',
                 'update_button'   => __( 'Сохранить', 'fenomen' ),
@@ -32,6 +32,15 @@
                         'key'     => 'field_header_fenomen_phone',
                         'label'   => 'Номер телефона',
                         'name'    => 'header_fenomen_phone',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '50',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_instagram',
+                        'label'   => 'Ссылка на Instagram',
+                        'name'    => 'fenomen_instagram',
                         'type'    => 'text',
                         'wrapper' => array(
                             'width' => '50',

@@ -335,15 +335,17 @@ get_header();
 		</section><!-- #docs -->
 		<?php } ?>
 
+		<?php if ( (bool)get_post_meta( $post->ID, 'front_insta_title', true ) ) { ?>
 		<section id="front_instagram">
-			<h3 class="text-center mb-5">Мы в Instagram</h3>
+			<h3 class="text-center mb-5"><?= get_post_meta( $post->ID, 'front_insta_title', true ); ?></h3>
 			<div class="front_instagram_wrap position-relative">
 				<div class="front_instagram_phone position-absolute d-flex flex-column">
 					<img src="<?= get_template_directory_uri() . '/img/phone.png' ?>" alt="" class="mb-4">
-					<a href="" class="btn btn-primary btn-yellow">Подписаться</a>
+					<a href="<?= get_option( 'options_fenomen_instagram' ) ?>" class="btn btn-primary btn-yellow" target="_blank">Подписаться</a>
 				</div>
 			</div>
 		</section><!-- #front_instagram -->
+		<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
