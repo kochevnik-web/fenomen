@@ -722,7 +722,6 @@ header.slideup {
     padding: 70px 0;
     background: url(../img/map_bg.jpg)no-repeat center top;
     background-size: cover;
-    min-height: 800px;
 }
 
 #map {

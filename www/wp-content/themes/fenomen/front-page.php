@@ -354,7 +354,7 @@ get_header();
 						<div id="map" class="overflow-hidden"></div>
 					</div>
 					<div class="col-md-6">
-
+						<h3>Наши контакты</h3>
 					</div>
 				</div>
 			</div>
