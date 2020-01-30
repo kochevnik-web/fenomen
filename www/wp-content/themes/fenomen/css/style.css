@@ -724,6 +724,17 @@ header.slideup {
     background-size: cover;
 }
 
+#contacts_section:before {
+    content: '';
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    background: url(../img/front_video.png)no-repeat left top;
+    background-size: 30%;
+    top: -70px;
+    left: -92px;
+}
+
 #map {
     height: 370px;
     width: 100%;

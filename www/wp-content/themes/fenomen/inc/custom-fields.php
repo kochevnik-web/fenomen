@@ -29,12 +29,30 @@
                 'title'  => 'Настройки для шаблона Fenomen',
                 'fields' => array(
                     array(
+                        'key'     => 'field_fenomen_adress',
+                        'label'   => 'Адрес',
+                        'name'    => 'fenomen_adress',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
                         'key'     => 'field_header_fenomen_phone',
                         'label'   => 'Номер телефона',
                         'name'    => 'header_fenomen_phone',
                         'type'    => 'text',
                         'wrapper' => array(
-                            'width' => '50',
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_email',
+                        'label'   => 'Email',
+                        'name'    => 'fenomen_email',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
                         ),
                     ),
                     array(
@@ -43,8 +61,55 @@
                         'name'    => 'fenomen_instagram',
                         'type'    => 'text',
                         'wrapper' => array(
-                            'width' => '50',
+                            'width' => '33.33',
                         ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_vk',
+                        'label'   => 'Ссылка на В Контакте',
+                        'name'    => 'fenomen_vk',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_facebok',
+                        'label'   => 'Ссылка на В Контакте',
+                        'name'    => 'fenomen_facebook',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_contacts_title',
+                        'label'   => 'Заголовок блока карты',
+                        'name'    => 'fenomen_contacts_title',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_coord',
+                        'label'   => 'Координаты',
+                        'name'    => 'fenomen_coord',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
+                        'key'     => 'field_fenomen_map_zoom',
+                        'label'   => 'Увеличение карты',
+                        'name'    => 'fenomen_map_zoom',
+                        'type'    => 'number',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                        'min'     => 1,
+                        'max'     => 19,
                     ),
                     array(
                         'key'    => 'field_fenomen_head_enquqe_script',

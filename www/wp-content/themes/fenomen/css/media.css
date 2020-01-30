@@ -16,6 +16,10 @@
     .front_words_wrap .col-lg-6 {
         z-index: 1;
     }
+
+    #contacts_section:before {
+        background-size: 50%;
+    }
 }
 @media(max-width: 992px) {
     #site-nav {
@@ -181,6 +185,10 @@
 
     .front_instagram_phone {
         margin-left: -129px;
+    }
+
+    #contacts_section:before {
+        display: none;
     }
 }
 

@@ -42,7 +42,7 @@
 							</div>
 							<div class="select_city_map_header-text">
 								<p>Адрес школы: <span class="color cursor-pointer font-weight-bold select_city_map_header-link hover_amime">Смотреть на карте</span></p>
-								<p>м. Заельцовская, 2-ая Союза Молодежи 32, оф. 268</p>
+								<p><?= get_option( 'options_fenomen_adress' ); ?></p>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 					</div>
 					<div class="col-md-6 col-xl-2">
 						<div class="header_phone_number font-weight-bold text-center text-md-right">
-							<?php echo get_option( 'options_header_fenomen_phone' ); ?>
+							<?= get_option( 'options_header_fenomen_phone' ); ?>
 						</div>
 					</div>
 				</div>
