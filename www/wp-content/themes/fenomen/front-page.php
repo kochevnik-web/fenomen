@@ -354,7 +354,41 @@ get_header();
 						<div id="map" class="overflow-hidden"></div>
 					</div>
 					<div class="col-md-6">
-						<h3>Наши контакты</h3>
+						<h3 class="mb-4">Наши контакты</h3>
+						<div class="contact_info_wrap mb-4">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="contact_info py-3">
+										<div class="title mb-1">Номер телефона:</div>
+										<div class="format mb-1">+7 (999) 999-11-57</div>
+										<a href="tel:+7 (999) 999-11-57">позвонить нам</a>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="contact_info py-3">
+										<div class="title mb-1">Электронная почта:</div>
+										<div class="format mb-1">office@fenomen.com</div>
+										<a href="mailto:office@fenomen.com">позвонить нам</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="contact_info_wrap mb-4">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="contact_info pb-3">
+										<div class="title">Адрес школы:</div>
+										<div class="format">м. Заельцовская, 2-ая Союза Молодежи 32, оф. 268</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex">
+							<div class="title">Мы в соцсетях:</div>
+							<a href="" class="contacts_link"></a>
+							<a href="" class="contacts_link"></a>
+							<a href="" class="contacts_link"></a>
+						</div>
 					</div>
 				</div>
 			</div>

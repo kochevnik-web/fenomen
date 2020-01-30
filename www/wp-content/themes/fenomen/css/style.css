@@ -729,3 +729,28 @@ header.slideup {
     width: 100%;
     border-radius: 13px ;
 }
+
+#contacts_section .title {
+    font-size: 14px;
+}
+
+.contact_info_wrap {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact_info .format {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.contact_info a {
+    color: #FFE600;
+    border-bottom: 1px dashed #FFE600;
+}
+
+.contact_info a:hover {
+    color: #FFE600;
+    text-decoration: none;
+    opacity: .8;
+}
