@@ -347,18 +347,41 @@ get_header();
 		</section><!-- #front_instagram -->
 		<?php } ?>
 
-		<section id="map">
+		<section id="contacts_section" class="color-white">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-					
+						<div id="map" class="overflow-hidden"></div>
 					</div>
 					<div class="col-md-6">
-					
+
 					</div>
 				</div>
 			</div>
-		</section>
+			<script type="text/javascript">
+				ymaps.ready(function () {
+					var myMap = new ymaps.Map('map', {
+							center: [55.055847, 82.898080],
+							zoom: 16
+						});
+
+						myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+							// Опции.
+							// Необходимо указать данный тип макета.
+							iconLayout: 'default#image',
+							// Своё изображение иконки метки.
+							iconImageHref: '<?= get_template_directory_uri() . '/img/marker.svg' ?>',
+							// Размеры метки.
+							iconImageSize: [101, 101],
+							// Смещение левого верхнего угла иконки относительно
+							// её "ножки" (точки привязки).
+							iconImageOffset: [-50, -100]
+						});
+
+					myMap.geoObjects.add(myPlacemark);
+				});
+			</script>
+		</section><!-- #map -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
