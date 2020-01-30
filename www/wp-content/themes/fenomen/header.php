@@ -16,8 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=82e46475-fc43-4f35-84b3-583493552821&lang=ru_RU" type="text/javascript"></script>
 	<?php wp_head(); ?>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=82e46475-fc43-4f35-84b3-583493552821&lang=ru_RU" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/8cec9744ca.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>

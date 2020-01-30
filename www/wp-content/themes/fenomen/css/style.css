@@ -754,3 +754,14 @@ header.slideup {
     text-decoration: none;
     opacity: .8;
 }
+
+.contacts_link {
+    color: #FFE600;
+    font-size: 22px;
+    padding: 0 4px;
+}
+
+.contacts_link:hover {
+    color: #FFE600;
+    opacity: .8;
+}

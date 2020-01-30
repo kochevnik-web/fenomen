@@ -350,11 +350,11 @@ get_header();
 		<section id="contacts_section" class="color-white">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-lg-6 mb-4 mb-lg-0">
 						<div id="map" class="overflow-hidden"></div>
 					</div>
-					<div class="col-md-6">
-						<h3 class="mb-4">Наши контакты</h3>
+					<div class="col-lg-6">
+						<h3 class="mb-2 mb-lg-4">Наши контакты</h3>
 						<div class="contact_info_wrap mb-4">
 							<div class="row">
 								<div class="col-md-6">
@@ -375,7 +375,7 @@ get_header();
 						</div>
 						<div class="contact_info_wrap mb-4">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-lg-8">
 									<div class="contact_info pb-3">
 										<div class="title">Адрес школы:</div>
 										<div class="format">м. Заельцовская, 2-ая Союза Молодежи 32, оф. 268</div>
@@ -384,10 +384,10 @@ get_header();
 							</div>
 						</div>
 						<div class="d-flex">
-							<div class="title">Мы в соцсетях:</div>
-							<a href="" class="contacts_link"></a>
-							<a href="" class="contacts_link"></a>
-							<a href="" class="contacts_link"></a>
+							<div class="title mr-2">Мы в соцсетях:</div>
+							<a href="" class="contacts_link"><i class="fab fa-facebook"></i></a>
+							<a href="" class="contacts_link"><i class="fab fa-instagram"></i></a>
+							<a href="" class="contacts_link"><i class="fab fa-vk"></i></a>
 						</div>
 					</div>
 				</div>
