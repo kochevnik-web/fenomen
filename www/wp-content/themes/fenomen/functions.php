@@ -140,6 +140,7 @@ function fenomen_scripts() {
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'mikeinput', get_template_directory_uri() . '/js/mikeinput.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'fenomen', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

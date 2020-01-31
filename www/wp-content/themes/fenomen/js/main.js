@@ -33,4 +33,7 @@ jQuery(document).ready(function($){
         $('.review_hide').fadeIn();
 
     });
+
+    //Маска под телефонный номер для поля Input
+    $('input[name="fenomen-phone"]').mask("+7 (999) 999-99-99");
 });
