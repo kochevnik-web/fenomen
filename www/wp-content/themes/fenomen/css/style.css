@@ -776,3 +776,27 @@ header.slideup {
     color: #FFE600;
     opacity: .8;
 }
+
+footer {
+    padding: 25px;
+    background: #1677BD;
+}
+
+.footer_menu {
+    flex-wrap: wrap;
+}
+
+.footer_menu li {
+    width: 33.333%;
+    padding-right: 5px;
+}
+
+.footer_menu li a {
+    color: #FFFFFF;
+}
+
+.footer_menu li a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    opacity: .8;
+}
