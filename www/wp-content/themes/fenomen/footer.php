@@ -22,21 +22,22 @@
 					</a>
 				</div>
 				<div class="col-md-9 col-xl-5">
-					<ul class="footer_menu list-unstyled m-0 d-flex text-center text-md-right text-xl-left">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Онлайн-школа</a></li>
-						<li><a href="#">Мероприятия</a></li>
-						<li><a href="#">Программы</a></li>
-						<li><a href="#">Вопросы и ответы</a></li>
-						<li><a href="#">Блог</a></li>
-					</ul>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'footer-menu',
+							'menu_id'        => 'footer-menu',
+							'fallback_cb'    => '',
+							'depth'          => 1,
+							'menu_class'     => 'footer_menu list-unstyled m-0 d-flex text-center text-md-right text-xl-left'
+						) );
+					?>
 				</div>
 				<div class="col-xl-5 d-block d-md-flex align-items-center text-center">
 					<div class="footer_item mb-4 mb-md-0 text-center text-md-left">
-						<a href="http://dev.fenomen.loc/privacy-policy/" class="btn btn-primary btn-white-border">Открыть школу</a>
+						<a href="<?= get_option( 'options_fenomen_open_scholl_link' ); ?>" class="btn btn-primary btn-white-border">Открыть школу</a>
 					</div>
 					<div class="footer_item text-center text-xl-left">
-						<a href="#" class="politic">Политика конфиденциальности</a>
+						<a href="http://dev.fenomen.loc/privacy-policy/" class="politic">Политика конфиденциальности</a>
 					</div>
 					<div class="footer_item text-center text-md-right">
 						<a href="<?= get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>

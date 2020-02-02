@@ -112,6 +112,15 @@
                         'max'     => 19,
                     ),
                     array(
+                        'key'     => 'field_fenomen_open_scholl_link',
+                        'label'   => 'Открыть школу ссылка',
+                        'name'    => 'fenomen_open_scholl_link',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
                         'key'    => 'field_fenomen_head_enquqe_script',
                         'label'  => 'Блок вставки в head',
                         'name'   => 'fenomen_head_enquqe_script',
