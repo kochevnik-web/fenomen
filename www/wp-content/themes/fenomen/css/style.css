@@ -1,50 +1,54 @@
-@font-face{
+@font-face {
     font-family: 'Cera Pro';
     src: url('../fonts/CeraPro-Light.eot');
     src: url('../fonts/CeraPro-Light.eot?iefix') format('eot'),
-    url('../fonts/CeraPro-Light.woff') format('woff'),
-    url('../fonts/CeraPro-Light.ttf') format('truetype');
+        url('../fonts/CeraPro-Light.woff') format('woff'),
+        url('../fonts/CeraPro-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'Cera Pro light';
     src: url('../fonts/CeraPro-Thin.eot');
     src: url('../fonts/CeraPro-Thin.eot?iefix') format('eot'),
-    url('../fonts/CeraPro-Thin.woff') format('woff'),
-    url('../fonts/CeraPro-Thin.ttf') format('truetype');
+        url('../fonts/CeraPro-Thin.woff') format('woff'),
+        url('../fonts/CeraPro-Thin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'Cera Pro Medium';
     src: url('../fonts/CeraPro-Medium.eot');
     src: url('../fonts/CeraPro-Medium.eot?iefix') format('eot'),
-    url('../fonts/CeraPro-Medium.woff') format('woff'),
-    url('../fonts/CeraPro-Medium.ttf') format('truetype');
+        url('../fonts/CeraPro-Medium.woff') format('woff'),
+        url('../fonts/CeraPro-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-.h1, h1 {
+.h1,
+h1 {
     font-size: 40px;
     font-family: 'Cera Pro Medium';
 }
 
-.h2, h2 {
+.h2,
+h2 {
     font-size: 36px;
     font-family: 'Cera Pro Medium';
 }
 
-.h3, h3 {
+.h3,
+h3 {
     font-size: 28px;
     font-family: 'Cera Pro Medium';
     font-weight: 600;
 }
 
-.h4, h4 {
+.h4,
+h4 {
     font-size: 26px;
     font-family: 'Cera Pro Medium';
 }
@@ -63,9 +67,10 @@ body.no-scroll {
     width: 100%;
     position: fixed;
     overflow: hidden;
- }
+}
 
-a, .hover_amime {
+a,
+.hover_amime {
     transition: all 0.3s 0.1s ease;
 }
 
@@ -77,7 +82,7 @@ a, .hover_amime {
     font-family: 'Cera Pro Medium';
 }
 
-.color-white{
+.color-white {
     color: #FFFFFF;
 }
 
@@ -97,7 +102,8 @@ a, .hover_amime {
     background-color: #FFFFFF;
 }
 
-.btn-primary.btn-yellow, .btn-primary.btn-yellow:active:focus {
+.btn-primary.btn-yellow,
+.btn-primary.btn-yellow:active:focus {
     min-height: 40px;
     border-radius: 40px;
     background: #FFE600;
@@ -112,7 +118,8 @@ a, .hover_amime {
     color: #000000;
 }
 
-.btn-primary.btn-blue, .btn-primary.btn-blue:active:focus {
+.btn-primary.btn-blue,
+.btn-primary.btn-blue:active:focus {
     min-height: 50px;
     border-radius: 50px;
     background: #3aa4fb;
@@ -123,13 +130,22 @@ a, .hover_amime {
     padding: 6px 25px;
 }
 
+.btn-primary.btn-white-border,
+.btn-primary.btn-white-border:active:focus {
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    border-radius: 40px;
+    padding: 7px 15px;
+}
+
 .btn-primary.btn-blue:hover {
     border: 2px solid #3aa4fb;
     color: #3aa4fb;
     background: transparent;
 }
 
-.arrow-down, .arrow-up {
+.arrow-down,
+.arrow-up {
     position: relative;
 }
 
@@ -238,7 +254,7 @@ header.slideup {
     border: 2px solid #FFFFFF;
     height: 40px;
     padding: 0 20px;
-    background: #FFFFFF;    
+    background: #FFFFFF;
 }
 
 .btn_header_phone:hover {
@@ -272,6 +288,7 @@ header.slideup {
     text-decoration: none;
     font-family: 'Cera Pro Medium';
 }
+
 .sub-menu {
     display: none;
     list-style: none;
@@ -324,7 +341,8 @@ header.slideup {
     right: -15px;
 }
 
-.menu-item-has-children:hover .sub-menu, .sub-menu:hover {
+.menu-item-has-children:hover .sub-menu,
+.sub-menu:hover {
     display: block;
 }
 
@@ -332,11 +350,15 @@ header.slideup {
     opacity: 1;
 }
 
-.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
     background: #FFFFFF;
 }
 
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
     background-color: #FFFFFF;
 }
 
@@ -540,7 +562,7 @@ header.slideup {
     padding: 105px 0 0 0;
 }
 
-#front_words:before{
+#front_words:before {
     content: '';
     background: url(../img/yellow_w_bg.svg)no-repeat left top;
     position: absolute;
@@ -695,7 +717,7 @@ header.slideup {
     left: 0;
     height: 100%;
     width: 200px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .front_instagram_wrap:after {
@@ -705,10 +727,10 @@ header.slideup {
     right: 0;
     height: 100%;
     width: 200px;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
-.front_instagram_wrap .btn-yellow{
+.front_instagram_wrap .btn-yellow {
     width: 80%;
     margin-left: 21px;
 }
@@ -718,7 +740,7 @@ header.slideup {
     top: -103px;
 }
 
-#contacts_section  {
+#contacts_section {
     padding: 70px 0;
     background: url(../img/map_bg.jpg)no-repeat center top;
     background-size: cover;
@@ -738,7 +760,7 @@ header.slideup {
 #map {
     height: 370px;
     width: 100%;
-    border-radius: 13px ;
+    border-radius: 13px;
 }
 
 #contacts_section .title {
@@ -793,10 +815,40 @@ footer {
 
 .footer_menu li a {
     color: #FFFFFF;
+    font-size: 14px;
 }
 
 .footer_menu li a:hover {
     color: #FFFFFF;
     text-decoration: none;
     opacity: .8;
+}
+
+.footer_item {
+    width: 33.33%;
+}
+
+footer .btn-white-border {
+    font-size: 14px;
+}
+
+footer .contacts_link,
+footer .contacts_link:hover {
+    color: #FFFFFF;
+}
+
+.politic {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    opacity: .45;
+    text-decoration: underline;
+    margin: 0 0 10px 0;
+    display: inline-block;
+}
+
+.politic:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 1;
 }
