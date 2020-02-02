@@ -424,7 +424,8 @@ header.slideup {
     padding: 70px 0;
 }
 
-.form input[type="text"] {
+.form input[type="text"],
+#form input[type="text"] {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.11);
     border-radius: 8px;
@@ -499,11 +500,11 @@ header.slideup {
     padding-left: 43px;
 }
 
-.video_list ul li {
+ul.corona-list li {
     line-height: 31px;
 }
 
-.video_list ul li .icon {
+ul.corona-list li .icon {
     background: url('../img/cor.svg')no-repeat left center;
     height: 31px;
     width: 31px;
@@ -851,4 +852,18 @@ footer .contacts_link:hover {
     text-decoration: none;
     color: #FFFFFF;
     opacity: 1;
+}
+
+.page-template-start-page .intro_bg {
+    background: url(../img/start_bg.png)no-repeat top right;
+}
+
+.page-template-start-page #intro .corona-list {
+    font-size: 18px;
+}
+
+#form {
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: 10px;
 }

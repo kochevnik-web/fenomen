@@ -138,6 +138,10 @@
         line-height: 50px;
     }
 
+    .page-template-start-page .intro_bg {
+        background: none;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -208,6 +212,18 @@
 
     .footer_item {
         width: 100%;
+    }
+
+    footer .contacts_link {
+        font-size: 40px;
+    }
+
+    .page-template-start-page .intro_bg {
+        padding: 0 15px;
+    }
+
+    #form {
+        padding: 20px 10px;
     }
 }
 
