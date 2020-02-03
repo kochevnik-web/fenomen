@@ -80,6 +80,76 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <section id="contacts_section" class="color-white position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div id="map" class="overflow-hidden"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="mb-2 mb-lg-4"><?= get_option( 'options_fenomen_contacts_title' ); ?></h3>
+                            <div class="contact_info_wrap mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact_info py-3">
+                                            <div class="title mb-1">Номер телефона:</div>
+                                            <div class="format mb-1"><?= get_option( 'options_header_fenomen_phone' ); ?></div>
+                                            <a href="tel:<?= get_option( 'options_header_fenomen_phone' ); ?>">позвонить нам</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="contact_info py-3">
+                                            <div class="title mb-1">Электронная почта:</div>
+                                            <div class="format mb-1"><?= get_option( 'options_fenomen_email' ); ?></div>
+                                            <a href="mailto:<?= get_option( 'options_fenomen_email' ); ?>">написать нам</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact_info_wrap mb-4">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="contact_info pb-3">
+                                            <div class="title">Адрес школы:</div>
+                                            <div class="format"><?= get_option( 'options_fenomen_adress' ); ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="title mr-2">Мы в соцсетях:</div>
+                                <a href="<?= get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>
+                                <a href="<?= get_option( 'options_fenomen_instagram' ); ?>" class="contacts_link"><i class="fab fa-instagram"></i></a>
+                                <a href="<?= get_option( 'options_fenomen_vk' ); ?>" class="contacts_link"><i class="fab fa-vk"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    ymaps.ready(function () {
+                        var myMap = new ymaps.Map('map', {
+                                center: [55.055847, 82.898080],
+                                zoom: 16
+                            });
+
+                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                                // Опции.
+                                // Необходимо указать данный тип макета.
+                                iconLayout: 'default#image',
+                                // Своё изображение иконки метки.
+                                iconImageHref: '<?= get_template_directory_uri() . '/img/marker.svg' ?>',
+                                // Размеры метки.
+                                iconImageSize: [101, 101],
+                                // Смещение левого верхнего угла иконки относительно
+                                // её "ножки" (точки привязки).
+                                iconImageOffset: [-50, -100]
+                            });
+
+                        myMap.geoObjects.add(myPlacemark);
+                    });
+                </script>
+            </section><!-- #map -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
