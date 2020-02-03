@@ -142,6 +142,14 @@
         background: none;
     }
 
+    .start_list_item {
+        padding: 15px;
+    }
+
+    .start_list_item p {
+        line-height: normal;
+    }
+
 }
 
 @media (max-width: 768px) {

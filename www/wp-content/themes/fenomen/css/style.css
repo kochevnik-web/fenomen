@@ -867,3 +867,23 @@ footer .contacts_link:hover {
     padding: 35px;
     border-radius: 10px;
 }
+
+#start_list {
+    padding: 70px 0;
+}
+
+.start_list_item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 35px;
+    margin: 0 0 25px 0;
+}
+
+.start_list_item h4 {
+    font-weight: 600;
+}
+
+.start_list_item p {
+    line-height: 25px;
+}
