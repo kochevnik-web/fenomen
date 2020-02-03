@@ -880,6 +880,10 @@ footer .contacts_link:hover {
     margin: 0 0 25px 0;
 }
 
+.start_list_item img {
+    border-radius: 10px;
+}
+
 .start_list_item h4 {
     font-weight: 600;
 }
