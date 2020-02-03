@@ -80,6 +80,35 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <section id="book" class="white_bg position-relative">
+                <div class="container">
+                    <h3 class="text-center mb-0 mb-md-5">Познакомьтесь с учебными<br>материалами школы Феномен</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book_elem position-relative d-flex d-xl-block mt-5 mt-xl-0">
+                                <div id="book_elem_1" class="mb-4 mb-md-5 mb-lg-0">
+                                    <div class="number">01</div>
+                                    <h3 class="color-blue">Видеоуроки домашнего задания</h3>
+                                </div>
+                                <div id="book_elem_2" class="mb-4 mb-md-5 mb-lg-0">
+                                    <div class="number">02</div>
+                                    <h3 class="color-blue">Творческие задания</h3>
+                                </div>
+                                <div id="book_elem_3" class="mb-4 mb-md-5 mb-lg-0">
+                                    <div class="number">03</div>
+                                    <h3 class="color-blue">Интересные задачи</h3>
+                                    <div>Более 200 уроков</div>
+                                </div>
+                                <div id="book_elem_4" class="mb-4 mb-md-5 mb-lg-0">
+                                    <div class="number">04</div>
+                                    <h3 class="color-blue">Современный дизайн</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
                     <div class="row">

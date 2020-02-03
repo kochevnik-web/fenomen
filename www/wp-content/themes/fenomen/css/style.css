@@ -891,3 +891,74 @@ footer .contacts_link:hover {
 .start_list_item p {
     line-height: 25px;
 }
+
+#book {
+    padding: 15px 0 70px 0;
+}
+
+#book:before {
+    content: '';
+    position: absolute;
+    top: -314px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/book_add.png);
+    background-position: 105% 0;
+    background-repeat: no-repeat;
+}
+
+.book_elem {
+    min-height: 600px;
+    background: url(../img/book.png)no-repeat center center;
+    flex-wrap: wrap;
+}
+
+.book_elem .number {
+    width: 57px;
+    height: 57px;
+    border-radius: 100%;
+    background: #FFE600;
+    color: rgba(0, 0, 0, 0.31);
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 55px;
+    top: -35px;
+    left: -56px;
+    font-family: 'Cera Pro Medium';
+    position: absolute;
+}
+
+.book_add {
+    top: -290px;
+    right: -42px;
+}
+
+#book_elem_1,
+#book_elem_2,
+#book_elem_3,
+#book_elem_4 {
+    width: 260px;
+    position: absolute;
+}
+
+#book_elem_1 {
+    top: 76px;
+    left: 129px;
+}
+
+#book_elem_2 {
+    top: 423px;
+    left: 129px;
+}
+
+#book_elem_3 {
+    top: 76px;
+    right: -89px;
+}
+
+#book_elem_4 {
+    right: -89px;
+    top: 423px;
+}

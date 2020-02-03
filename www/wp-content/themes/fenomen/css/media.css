@@ -1,3 +1,17 @@
+@media(max-width: 1580px) {
+    #book:before {
+        background-position: 155% 0;
+    }
+
+    #book_elem_3 {
+        right: 0;
+    }
+
+    #book_elem_4 {
+        right: 0;
+    }
+}
+
 @media(max-width: 1200px) {
     .front_video_img {
         height: 274px;
@@ -21,6 +35,25 @@
 
     #contacts_section:before {
         background-size: 50%;
+    }
+
+    #book:before {
+        display: none;
+    }
+
+    .book_elem {
+        background: #FFFFFF;
+        min-height: auto;
+    }
+
+    #book_elem_1,
+    #book_elem_2,
+    #book_elem_3,
+    #book_elem_4 {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 25%;
     }
 }
 
@@ -150,6 +183,13 @@
         line-height: normal;
     }
 
+    #book_elem_1,
+    #book_elem_2,
+    #book_elem_3,
+    #book_elem_4 {
+        width: 50%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -232,6 +272,24 @@
 
     #form {
         padding: 20px 10px;
+    }
+
+    #book_elem_1,
+    #book_elem_2,
+    #book_elem_3,
+    #book_elem_4 {
+        width: 100%;
+    }
+
+    .book_elem {
+        text-align: center;
+    }
+
+    .book_elem .number {
+        position: relative;
+        margin: 0 auto 15px;
+        top: 0;
+        left: 0;
     }
 }
 
