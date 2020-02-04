@@ -133,34 +133,25 @@ Template Post Type: page
                 </section>
             <?php } ?>
 
+            <?php if ( (bool)get_post_meta( $post->ID, 'fenomen_help_title', true ) ) { ?>
             <section id="thoughts" class="white_bg">
                 <div class="container">
-                    <h3 class="text-center mb-5">Как Феномен помогает подготовиться к школе</h3>
+                    <h3 class="text-center mb-5"><?= get_post_meta( $post->ID, 'fenomen_help_title', true ); ?></h3>
                     <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                            <div class="thoughts-item">
-                                <img src="<?= get_template_directory_uri() . '/img/thoughts_1.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
-                                <h5 class="font-weight-bold mb-2">Решение задач, учим детей самостоятельности</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                            <div class="thoughts-item">
-                                <img src="<?= get_template_directory_uri() . '/img/thoughts_2.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
-                                <h5 class="font-weight-bold mb-2">Учим детей быстро принимать решения</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                            <div class="thoughts-item">
-                                <img src="<?= get_template_directory_uri() . '/img/thoughts_3.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
-                                <h5 class="font-weight-bold mb-2">Знакомится и общаться со своими сверстниками</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
-                            </div>
-                        </div>
+                        <?php if ( get_post_meta( $post->ID, 'fenomen_help', true ) > 0 ) { ?>
+                            <?php for ( $f = 0; $f < get_post_meta( $post->ID, 'fenomen_help', true ); $f++) { ?>
+                                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                                    <div class="thoughts-item">
+                                        <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'fenomen_help_' . $f . '_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_name', true ); ?>" class="w-100 mb-3">
+                                        <h5 class="font-weight-bold mb-2"><?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_name', true ); ?></h5>
+                                        <p><?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_text', true ); ?></p>
+                                    </div>
+                                </div>
+                        <?php }} ?>
                     </div>
                 </div>
             </section>
+            <?php } ?>
 
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
