@@ -153,29 +153,34 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <?php if ( (bool)get_post_meta( $post->ID, 'tale_title', true ) ) { ?>
             <section id="tale" class="blue_bg">
                 <div class="container">
-                    <h3 class="text-center color-wite mb-5">Занятия в школе ФЕНОМЕН это:</h3>
+                    <h3 class="text-center color-white mb-5"><?= get_post_meta( $post->ID, 'tale_title', true ); ?></h3>
+                    <?php
+                        $tale = get_post_meta( $post->ID, 'tale', true );
+                        if ( $tale > 0 ) {
+                    ?>
                     <div class="tale_wrap d-flex">
+                        <?php for ( $fi = 0; $fi < $tale; $fi++ ) { ?>
+                        <?php if ( get_post_meta( $post->ID, 'tale_' . $fi . '_type', true ) == 'text' ) { ?>
                         <div class="tale_item tale_text">
                             <div class="front_more_item_content">
-                                <h4 class="mb-3">Стильные учебные классы</h4>
-                                <div class="d-flex mb-2">
-                                    <div class="icon"></div>
-                                    <div class="w-100">Просторные учебные классы с современным ремонтом</div>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <div class="icon"></div>
-                                    <div class="w-100">Яркая безопасная и комфортная мебель</div>
-                                </div>
+                                <h4 class="mb-3"><?= get_post_meta( $post->ID, 'tale_' . $fi . '_name', true ); ?></h4>
+                                <?= get_post_meta( $post->ID, 'tale_' . $fi . '_text', true ); ?>
                             </div>
                         </div>
+                        <?php } else { ?>
                         <div class="tale_item tale_img">
-                            <img src="<?= get_template_directory_uri() . '/img/tale_1.png' ?>" alt="" class="w-100">
+                            <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'tale_' . $fi . '_img', true ), 'full' ); ?>" alt="" class="w-100">
                         </div>
+                        <?php } ?>
+                        <?php } ?>
                     </div>
+                    <?php } ?>
                 </div>
             </section>
+            <?php } ?>
 
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">

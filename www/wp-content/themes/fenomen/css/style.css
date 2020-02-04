@@ -989,6 +989,7 @@ footer .contacts_link:hover {
 .tale_wrap {
     overflow: hidden;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .tale_item {
