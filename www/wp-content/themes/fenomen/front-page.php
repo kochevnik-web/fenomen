@@ -50,7 +50,7 @@ get_header();
 		<?php } ?>
 
 		<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
-		<section id="main_form" class="form">
+		<section id="main_form" class="form white_bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">

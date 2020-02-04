@@ -111,6 +111,28 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
+                <section id="main_form" class="form gray_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-center">
+                                    <?php echo get_post_meta( $post->ID, 'form_titile', true ); ?>
+                                </h3>
+                                <div class="sub_title text-center col-md-10 offset-md-1 mb-4 mb-md-5">
+                                    <?php echo get_post_meta( $post->ID, 'form_subtitle', true ); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            if ( (bool)get_post_meta( $post->ID, 'form_shortcode', true ) ) {
+                                echo do_shortcode( get_post_meta( $post->ID, 'form_shortcode', true ) );
+                            }
+                        ?>
+                    </div>
+                </section>
+                <?php } ?>
+
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
                     <div class="row">
