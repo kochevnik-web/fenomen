@@ -153,6 +153,30 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <section id="tale" class="blue_bg">
+                <div class="container">
+                    <h3 class="text-center color-wite mb-5">Занятия в школе ФЕНОМЕН это:</h3>
+                    <div class="tale_wrap d-flex">
+                        <div class="tale_item tale_text">
+                            <div class="front_more_item_content">
+                                <h4 class="mb-3">Стильные учебные классы</h4>
+                                <div class="d-flex mb-2">
+                                    <div class="icon"></div>
+                                    <div class="w-100">Просторные учебные классы с современным ремонтом</div>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div class="icon"></div>
+                                    <div class="w-100">Яркая безопасная и комфортная мебель</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tale_item tale_img">
+                            <img src="<?= get_template_directory_uri() . '/img/tale_1.png' ?>" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
                     <div class="row">

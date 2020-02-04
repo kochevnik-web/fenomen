@@ -98,6 +98,10 @@ a,
     background-color: #EFEFEF;
 }
 
+.blue_bg {
+    background-color: #27A4FF;
+}
+
 .white_bg {
     background-color: #FFFFFF;
 }
@@ -976,4 +980,26 @@ footer .contacts_link:hover {
 
 .thoughts-item img {
     border-radius: 8px;
+}
+
+#tale {
+    padding: 70px 0;
+}
+
+.tale_wrap {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tale_item {
+    width: 33.33%;
+    background: #FFFFFF;
+}
+
+.tale_text {
+    padding: 35px;
+}
+
+.tale_text .front_more_item_content {
+    padding: 0;
 }
