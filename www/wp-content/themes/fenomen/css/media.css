@@ -315,4 +315,8 @@
     .front_more_item_content blockquote {
         font-weight: 600;
     }
+
+    #thoughts {
+        background: none;
+    }
 }

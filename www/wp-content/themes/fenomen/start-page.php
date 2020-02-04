@@ -131,7 +131,36 @@ Template Post Type: page
                         ?>
                     </div>
                 </section>
-                <?php } ?>
+            <?php } ?>
+
+            <section id="thoughts" class="white_bg">
+                <div class="container">
+                    <h3 class="text-center mb-5">Как Феномен помогает подготовиться к школе</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                            <div class="thoughts-item">
+                                <img src="<?= get_template_directory_uri() . '/img/thoughts_1.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
+                                <h5 class="font-weight-bold mb-2">Решение задач, учим детей самостоятельности</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                            <div class="thoughts-item">
+                                <img src="<?= get_template_directory_uri() . '/img/thoughts_2.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
+                                <h5 class="font-weight-bold mb-2">Учим детей быстро принимать решения</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                            <div class="thoughts-item">
+                                <img src="<?= get_template_directory_uri() . '/img/thoughts_3.png'; ?>" alt="Решение задач, учим детей самостоятельности" class="w-100 mb-3">
+                                <h5 class="font-weight-bold mb-2">Знакомится и общаться со своими сверстниками</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">

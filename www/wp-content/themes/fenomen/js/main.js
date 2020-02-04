@@ -34,6 +34,18 @@ jQuery(document).ready(function($){
 
     });
 
+    function thoughtsBg () {
+        let w = $('#thoughts .container').width();
+        let l = $('#thoughts .container').offset().left;
+        $('#thoughts').css({'background-position-x': (l - 285 ) + 'px, ' + (w + l - 130) + 'px', 'background-position-y': '-26px, -26px'});
+    }
+
+    $(window).resize(function(){
+        thoughtsBg ();
+    });
+
+    thoughtsBg ();
+
     //Маска под телефонный номер для поля Input
     $('input[name="fenomen-phone"]').mask("+7 (999) 999-99-99");
 });

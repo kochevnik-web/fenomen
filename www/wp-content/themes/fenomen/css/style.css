@@ -961,3 +961,19 @@ footer .contacts_link:hover {
     right: -89px;
     top: 423px;
 }
+
+#thoughts {
+    padding: 70px 0;
+    background: url(../img/thoughts_bg_1.png)no-repeat 100px -26px, url(../img/thoughts_bg_2.png)no-repeat 1353px -26px;
+}
+
+.thoughts-item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.thoughts-item img {
+    border-radius: 8px;
+}
