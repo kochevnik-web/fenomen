@@ -185,61 +185,31 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <?php if ( (bool)get_post_meta( $post->ID, 'carousel_title', true ) ) { ?>
             <section id="slider" class="blue_bg">
                 <div class="container">
-                    <h3 class="text-center color-white mb-5">Сильные преподаватели</h3>
+                    <h3 class="text-center color-white mb-5"><?= get_post_meta( $post->ID, 'carousel_title', true ); ?></h3>
+                    <?php if (  get_post_meta( $post->ID, 'carousel', true ) > 0 ) { ?>
                     <div class="owl-carousel owl-carousel-teacher">
+                        <?php for ( $car = 0; $car < get_post_meta( $post->ID, 'carousel', true ); $car++ ) { ?>
                         <div class="item text-center">
-                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
-                            <h4>Джумагалиев Ян</h4>
-                            <div class="subtitle color-blue">Мастер Спорта России</div>
+                            <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'carousel_' . $car . '_img', true ), 'medium' ); ?>" alt="<?= get_post_meta( $post->ID, 'carousel_' . $car . '_name', true ); ?>">
+                            <h4><?= get_post_meta( $post->ID, 'carousel_' . $car . '_name', true ); ?></h4>
+                            <div class="subtitle color-blue"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_titul', true ); ?></div>
                             <div class="my-3">
-                                <span class="text">Опыт преподавания: 3 года</span>
+                                <span class="text"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_opit', true ); ?></span>
                             </div>
                             <div class="mb-4">
-                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
+                                <span class="desc"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_count', true ); ?></span>
                             </div>
                             <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
                         </div><!-- #item -->
-                        <div class="item text-center">
-                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
-                            <h4>Джумагалиев Ян</h4>
-                            <div class="subtitle color-blue">Мастер Спорта России</div>
-                            <div class="my-3">
-                                <span class="text">Опыт преподавания: 3 года</span>
-                            </div>
-                            <div class="mb-4">
-                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
-                        </div><!-- #item -->
-                        <div class="item text-center">
-                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
-                            <h4>Джумагалиев Ян</h4>
-                            <div class="subtitle color-blue">Мастер Спорта России</div>
-                            <div class="my-3">
-                                <span class="text">Опыт преподавания: 3 года</span>
-                            </div>
-                            <div class="mb-4">
-                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
-                        </div><!-- #item -->
-                        <div class="item text-center">
-                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
-                            <h4>Джумагалиев Ян</h4>
-                            <div class="subtitle color-blue">Мастер Спорта России</div>
-                            <div class="my-3">
-                                <span class="text">Опыт преподавания: 3 года</span>
-                            </div>
-                            <div class="mb-4">
-                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
-                        </div><!-- #item -->
+                        <?php } ?>
                     </div>
                 </div>
+                <?php } ?>
             </section>
+            <?php } ?>
 
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
