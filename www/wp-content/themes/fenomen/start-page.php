@@ -154,14 +154,14 @@ Template Post Type: page
             <?php } ?>
 
             <?php if ( (bool)get_post_meta( $post->ID, 'tale_title', true ) ) { ?>
-            <section id="tale" class="blue_bg">
+            <section id="tale" class="blue_bg position-relative">
                 <div class="container">
                     <h3 class="text-center color-white mb-5"><?= get_post_meta( $post->ID, 'tale_title', true ); ?></h3>
                     <?php
                         $tale = get_post_meta( $post->ID, 'tale', true );
                         if ( $tale > 0 ) {
                     ?>
-                    <div class="tale_wrap d-flex">
+                    <div class="tale_wrap d-flex mb-5">
                         <?php for ( $fi = 0; $fi < $tale; $fi++ ) { ?>
                         <?php if ( get_post_meta( $post->ID, 'tale_' . $fi . '_type', true ) == 'text' ) { ?>
                         <div class="tale_item tale_text">
@@ -178,6 +178,9 @@ Template Post Type: page
                         <?php } ?>
                     </div>
                     <?php } ?>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary btn-yellow">Записаться на бесплатное занятие</a>
+                    </div>
                 </div>
             </section>
             <?php } ?>

@@ -303,6 +303,10 @@
         top: 0;
         left: 0;
     }
+
+    #tale:before {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {

@@ -986,10 +986,23 @@ footer .contacts_link:hover {
     padding: 70px 0;
 }
 
+#tale:before {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    bottom: -280px;
+    right: 0;
+    background: url(../img/tale_bg.png)no-repeat right bottom;
+    z-index: 2;
+}
+
 .tale_wrap {
     overflow: hidden;
     border-radius: 10px;
     flex-wrap: wrap;
+    z-index: 3;
+    position: relative;
 }
 
 .tale_item {
@@ -1003,4 +1016,8 @@ footer .contacts_link:hover {
 
 .tale_text .front_more_item_content {
     padding: 0;
+}
+
+#tale .btn-primary.btn-yellow:hover {
+    color: #FFE600;
 }
