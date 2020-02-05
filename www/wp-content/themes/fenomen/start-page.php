@@ -185,6 +185,62 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <section id="slider" class="blue_bg">
+                <div class="container">
+                    <h3 class="text-center color-white mb-5">Сильные преподаватели</h3>
+                    <div class="owl-carousel owl-carousel-teacher">
+                        <div class="item text-center">
+                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
+                            <h4>Джумагалиев Ян</h4>
+                            <div class="subtitle color-blue">Мастер Спорта России</div>
+                            <div class="my-3">
+                                <span class="text">Опыт преподавания: 3 года</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
+                        </div><!-- #item -->
+                        <div class="item text-center">
+                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
+                            <h4>Джумагалиев Ян</h4>
+                            <div class="subtitle color-blue">Мастер Спорта России</div>
+                            <div class="my-3">
+                                <span class="text">Опыт преподавания: 3 года</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
+                        </div><!-- #item -->
+                        <div class="item text-center">
+                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
+                            <h4>Джумагалиев Ян</h4>
+                            <div class="subtitle color-blue">Мастер Спорта России</div>
+                            <div class="my-3">
+                                <span class="text">Опыт преподавания: 3 года</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
+                        </div><!-- #item -->
+                        <div class="item text-center">
+                            <img src="<?= get_template_directory_uri() . '/img/owl_1.png' ?>" alt="">
+                            <h4>Джумагалиев Ян</h4>
+                            <div class="subtitle color-blue">Мастер Спорта России</div>
+                            <div class="my-3">
+                                <span class="text">Опыт преподавания: 3 года</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="desc">Ученики получившие<br>разряд – более 30</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
+                        </div><!-- #item -->
+                    </div>
+                </div>
+            </section>
+
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
                     <div class="row">

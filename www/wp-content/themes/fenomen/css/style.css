@@ -192,7 +192,7 @@ header {
 }
 
 header.slideup {
-    background: #3aa4fb;
+    background: #27A4FF;
     box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
     z-index: 10;
 }
@@ -1020,4 +1020,102 @@ footer .contacts_link:hover {
 
 #tale .btn-primary.btn-yellow:hover {
     color: #FFE600;
+}
+
+#slider {
+    padding: 70px 0;
+}
+
+.owl-carousel-teacher .item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.17);
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.owl-carousel-teacher .item img {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    margin: 0 auto 15px;
+}
+
+.owl-carousel-teacher .item .text {
+    background: #F4F4F4;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 5px 8px;
+}
+
+.owl-carousel-teacher .item .desc {
+    font-size: 16px;
+}
+
+.owl-carousel-teacher .item .btn-primary {
+    height: 45px;
+    border-radius: 45px;
+    border: 2px solid #FFE600;
+    font-weight: 600;
+    background: transparent;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Cera Pro Medium';
+    padding: 10px 20px;
+}
+
+.owl-carousel-teacher .item .btn-primary:hover {
+    background: #FFE600;
+}
+
+.owl-carousel-teacher .owl-nav button.owl-prev,
+.owl-carousel-teacher .owl-nav button.owl-next {
+    position: absolute;
+    width: 75px;
+    top: 35%;
+    height: 75px;
+    border-radius: 75px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.17);
+}
+
+.owl-carousel-teacher .owl-prev {
+    left: -35px;
+}
+
+.owl-carousel-teacher .owl-next {
+    right: -35px;
+}
+
+.owl-carousel-teacher .owl-nav button.owl-prev:hover,
+.owl-carousel-teacher .owl-nav button.owl-next:hover {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.30);
+}
+
+.owl-carousel-teacher .owl-prev:hover i,
+.owl-carousel-teacher .owl-next:hover i {
+    color: #27A4FF;
+}
+
+.owl-carousel-teacher button.owl-dot {
+    background: #FFE600;
+    width: 8px;
+    height: 8px;
+    opacity: .6;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.owl-carousel-teacher button.owl-dot:last-child {
+    margin-right: 0;
+}
+
+.owl-carousel-teacher button.owl-dot.active {
+    opacity: 1;
+    box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.6);
+}
+
+.owl-carousel-teacher .owl-dots {
+    display: flex;
+    margin: 20px 0 0 0;
+    justify-content: center;
 }

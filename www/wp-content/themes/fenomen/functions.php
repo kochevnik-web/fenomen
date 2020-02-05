@@ -136,11 +136,13 @@ function fenomen_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/css/hamburgers.min.css' );
 	wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'owl', get_template_directory_uri() . '/css/owl.carousel.min.css' );
 	wp_enqueue_style( 'fenomen', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'fenomen-media', get_template_directory_uri() . '/css/media.css' );
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'mikeinput', get_template_directory_uri() . '/js/mikeinput.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'fenomen', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
