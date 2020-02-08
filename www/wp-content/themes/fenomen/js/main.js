@@ -59,6 +59,7 @@ jQuery(document).ready(function ($) {
     }
 
     function thoughtsBg() {
+        if (!$("section").is("#thoughts")) return;
         let w = $('#thoughts .container').width();
         let l = $('#thoughts .container').offset().left;
         $('#thoughts').css({
@@ -68,6 +69,7 @@ jQuery(document).ready(function ($) {
     }
 
     function programmBg() {
+        if (!$("section").is("#programm")) return;
         let s = ($(document).width() >= 768 && $(document).width()) <= 992 ? 200 : 0;
         let l = $('#programm .container').offset().left;
         $('#programm').css({
