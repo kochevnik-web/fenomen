@@ -1119,3 +1119,29 @@ footer .contacts_link:hover {
     margin: 20px 0 0 0;
     justify-content: center;
 }
+
+#programm {
+    padding: 70px 0;
+    background: url(../img/programm_bg.png)no-repeat;
+}
+
+.programm_item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 35px;
+}
+
+#programm .btn-yellow {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.programm_item .icon {
+    margin: 0 20px 0 0;
+}
+
+#programm .sub_title {
+    font-size: 14px;
+    opacity: 0.5;
+}

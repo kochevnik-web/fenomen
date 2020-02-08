@@ -185,6 +185,44 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <section id="programm" class="white_bg">
+                <div class="container">
+                    <h3 class="text-center mb-5">Программа Феномен Progress</h3>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4 col-lg-6 offset-lg-6">
+                            <div class="programm_item mb-5">
+                                <h4 class="color-blue mb-4">Что входит в программу:</h4>
+                                <div class="programm_item_row d-flex mb-3">
+                                    <div class="icon">
+                                        <img src="<?= get_template_directory_uri() . '/img/p_icon-1.svg' ?>" alt="">
+                                    </div>
+                                    <div class="text">4 или 8 занятий с профессиональным преподавателем по программе Феномен Progress </div>
+                                </div>
+                                <div class="programm_item_row d-flex">
+                                    <div class="icon">
+                                        <img src="<?= get_template_directory_uri() . '/img/p_icon_2.svg' ?>" alt="">
+                                    </div>
+                                    <div class="text">Набор рабочих тетрадей, доступ к базе знаний, видео уроки для домашней работы, дневник шахматиста.</div>
+                                </div>
+                            </div>
+                            <div class="programm_item mb-5">
+                                <h4 class="color-blue mb-4">Длительность занятий</h4>
+                                <p><strong>Младшая группа 5 – 7 лет</strong> - 60 минут 1 раз в неделю</p>
+                                <p><strong>Младшая группа 5 – 7 лет</strong> - 60 минут 2 раз в неделю</p>
+                                <p><strong>Средняя группа 7 – 14 лет</strong> - 60 минут 1 раз в неделю</p>
+                                <p><strong>Средняя группа 7 – 14 лет</strong> - 60 минут 2 раз в неделю</p>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a href="#" class="btn btn-primary btn-yellow">Узнать стоимость и расписание занятий</a>
+                            </div>
+                            <div class="sub_title text-center">
+                                Заполнив форму вы перейдете в закрытый раздел<br>с расписанием и стоимостью занятий
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <?php if ( (bool)get_post_meta( $post->ID, 'carousel_title', true ) ) { ?>
             <section id="slider" class="blue_bg">
                 <div class="container">

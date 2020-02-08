@@ -42,6 +42,22 @@ jQuery(document).ready(function ($) {
 
     });
 
+    $(window).on('load', function () {
+        galeryButton();
+    });
+
+    function galeryButton() {
+        if (($(document).width() <= 992)) {
+            $('.owl-carousel-teacher .owl-next').css({
+                'right': '-20px'
+            });
+        } else {
+            $('.owl-carousel-teacher .owl-next').css({
+                'right': '-35px'
+            });
+        }
+    }
+
     function thoughtsBg() {
         let w = $('#thoughts .container').width();
         let l = $('#thoughts .container').offset().left;
@@ -51,11 +67,23 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    function programmBg() {
+        let s = ($(document).width() >= 768 && $(document).width()) <= 992 ? 200 : 0;
+        let l = $('#programm .container').offset().left;
+        $('#programm').css({
+            'background-position-x': (l - 240 - s) + 'px',
+            'background-position-y': 'bottom'
+        });
+    }
+
     $(window).resize(function () {
         thoughtsBg();
+        programmBg();
+        galeryButton();
     });
 
     thoughtsBg();
+    programmBg();
 
     //Маска под телефонный номер для поля Input
     $('input[name="fenomen-phone"]').mask("+7 (999) 999-99-99");
