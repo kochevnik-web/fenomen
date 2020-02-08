@@ -211,6 +211,134 @@ Template Post Type: page
             </section>
             <?php } ?>
 
+            <?php if ( (bool)get_post_meta( $post->ID, 'reviews_title', true ) ) { ?>
+            <section id="reviews" class="gray_bg">
+                <div class="container">
+                    <h3 class="mb-5 text-center"><?= get_post_meta( $post->ID, 'reviews_title', true ); ?></h3>
+                    <div class="row mb-4">
+                        <?php
+                            $reviews_arr_1 = array();
+                            $reviews_arr_2 = array();
+                            $reviews_count = get_post_meta( $post->ID, 'fenomen_reviews', true );
+
+                            for ( $r = 0; $r < $reviews_count; $r++ ) {
+                                $review_name  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_name', true );
+                                $review_type  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_type', true );
+                                $review_text  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_text', true );
+                                $review_link  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_link', true );
+                                $review_img   = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_img', true );
+                                $review_child = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_child', true );
+                                $review_hide  = get_post_meta( $post->ID, 'fenomen_reviews_' . $r . '_hide', true );
+
+                                if ( $r%2 ) {
+                                    $reviews_arr_2[$r] = array(
+                                        'name'  => $review_name,
+                                        'type'  => $review_type,
+                                        'text'  => $review_text,
+                                        'link'  => $review_link,
+                                        'img'   => $review_img,
+                                        'child' => $review_child,
+                                        'hide'  => $review_hide,
+                                    );
+                                } else {
+                                    $reviews_arr_1[$r] = array(
+                                        'name'  => $review_name,
+                                        'type'  => $review_type,
+                                        'text'  => $review_text,
+                                        'link'  => $review_link,
+                                        'img'   => $review_img,
+                                        'child' => $review_child,
+                                        'hide'  => $review_hide,
+                                    );
+                                }
+                            }
+                        ?>
+
+                        <?php if ( count( $reviews_arr_1 ) > 0 ) { ?>
+                            <div class="col-md-6">
+                                <?php foreach ( $reviews_arr_1 as $rew_item ) { ?>
+                                    <?php if ( (bool) $rew_item['name'] ) { ?>
+                                        <?php if ( $rew_item['type'] == 'text' ) { ?>
+                                            <div class="reviews_item reviews_item_text<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+                                                <div class="reviews_item_wrap">
+                                                    <div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+                                                        <img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
+                                                    </div>
+                                                    <div class="reviews_item_text_content">
+                                                        <div class="title">
+                                                        <?= $rew_item['name']; ?>
+                                                        </div>
+                                                        <div class="subtitle mb-2">
+                                                        <?= $rew_item['child']; ?>
+                                                        </div>
+                                                        <p  class="m-0">
+                                                        <?= $rew_item['text']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><!-- #review -->
+                                        <?php } else { ?>
+                                            <div class="reviews_item reviews_item_video<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+                                                <a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
+                                                    <img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
+                                                    <div class="play position-absolute text-center">
+                                                        <img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="Отзыв о Fenomen">
+                                                    </div>
+                                                    <div class="title position-absolute text-right">
+                                                        <div class="title_1"><?= $rew_item['name']; ?></div>
+                                                        <div class="title_2"><?= $rew_item['child']; ?></div>
+                                                    </div>
+                                                </a>
+                                            </div><!-- #review -->
+                                <?php } } } ?>
+                            </div>
+                        <?php } ?>
+                        <?php if ( count( $reviews_arr_2 ) > 0 ) { ?>
+                            <div class="col-md-6" id="rev_column">
+                                <?php foreach ( $reviews_arr_2 as $rew_item ) { ?>
+                                    <?php if ( (bool) $rew_item['name'] ) { ?>
+                                        <?php if ( $rew_item['type'] == 'text' ) { ?>
+                                            <div class="reviews_item reviews_item_text<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+                                                <div class="reviews_item_wrap">
+                                                    <div class="reviews_item_text_img text-center text-lg-left mb-3 mb-lg-0">
+                                                        <img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'thumbnail' ); ?>" alt="Отзыв о Fenomen">
+                                                    </div>
+                                                    <div class="reviews_item_text_content">
+                                                        <div class="title">
+                                                        <?= $rew_item['name']; ?>
+                                                        </div>
+                                                        <div class="subtitle mb-2">
+                                                        <?= $rew_item['child']; ?>
+                                                        </div>
+                                                        <p  class="m-0">
+                                                        <?= $rew_item['text']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><!-- #review -->
+                                        <?php } else { ?>
+                                            <div class="reviews_item reviews_item_video<?php echo (bool)$rew_item['hide'] ? ' review_hide' : ''; ?>">
+                                                <a href="<?= $rew_item['link']; ?>" data-fancybox class="d-block color-white position-relative overflow-hidden">
+                                                    <img src="<?= wp_get_attachment_image_url( $rew_item['img'], 'full' ); ?>" alt="" class="w-100">
+                                                    <div class="play position-absolute text-center">
+                                                        <img src="<?= get_template_directory_uri() . '/img/front_video_play.svg'; ?>" alt="Отзыв о Fenomen">
+                                                    </div>
+                                                    <div class="title position-absolute text-right">
+                                                        <div class="title_1"><?= $rew_item['name']; ?></div>
+                                                        <div class="title_2"><?= $rew_item['child']; ?></div>
+                                                    </div>
+                                                </a>
+                                            </div><!-- #review -->
+                                <?php } } } ?>
+                            </div>
+                        <?php } ?>
+
+                    </div>
+                    <div class="text-center"><button class="btn btn-primary btn-blue hover_amime" id="reviews_btn">Загрузить еще отзывы</button></div>
+                </div>
+            </section><!-- #reviews -->
+            <?php } ?>
+
             <section id="contacts_section" class="color-white position-relative">
                 <div class="container">
                     <div class="row">
