@@ -1195,3 +1195,9 @@ footer .contacts_link:hover {
 .process_text {
     padding: 35px;
 }
+
+#result {
+    padding: 70px 0;
+    background-image: url(../img/result_bg.png);
+    background-repeat: no-repeat;
+}

@@ -92,8 +92,82 @@ Template Post Type: page
 						</div>
 					</div>
 				</div>
-			</dection><!-- #process -->
+			</section><!-- #process -->
 			<?php } ?>
+	
+			<section id="result" class="blue_bg color-white">
+				<div class="container">
+					<h3 class="text-center mb-5">
+						Результат занятий по программе Феномен Progress
+					</h3>
+					<div class="row">
+						<div class="col-md-8 offset-md-4 col-lg-6 offset-lg-6">
+							<div class="result_text">
+								<h4 class="mb-3 color">В шахматах:</h4>
+								<ul class="list-unstyled color-white mb-5 corona-list">
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Усиленная подготовка к соревнованиям</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Углубленное изучение шахматных дебютов</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Подготовка будущего чемпиона</div>
+									</li>
+								</ul>
+								<h4 class="mb-3 color">Интеллектуальные способности:</h4>
+								<ul class="list-unstyled color-white mb-5 corona-list">
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Аналитическое и неординарное мышление</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Учимся мыслить схемами и планами</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Развитие воображения</div>
+									</li>
+								</ul>
+								<h4 class="mb-3 color">В школе:</h4>
+								<ul class="list-unstyled color-white mb-5 corona-list">
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Хорошая память</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Умение думать и рассуждать</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Подготовка для будущего чемпиона</div>
+									</li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Усидчивость</div>
+									</li>
+								</ul>
+								<h4 class="mb-3 color">Жизнь в социуме:</h4>
+								<ul class="list-unstyled color-white mb-5 corona-list">
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Учимся побеждать и принимать поражения, находить выходы из самых тяжелых ситуаций</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Учимся сравнивать и выбирать</div></li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Соревновательный дух</div>
+									</li>
+									<li class="d-flex">
+										<div class="icon"></div>
+										<div class="w-100">Вырабатываем навык руководителя</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<section id="contacts_section" class="color-white position-relative">
                 <div class="container">
@@ -163,8 +237,8 @@ Template Post Type: page
                         myMap.geoObjects.add(myPlacemark);
                     });
                 </script>
-            </section><!-- #map -->
-
+			</section><!-- #map -->
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
