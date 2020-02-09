@@ -47,6 +47,54 @@ Template Post Type: page
 			</section><!-- #intro -->
 			<?php } ?>
 
+			<section white_bg" id="process">
+				<div class="container">
+					<h3 class="text-center">
+						Программа состоит<br>из 2-х параллельных процессов
+					</h3>
+					<div class="row pt-4 mb-5 align-items-center">
+						<div class="col-md-6">
+							<div class="process_img position-relative">
+								<img src="<?= get_template_directory_uri() . '/img/process_1.png' ?>" alt="" class="w-100 mb-2 mb-md-0">
+								<div class="number position-absolute d-flex number1">
+									<span class="d-block text-center">01</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="process_text">
+								<div class="d-flex align-items-center mb-3">
+									<div class="icon mr-4"><img src="<?= get_template_directory_uri() . '/img/process_ico_1.png' ?>" alt=""></div>
+									<h4>Обучение в школе Феномен</h4>
+								</div>
+								<p>Возможность быстро (600–1000 слов в минуту) осваивать незнакомый текст.</p>
+								<p>В результате занятий ребенок самостоятельно учится и выполняет домашнее задание без помощи родителей и репетиторов.</p>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center flex-row-reverse">
+						<div class="col-md-6">
+							<div class="process_img position-relative">
+								<img src="<?= get_template_directory_uri() . '/img/process_2.png' ?>" alt="" class="w-100 mb-2 mb-md-0">
+								<div class="number position-absolute d-flex number2">
+									<span class="d-block text-center">02</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="process_text">
+								<div class="d-flex align-items-center mb-3">
+									<div class="icon mr-4"><img src="<?= get_template_directory_uri() . '/img/process_ico_2.png' ?>" alt=""></div>
+									<h4>Онлайн обучение от лучших шахматистов России</h4>
+								</div>
+								<p>Возможность быстро (600–1000 слов в минуту) осваивать незнакомый текст.</p>
+								<p>В результате занятий ребенок самостоятельно учится и выполняет домашнее задание без помощи родителей и репетиторов.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</dection><!-- #process -- >
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

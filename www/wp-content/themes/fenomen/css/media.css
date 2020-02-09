@@ -211,6 +211,10 @@
         padding: 35px;
     }
 
+    .process_text {
+        padding: 15px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -321,6 +325,22 @@
     .owl-carousel-teacher .owl-nav button.owl-prev,
     .owl-carousel-teacher .owl-nav button.owl-next {
         display: none;
+    }
+
+    .process_img .number1,
+    .process_img .number2 {
+        top: -70px;
+        right: 0;
+        left: 50%;
+        margin-left: -45px;
+    }
+
+    .process_text {
+        padding: 15px 0;
+    }
+
+    #process h3 {
+        margin-bottom: 70px;
     }
 }
 
