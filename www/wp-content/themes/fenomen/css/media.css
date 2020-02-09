@@ -184,7 +184,8 @@
     }
 
     .page-template-start-page .intro_bg,
-    .page-template-progress-page .intro_bg {
+    .page-template-progress-page .intro_bg,
+    .page-template-individual-page .intro_bg {
         background: none;
     }
 
@@ -292,7 +293,8 @@
     }
 
     .page-template-start-page .intro_bg,
-    .page-template-progress-page .intro_bg {
+    .page-template-progress-page .intro_bg,
+    .page-template-individual-page .intro_bg {
         padding: 0 15px;
     }
 

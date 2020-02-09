@@ -109,7 +109,7 @@ Template Post Type: page
 						</div>
 					</div>
 				</div>
-			</section>
+			</section><!-- #result -->
 			<?php } ?>
 			
 			<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
@@ -151,7 +151,7 @@ Template Post Type: page
                         <?php }} ?>
                     </div>
                 </div>
-            </section>
+            </section><!-- #thoughts -->
 			<?php } ?>
 			
 			<?php if ( (bool)get_post_meta( $post->ID, 'tale_title', true ) ) { ?>
@@ -183,7 +183,7 @@ Template Post Type: page
                         <a href="#" class="btn btn-primary btn-yellow">Записаться на бесплатное занятие</a>
                     </div>
                 </div>
-            </section>
+            </section><!-- #tale -->
 			<?php } ?>
 			
 			<?php if ( (bool)get_post_meta( $post->ID, 'prog_title', true ) ) { ?>
@@ -207,7 +207,7 @@ Template Post Type: page
                         </div>
                     </div>
                 </div>
-            </section>
+            </section><!-- #programm -->
 			<?php } ?>
 			
 			<?php if ( (bool)get_post_meta( $post->ID, 'carousel_title', true ) ) { ?>
@@ -233,7 +233,7 @@ Template Post Type: page
                     </div>
                 </div>
                 <?php } ?>
-            </section>
+            </section><!-- #slider -->
 			<?php } ?>
 			
 			<?php if ( (bool)get_post_meta( $post->ID, 'reviews_title', true ) ) { ?>

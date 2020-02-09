@@ -1198,3 +1198,7 @@ footer .contacts_link:hover {
     background-image: url(../img/result_bg.png);
     background-repeat: no-repeat;
 }
+
+.page-template-individual-page .intro_bg {
+    background: url(../img/individual_bg.png)no-repeat top right;
+}
