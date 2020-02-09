@@ -95,79 +95,64 @@ Template Post Type: page
 			</section><!-- #process -->
 			<?php } ?>
 	
+			<?php if ( (bool)get_post_meta( $post->ID, 'result_title', true ) ) { ?>
 			<section id="result" class="blue_bg color-white">
 				<div class="container">
 					<h3 class="text-center mb-5">
-						Результат занятий по программе Феномен Progress
+						<?= get_post_meta( $post->ID, 'result_title', true ); ?>
 					</h3>
 					<div class="row">
 						<div class="col-md-8 offset-md-4 col-lg-6 offset-lg-6">
 							<div class="result_text">
-								<h4 class="mb-3 color">В шахматах:</h4>
-								<ul class="list-unstyled color-white mb-5 corona-list">
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Усиленная подготовка к соревнованиям</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Углубленное изучение шахматных дебютов</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Подготовка будущего чемпиона</div>
-									</li>
-								</ul>
-								<h4 class="mb-3 color">Интеллектуальные способности:</h4>
-								<ul class="list-unstyled color-white mb-5 corona-list">
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Аналитическое и неординарное мышление</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Учимся мыслить схемами и планами</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Развитие воображения</div>
-									</li>
-								</ul>
-								<h4 class="mb-3 color">В школе:</h4>
-								<ul class="list-unstyled color-white mb-5 corona-list">
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Хорошая память</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Умение думать и рассуждать</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Подготовка для будущего чемпиона</div>
-									</li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Усидчивость</div>
-									</li>
-								</ul>
-								<h4 class="mb-3 color">Жизнь в социуме:</h4>
-								<ul class="list-unstyled color-white mb-5 corona-list">
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Учимся побеждать и принимать поражения, находить выходы из самых тяжелых ситуаций</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Учимся сравнивать и выбирать</div></li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Соревновательный дух</div>
-									</li>
-									<li class="d-flex">
-										<div class="icon"></div>
-										<div class="w-100">Вырабатываем навык руководителя</div>
-									</li>
-								</ul>
+								<?= get_post_meta( $post->ID, 'result_text', true ); ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<?php } ?>
+			
+			<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
+                <section id="main_form" class="form white_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-center">
+                                    <?php echo get_post_meta( $post->ID, 'form_titile', true ); ?>
+                                </h3>
+                                <div class="sub_title text-center col-md-10 offset-md-1 mb-4 mb-md-5">
+                                    <?php echo get_post_meta( $post->ID, 'form_subtitle', true ); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            if ( (bool)get_post_meta( $post->ID, 'form_shortcode', true ) ) {
+                                echo do_shortcode( get_post_meta( $post->ID, 'form_shortcode', true ) );
+                            }
+                        ?>
+                    </div>
+                </section>
+			<?php } ?>
+			
+			<?php if ( (bool)get_post_meta( $post->ID, 'fenomen_help_title', true ) ) { ?>
+            <section id="thoughts" class="blue_bg">
+                <div class="container">
+                    <h3 class="text-center mb-5 color-white"><?= get_post_meta( $post->ID, 'fenomen_help_title', true ); ?></h3>
+                    <div class="row justify-content-center">
+                        <?php if ( get_post_meta( $post->ID, 'fenomen_help', true ) > 0 ) { ?>
+                            <?php for ( $f = 0; $f < get_post_meta( $post->ID, 'fenomen_help', true ); $f++) { ?>
+                                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                                    <div class="thoughts-item">
+                                        <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'fenomen_help_' . $f . '_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_name', true ); ?>" class="w-100 mb-3">
+                                        <h5 class="font-weight-bold mb-2"><?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_name', true ); ?></h5>
+                                        <p><?= get_post_meta( $post->ID, 'fenomen_help_' . $f . '_text', true ); ?></p>
+                                    </div>
+                                </div>
+                        <?php }} ?>
+                    </div>
+                </div>
+            </section>
+            <?php } ?>
 
 			<section id="contacts_section" class="color-white position-relative">
                 <div class="container">

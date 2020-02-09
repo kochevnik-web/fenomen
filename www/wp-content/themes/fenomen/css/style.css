@@ -968,7 +968,8 @@ footer .contacts_link:hover {
 
 #thoughts {
     padding: 70px 0;
-    background: url(../img/thoughts_bg_1.png)no-repeat 100px -26px, url(../img/thoughts_bg_2.png)no-repeat 1353px -26px;
+    background-image: url(../img/thoughts_bg_1.png), url(../img/thoughts_bg_2.png);
+    background-repeat: no-repeat, no-repeat;
 }
 
 .thoughts-item {
