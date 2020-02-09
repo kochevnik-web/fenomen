@@ -183,7 +183,8 @@
         line-height: 50px;
     }
 
-    .page-template-start-page .intro_bg {
+    .page-template-start-page .intro_bg,
+    .page-template-progress-page .intro_bg {
         background: none;
     }
 
@@ -286,7 +287,8 @@
         font-size: 40px;
     }
 
-    .page-template-start-page .intro_bg {
+    .page-template-start-page .intro_bg,
+    .page-template-progress-page .intro_bg {
         padding: 0 15px;
     }
 

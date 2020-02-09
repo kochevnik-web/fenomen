@@ -1145,3 +1145,7 @@ footer .contacts_link:hover {
     font-size: 14px;
     opacity: 0.5;
 }
+
+.page-template-progress-page .intro_bg {
+    background: url(../img/progress_bg.png)no-repeat top right;
+}
