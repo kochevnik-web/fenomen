@@ -47,15 +47,16 @@ Template Post Type: page
 			</section><!-- #intro -->
 			<?php } ?>
 
+			<?php if ( (bool)get_post_meta( $post->ID, 'process_title', true ) ) { ?>
 			<section white_bg" id="process">
 				<div class="container">
 					<h3 class="text-center">
-						Программа состоит<br>из 2-х параллельных процессов
+						<?= get_post_meta( $post->ID, 'process_title', true ); ?>
 					</h3>
 					<div class="row pt-4 mb-5 align-items-center">
 						<div class="col-md-6">
 							<div class="process_img position-relative">
-								<img src="<?= get_template_directory_uri() . '/img/process_1.png' ?>" alt="" class="w-100 mb-2 mb-md-0">
+								<img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'process_img_1', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'process_title_1', true ); ?>" class="w-100 mb-2 mb-md-0">
 								<div class="number position-absolute d-flex number1">
 									<span class="d-block text-center">01</span>
 								</div>
@@ -64,18 +65,17 @@ Template Post Type: page
 						<div class="col-md-6">
 							<div class="process_text">
 								<div class="d-flex align-items-center mb-3">
-									<div class="icon mr-4"><img src="<?= get_template_directory_uri() . '/img/process_ico_1.png' ?>" alt=""></div>
-									<h4>Обучение в школе Феномен</h4>
+									<div class="icon mr-4"><img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'process_icon_1', true ), 'full' ); ?>" alt="icon"></div>
+									<h4><?= get_post_meta( $post->ID, 'process_title_1', true ); ?></h4>
 								</div>
-								<p>Возможность быстро (600–1000 слов в минуту) осваивать незнакомый текст.</p>
-								<p>В результате занятий ребенок самостоятельно учится и выполняет домашнее задание без помощи родителей и репетиторов.</p>
+								<?= get_post_meta( $post->ID, 'process_text_1', true ); ?>
 							</div>
 						</div>
 					</div>
 					<div class="row align-items-center flex-row-reverse">
 						<div class="col-md-6">
 							<div class="process_img position-relative">
-								<img src="<?= get_template_directory_uri() . '/img/process_2.png' ?>" alt="" class="w-100 mb-2 mb-md-0">
+								<img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'process_img_2', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'process_title_2', true ); ?>" class="w-100 mb-2 mb-md-0">
 								<div class="number position-absolute d-flex number2">
 									<span class="d-block text-center">02</span>
 								</div>
@@ -84,16 +84,16 @@ Template Post Type: page
 						<div class="col-md-6">
 							<div class="process_text">
 								<div class="d-flex align-items-center mb-3">
-									<div class="icon mr-4"><img src="<?= get_template_directory_uri() . '/img/process_ico_2.png' ?>" alt=""></div>
-									<h4>Онлайн обучение от лучших шахматистов России</h4>
+									<div class="icon mr-4"><img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'process_icon_2', true ), 'full' ); ?>" alt=""></div>
+									<h4><?= get_post_meta( $post->ID, 'process_title_2', true ); ?></h4>
 								</div>
-								<p>Возможность быстро (600–1000 слов в минуту) осваивать незнакомый текст.</p>
-								<p>В результате занятий ребенок самостоятельно учится и выполняет домашнее задание без помощи родителей и репетиторов.</p>
+								<?= get_post_meta( $post->ID, 'process_text_2', true ); ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</dection><!-- #process -- >
+			<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
