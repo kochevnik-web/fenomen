@@ -102,7 +102,31 @@ Template Post Type: page
 				</div>
 			</div>
 		</section><!-- #tale -->
-        <?php } ?>
+		<?php } ?>
+		
+		<?php if ( (bool)get_post_meta( $post->ID, 'prog_title', true ) ) { ?>
+		<section id="programm" class="white_bg">
+			<div class="container">
+				<h3 class="text-center mb-5"><?= get_post_meta( $post->ID, 'prog_title', true ); ?></h3>
+				<div class="row">
+					<div class="col-md-8 offset-md-4 col-lg-6 offset-lg-6">
+						<div class="programm_item mb-5">
+							<?= get_post_meta( $post->ID, 'prog_text_1', true ); ?>
+						</div>
+						<div class="programm_item mb-5">
+							<?= get_post_meta( $post->ID, 'prog_text_2', true ); ?>
+						</div>
+						<div class="text-center mb-4">
+							<a href="#" class="btn btn-primary btn-yellow">Узнать стоимость и расписание занятий</a>
+						</div>
+						<div class="sub_title text-center">
+							<?= get_post_meta( $post->ID, 'prog_sub_title', true ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #programm -->
+		<?php } ?>
 
 	</div><!-- #primary -->
 
