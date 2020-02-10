@@ -48,6 +48,30 @@ Template Post Type: page
 			<?php } ?>
 
 		</main><!-- #main -->
+
+		<?php if ( (bool)get_post_meta( $post->ID, 'format_title', true ) ) { ?>
+		<section id="format" class="white_bg">
+			<div class="container">
+				<h3 class="text-center mb-5"><?= get_post_meta( $post->ID, 'format_title', true ); ?></h3>
+				<?php if ( get_post_meta( $post->ID, 'format', true ) > 0 ) { ?>
+				<div class="row justify-content-center">
+					<?php for ( $fo = 0; $fo < get_post_meta( $post->ID, 'format', true ); $fo++ ) { ?>
+					<div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+						<div class="format_item text-center">
+							<img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'format_' . $fo . '_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'format_' . $fo . '_name', true ); ?>" class="w-100 mb-3">
+							<h5 class="mb-3 color-blue font-weight-bold"><?= get_post_meta( $post->ID, 'format_' . $fo . '_name', true ); ?></h5>
+							<div class="title font-weight-bold">Где проходят занятия:</div>
+							<p class="mb-3"><?= get_post_meta( $post->ID, 'format_' . $fo . '_p', true ); ?></p>
+							<a href="" class="btn btn-primary btn-yellow">Записаться на занятие</a>
+						</div>
+					</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
+			</div>
+		</section><!-- #format -->
+		<?php } ?>
+
 	</div><!-- #primary -->
 
 <?php
