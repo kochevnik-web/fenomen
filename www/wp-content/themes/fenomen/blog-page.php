@@ -9,7 +9,6 @@
  * @package fenomen
  */
 
-    $cat   = 'news';
     $paged = get_query_var('paged') ?: 1;
 
     get_header();
@@ -33,7 +32,6 @@
                     $query = new WP_Query(array(
                         'post_type' => 'post',
                         'posts_per_page' => 6,
-                        'category_name' => $cat,
                         'paged' => $paged,
 
                     ) );
