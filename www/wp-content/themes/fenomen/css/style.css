@@ -397,11 +397,9 @@ header.slideup {
   left: 0;
   width: 100%;
   height: 300px;
-  background: linear-gradient(
-    180deg,
-    rgba(39, 164, 255, 0) 34.38%,
-    #27a4ff 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(39, 164, 255, 0) 34.38%,
+      #27a4ff 100%);
 }
 
 .intro_bg {
@@ -737,11 +735,9 @@ ul.corona-list li .icon {
   left: 0;
   height: 100%;
   width: 200px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 .front_instagram_wrap:after {
@@ -751,11 +747,9 @@ ul.corona-list li .icon {
   right: 0;
   height: 100%;
   width: 200px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%);
 }
 
 .front_instagram_wrap .btn-yellow {
@@ -1242,15 +1236,18 @@ footer .contacts_link:hover {
   border-radius: 10px;
 }
 
-.page-template-blog-page header {
+.blog header,
+.category header {
   background: #27a4ff;
 }
 
-.page-template-blog-page h1 {
+.blog h1,
+.category h1 {
   font-size: 34px;
 }
 
-.page-template-blog-page #content {
+.blog #content,
+.category #content {
   padding-top: 180px;
 }
 
@@ -1290,11 +1287,9 @@ footer .contacts_link:hover {
   width: 87%;
   height: 40px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%);
   position: absolute;
   left: 18px;
   bottom: 20px;
@@ -1331,4 +1326,39 @@ footer .contacts_link:hover {
 .post-list-item-title {
   font-size: 18px;
   line-height: 24px;
+}
+
+.page-numbers {
+  font-weight: bold;
+  margin-right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  text-align: center;
+  line-height: 32px;
+}
+
+a.page-numbers {
+  color: #c5c5c5;
+}
+
+a.page-numbers:hover {
+  border: 1px solid #c5c5c5;
+  text-decoration: none;
+}
+
+.page-numbers:hover {
+  border: 1px solid transparent;
+}
+
+.page-numbers:last-child {
+  margin-right: 0;
+}
+
+.next.page-numbers,
+.prev.page-numbers {
+  font-size: 24px;
+  line-height: 30px;
+  border: 1px solid #c5c5c5;
 }

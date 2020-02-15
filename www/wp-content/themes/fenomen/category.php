@@ -1,12 +1,9 @@
 <?php
 /*
- Template Name: Страница Блога
- Template Post Type: page
-
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package fenomen
+ * @package fenomen category page
  */
 
     $paged = get_query_var('paged') ?: 1;
@@ -17,7 +14,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class="container">
-                <h1 class="text-center mb-4 font-weight-bold">Новости и статьи</h1>
+                <h1 class="text-center mb-4 font-weight-bold"><?php the_archive_title(); ?></h1>
                 <?php
                     $categories = get_categories( array(
                         'taxonomy'     => 'category',
@@ -47,10 +44,9 @@
                         get_template_part( 'template-parts/content' );
 
                     endwhile; // End of the loop.
-
                 ?>
-                </div>
-                <?php if ( pagination() ) { ?>
+				</div>
+				<?php if ( pagination() ) { ?>
                     <div class="row mb-5">
                         <div class="pagination justify-content-center w-100">
                             <?php echo pagination(); ?>

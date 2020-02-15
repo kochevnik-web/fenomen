@@ -67,6 +67,11 @@
     .owl-carousel-teacher .item {
         padding: 20px;
     }
+
+    .blog #content,
+    .category #content {
+        padding-top: 220px;
+    }
 }
 
 @media(max-width: 992px) {
@@ -347,6 +352,27 @@
 
     #result {
         background: #27A4FF;
+    }
+
+    .blog #content,
+    .category #content {
+        padding-top: 40px;
+    }
+
+    .blog-category-menu {
+        height: auto;
+        padding: 25px 40px;
+        border-radius: 30px;
+        flex-direction: column;
+    }
+
+    .blog-category-menu li {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .page-numbers {
+        margin-right: 5px;
     }
 }
 
