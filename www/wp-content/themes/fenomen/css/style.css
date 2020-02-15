@@ -1237,16 +1237,19 @@ footer .contacts_link:hover {
 }
 
 .blog header,
+.single-post header,
 .category header {
   background: #27a4ff;
 }
 
 .blog h1,
+.single-post h1,
 .category h1 {
   font-size: 34px;
 }
 
 .blog #content,
+.single-post #content,
 .category #content {
   padding-top: 180px;
 }
