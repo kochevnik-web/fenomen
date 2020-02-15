@@ -69,6 +69,7 @@
     }
 
     .blog #content,
+    .post-type-archive-event #content,
     .single-post #content,
     .category #content {
         padding-top: 220px;
@@ -357,6 +358,7 @@
 
     .blog #content,
     .single-post #content,
+    .post-type-archive-event #content,
     .category #content {
         padding-top: 40px;
     }

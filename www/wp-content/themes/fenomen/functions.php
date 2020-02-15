@@ -226,38 +226,43 @@ function pagination() {
 }
 
 add_filter( 'get_the_archive_title', function( $title ) {
-	return str_replace( 'Рубрика: ', '', $title );
+	return str_replace( array ( 'Рубрика: ', 'Архивы: ' ), '', $title );
 });
 
-// add_action( 'init', 'add_post_type' );
-// function my_custom_init(){
-// 	register_post_type('book', array(
-// 		'labels'             => array(
-// 			'name'               => 'Книги', // Основное название типа записи
-// 			'singular_name'      => 'Книга', // отдельное название записи типа Book
-// 			'add_new'            => 'Добавить новую',
-// 			'add_new_item'       => 'Добавить новую книгу',
-// 			'edit_item'          => 'Редактировать книгу',
-// 			'new_item'           => 'Новая книга',
-// 			'view_item'          => 'Посмотреть книгу',
-// 			'search_items'       => 'Найти книгу',
-// 			'not_found'          =>  'Книг не найдено',
-// 			'not_found_in_trash' => 'В корзине книг не найдено',
-// 			'parent_item_colon'  => '',
-// 			'menu_name'          => 'Книги'
+add_filter( 'excerpt_length', function(){
+	return 10;
+} );
 
-// 		  ),
-// 		'public'             => true,
-// 		'publicly_queryable' => true,
-// 		'show_ui'            => true,
-// 		'show_in_menu'       => true,
-// 		'query_var'          => true,
-// 		'rewrite'            => true,
-// 		'capability_type'    => 'post',
-// 		'has_archive'        => true,
-// 		'hierarchical'       => false,
-// 		'menu_position'      => null,
-// 		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
-// 	) );
-// }
+add_action( 'init', 'add_post_type_event' );
+function add_post_type_event(){
+	register_post_type( 'event', array(
+		'labels'             => array(
+			'name'               => 'Турниры', // Основное название типа записи
+			'singular_name'      => 'Турнир', // отдельное название записи типа Book
+			'add_new'            => 'Добавить турнир',
+			'add_new_item'       => 'Добавить новый турнир',
+			'edit_item'          => 'Редактировать турнир',
+			'new_item'           => 'Новый турнир',
+			'view_item'          => 'Посмотреть турнир',
+			'search_items'       => 'Найти турнир',
+			'not_found'          => 'Турниров не найдено',
+			'not_found_in_trash' => 'В корзине турниров не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Турниры'
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'menu_icon'          => 'dashicons-pressthis',
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title','editor','author','thumbnail','excerpt' )
+	) );
+}
 

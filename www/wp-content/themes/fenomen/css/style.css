@@ -1238,18 +1238,21 @@ footer .contacts_link:hover {
 
 .blog header,
 .single-post header,
+.post-type-archive-event header,
 .category header {
   background: #27a4ff;
 }
 
 .blog h1,
 .single-post h1,
+.post-type-archive-event h1,
 .category h1 {
   font-size: 34px;
 }
 
 .blog #content,
 .single-post #content,
+.post-type-archive-event #content,
 .category #content {
   padding-top: 180px;
 }
@@ -1364,4 +1367,9 @@ a.page-numbers:hover {
   font-size: 24px;
   line-height: 30px;
   border: 1px solid #c5c5c5;
+}
+
+.sorting_data {
+  font-size: 14px;
+  font-weight: bold;
 }

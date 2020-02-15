@@ -1,12 +1,9 @@
 <?php
 /*
- Template Name: Страница Блога
- Template Post Type: page
-
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package fenomen
+ * @package fenomen archive blog page
  */
 
     $paged = get_query_var('paged') ?: 1;
