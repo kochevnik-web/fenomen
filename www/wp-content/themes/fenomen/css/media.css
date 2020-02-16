@@ -69,6 +69,7 @@
     }
 
     .blog #content,
+    .page #content,
     .single-event #content,
     .post-type-archive-event #content,
     .single-post #content,
@@ -358,6 +359,7 @@
     }
 
     .blog #content,
+    .page #content,
     .single-post #content,
     .single-event #content,
     .post-type-archive-event #content,

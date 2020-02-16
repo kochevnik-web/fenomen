@@ -1,5 +1,9 @@
 <?php
 /*
+Template Name: Вопросы и ответы
+Template Post Type: page
+*/
+/*
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

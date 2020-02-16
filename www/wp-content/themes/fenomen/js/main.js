@@ -1,5 +1,5 @@
-jQuery(document).ready(function ($) {
-  $(document).on("click", ".hamburger-1", function () {
+jQuery(document).ready(function($) {
+  $(document).on("click", ".hamburger-1", function() {
     $(this).css({
       opacity: "0"
     });
@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
       opacity: "1"
     });
   });
-  $(document).on("click", ".hamburger-2", function () {
+  $(document).on("click", ".hamburger-2", function() {
     $("#site-nav").removeClass("open");
     $("body").removeClass("no-scroll");
     $(this).css({
@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
     $("header").removeClass("slideup");
   }
 
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
       $("header").addClass("slideup");
     } else {
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(document).on("click", "#reviews_btn", function () {
+  $(document).on("click", "#reviews_btn", function() {
     if ($(window).width() <= 992) {
       $(".review_hide")
         .detach()
@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
     $(".review_hide").fadeIn();
   });
 
-  $(window).on("load", function () {
+  $(window).on("load", function() {
     galeryButton();
   });
 
@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  $(window).resize(function () {
+  $(window).resize(function() {
     thoughtsBg();
     programmBg();
     galeryButton();
@@ -125,46 +125,48 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $('.datepicker').datepicker({
-    dateFormat: 'dd.mm.yy'
-  });
+  if ($("input").is(".datepicker")) {
+    $(".datepicker").datepicker({
+      dateFormat: "dd.mm.yy"
+    });
+  }
 
-  $('.datepicker').datepicker({
-    dateFormat: 'dd.mm.yy'
-  });
-
-  $(document).on('change', '.datepicker', function () {
+  $(document).on("change", ".datepicker", function() {
     const dateDefault = eventDates.dataNow;
-    const from = $('[name="event_data_from"]').val() ? $('[name="event_data_from"]').val() : dateDefault;
-    const to = $('[name="event_data_to"]').val() ? $('[name="event_data_to"]').val() : dateDefault;
+    const from = $('[name="event_data_from"]').val()
+      ? $('[name="event_data_from"]').val()
+      : dateDefault;
+    const to = $('[name="event_data_to"]').val()
+      ? $('[name="event_data_to"]').val()
+      : dateDefault;
 
     $.ajax({
-      type: 'POST',
+      type: "POST",
       url: eventDates.ajaxurl,
       data: {
-        action: 'fenomen_event_sort_date',
+        action: "fenomen_event_sort_date",
         to: to,
-        from: from,
+        from: from
       },
-      beforeSend: function () {
+      beforeSend: function() {
         $('[name="event_data_from"]').prop("disabled", true);
         $('[name="event_data_to"]').prop("disabled", true);
-        $('#archive-event-loader').show();
+        $("#archive-event-loader").show();
       },
-      success: function (result) {
-        if (result !== 'error') {
-          $('#archive-event').html(result);
-          $('.pagination').hide();
+      success: function(result) {
+        if (result !== "error") {
+          $("#archive-event").html(result);
+          $(".pagination").hide();
         } else {
-          let html = '<h2 class="col-12 font-weight-bold">По Вашему запросу ни чего не найдено!</h2>';
-          $('#archive-event').html(html);
-          $('.pagination').hide();
+          let html =
+            '<h2 class="col-12 font-weight-bold">По Вашему запросу ни чего не найдено!</h2>';
+          $("#archive-event").html(html);
+          $(".pagination").hide();
         }
         $('[name="event_data_from"]').prop("disabled", false);
         $('[name="event_data_to"]').prop("disabled", false);
-        $('#archive-event-loader').hide();
+        $("#archive-event-loader").hide();
       }
     });
-
   });
 });
