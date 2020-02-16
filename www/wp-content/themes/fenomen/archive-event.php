@@ -28,10 +28,19 @@
                         ?>
                             <div class="col-md-6 col-lg-4 mb-4">
                                 <article id="post-<?php the_ID(); ?>" class="d-flex h-100">
-                                    <a href="<?php the_permalink(); ?>" class="post-list-item d-block position-relative">
+                                    <a href="<?php the_permalink(); ?>" class="post-list-item d-block position-relative w-100">
                                     <?php the_post_thumbnail( '274x140', array( 'class' => 'w-100 mb-3' ) ); ?>
-                                        <div class="post-list-item-title mb-1 color-blue font-weight-bold text-center"><?php the_title(); ?></div>
-                                        <?php the_excerpt(); ?>
+                                        <div class="post-list-item-title mb-3 color-blue font-weight-bold text-center"><?php the_title(); ?></div>
+                                        <?php $eventDate = get_field( 'event_date' ); ?>
+                                        <div class="text-center mb-3">
+                                            <span class="event_date"><?= wp_date( 'j F, Время: H:i', strtotime( $eventDate ) ); ?></span>
+                                        </div>
+                                        <?php if ( (bool)get_field( 'event_location' ) ) { ?>
+                                        <div class="d-flex event_location">
+                                            <div class="icon mr-2"><img src="<?= get_template_directory_uri() . '/img/event_marker.svg' ?>" alt=""></div>
+                                            <div class="div"><?= get_field( 'event_location' ); ?></div>
+                                        </div>
+                                        <?php } ?>
                                     </a>
                                 </article><!-- #post-<?php the_ID(); ?> -->
                             </div>

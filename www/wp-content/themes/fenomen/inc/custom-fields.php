@@ -187,6 +187,46 @@
                 'instruction_placement' => 'label',
                 'active' => true,
             ));
+
+            acf_add_local_field_group(array(
+                'key' => 'acf_event_fields_group',
+                'title' => 'Данные турнира',
+                'fields' => array(
+                    array(
+                        'key' => 'field_event_date',
+                        'label' => 'Дата проведения',
+                        'name' => 'event_date',
+                        'type' => 'date_time_picker',
+                        'display_format' => 'F j, Y g:i a',
+                        'return_format' => 'Y-m-d H:i:s',
+                        'first_day' => 1,
+                    ),
+                    array(
+                        'key' => 'field_event_location',
+                        'label' => 'Место проведения',
+                        'name' => 'event_location',
+                        'type' => 'text',
+                    ),
+                ),
+                'location' => array(
+                    array(
+                        array(
+                            'param' => 'post_type',
+                            'operator' => '==',
+                            'value' => 'event',
+                        ),
+                    ),
+                ),
+                'menu_order' => 0,
+                'position' => 'normal',
+                'style' => 'default',
+                'label_placement' => 'top',
+                'instruction_placement' => 'label',
+                'hide_on_screen' => '',
+                'active' => true,
+                'description' => '',
+            ));
+                
         }
     }
 

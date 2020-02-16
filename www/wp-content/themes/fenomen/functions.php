@@ -234,7 +234,7 @@ add_filter( 'excerpt_length', function(){
 } );
 
 add_action( 'init', 'add_post_type_event' );
-function add_post_type_event(){
+function add_post_type_event() {
 	register_post_type( 'event', array(
 		'labels'             => array(
 			'name'               => 'Турниры', // Основное название типа записи
@@ -262,7 +262,14 @@ function add_post_type_event(){
 		'menu_icon'          => 'dashicons-pressthis',
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title','editor','author','thumbnail','excerpt' )
+		'supports'           => array( 'title','editor','thumbnail','excerpt', 'revisions' ),
 	) );
+}
+
+add_action( 'pre_get_posts', 'change_qauery_event' );
+function change_qauery_event( $query ){
+	if ( $query->is_main_query() && !is_admin() && $query->is_post_type_archive( 'event' ) ) {
+		$query->set( 'posts_per_page', 9 );
+	}
 }
 
