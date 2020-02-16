@@ -408,4 +408,8 @@
     #thoughts {
         background-image: none;
     }
+
+    .datepicker {
+        width: 100%;
+    }
 }

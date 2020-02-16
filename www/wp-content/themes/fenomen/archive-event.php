@@ -14,14 +14,15 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class="container">
-                <div class="mb-5 d-flex justify-content-between align-items-center">
-                    <h1 class="font-weight-bold">Турниры Феномен</h1>
-                    <div class="sorting_data">
-                        <span class="mr-3">Выбирете дату:</span>
-                        <input class="mr-3" type="text"><input class="mr-3" type="text">
+                <div class="mb-5 align-items-center row">
+                    <h1 class="font-weight-bold col-lg-5 mb-3 mb-lg-0">Турниры Феномен</h1>
+                    <div class="sorting_data col-lg-7 text-lg-right">
+                        <span class="mr-3 mb-3">Выбирете дату:</span>
+                        <input class="mr-3 datepicker my-3 my-sm-0" name="event_data_from" type="text" value="<?= wp_date( "d.m.Y" ); ?>">
+                        <input class="datepicker" name="event_data_to" type="text" value="<?= wp_date( "d.m.Y" ); ?>">
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-4 position-relative" id="archive-event">
                 <?php
                     while ( have_posts() ) :
                         the_post();
@@ -49,6 +50,7 @@
                     endwhile; // End of the loop.
 
                 ?>
+                    <div id="archive-event-loader" class="position-absolute"></div>
                 </div>
                 <?php if ( pagination() ) { ?>
                     <div class="row mb-5">

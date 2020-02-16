@@ -133,6 +133,16 @@ add_action( 'widgets_init', 'fenomen_widgets_init' );
  * Enqueue scripts and styles.
  */
 function fenomen_scripts() {
+
+	if ( is_post_type_archive( 'event' ) ) {
+		wp_enqueue_script( 'jquery-ui-datepicker' );
+		wp_enqueue_style( 'jqueryui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css', false, null );
+		wp_localize_script( 'jquery', 'eventDates', array( 
+			'dataNow' => wp_date( "d/m/Y" ),
+			'ajaxurl' => admin_url('admin-ajax.php'),
+		) );
+	}
+	
 	wp_enqueue_style( 'fenomen-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/css/hamburgers.min.css' );
@@ -150,6 +160,7 @@ function fenomen_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'fenomen_scripts' );
 
@@ -273,3 +284,55 @@ function change_qauery_event( $query ){
 	}
 }
 
+add_action( 'wp_ajax_fenomen_event_sort_date', 'fenomen_event_sort_date' );
+add_action( 'wp_ajax_nopriv_fenomen_event_sort_date', 'fenomen_event_sort_date' );
+function fenomen_event_sort_date() {
+	$post  = $_POST;
+	if( !$post['from'] || !$post['to'] ) wp_die( 'error' );
+
+	$from = date( 'Y-m-d', strtotime( $post['from'] ) ) . ' 00:00:00';
+	$to   = date( 'Y-m-d', strtotime( $post['to'] ) ) . ' 23:59:59';
+	
+	$posts = get_posts(array(
+		'post_type'      => 'event',
+		'posts_per_page' => -1,
+		'meta_query' => array(
+			array(
+				'key'       => 'event_date',
+				'value'     => array( $from, $to ),
+				'compare'   => 'BETWEEN',
+				'meta_type' => 'DATETIME'
+			)
+		),
+	));
+
+	if ( !count( $posts) ) wp_die( 'error' );
+
+	foreach ( $posts as $post ) {
+			$link      = get_permalink( $post->ID );
+			$title     = $post->post_title;
+			$eventDate = get_field( 'event_date', $post->ID );
+			$date      = wp_date( 'j F, Время: H:i', strtotime( $eventDate ) );
+			$loc       = get_field( 'event_location', $post->ID );
+			$marker    = get_template_directory_uri() . '/img/event_marker.svg';
+			$url       = get_the_post_thumbnail( $post->ID, '274x140', array( 'class' => 'w-100 mb-3' ) );
+			$html .= '<div class="col-md-6 col-lg-4 mb-4">
+				<article id="post-' . $post->ID . '" class="d-flex h-100">
+					<a href="' . $link . '" class="post-list-item d-block position-relative w-100">' . $url . '
+						<div class="post-list-item-title mb-3 color-blue font-weight-bold text-center">' . $title . '</div>
+						<div class="text-center mb-3">
+							<span class="event_date">' . $date . '</span>
+						</div>
+						<div class="d-flex event_location">
+							<div class="icon mr-2"><img src="' . $marker . '" alt=""></div>
+							<div class="div">' . $loc . '</div>
+						</div>
+					</a>
+				</article><!-- #post-<?php the_ID(); ?> -->
+			</div>';
+	}
+
+	echo $html;
+
+	wp_die();
+}
