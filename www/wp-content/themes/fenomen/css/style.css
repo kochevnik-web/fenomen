@@ -1238,6 +1238,7 @@ footer .contacts_link:hover {
 
 .blog header,
 .single-post header,
+.single-event header,
 .post-type-archive-event header,
 .category header {
   background: #27a4ff;
@@ -1245,6 +1246,7 @@ footer .contacts_link:hover {
 
 .blog h1,
 .single-post h1,
+.single-event h1,
 .post-type-archive-event h1,
 .category h1 {
   font-size: 34px;
@@ -1252,6 +1254,7 @@ footer .contacts_link:hover {
 
 .blog #content,
 .single-post #content,
+.single-event #content,
 .post-type-archive-event #content,
 .category #content {
   padding-top: 180px;
