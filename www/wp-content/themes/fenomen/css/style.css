@@ -1245,6 +1245,10 @@ footer .contacts_link:hover {
   background: #27a4ff;
 }
 
+.home header {
+  background: transparent;
+}
+
 .blog h1,
 .page h1,
 .single-post h1,
@@ -1261,6 +1265,10 @@ footer .contacts_link:hover {
 .post-type-archive-event #content,
 .category #content {
   padding-top: 180px;
+}
+
+.home #content {
+  padding-top: 0;
 }
 
 .blog-category-menu {
