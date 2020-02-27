@@ -203,7 +203,7 @@ header {
   z-index: 1;
 }
 
-header.slideup {
+.home header.slideup, header.slideup {
   background: #27a4ff;
   box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
   z-index: 10;
