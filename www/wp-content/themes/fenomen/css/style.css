@@ -492,6 +492,13 @@ header {
   border-radius: 15px;
 }
 
+.page-template-page-open .front_video_img {
+  background: url(../img/video.png) no-repeat top left;
+  width: 100%;
+  background-size: contain;
+  border-radius: 15px;
+}
+
 .front_video_img:hover {
   box-shadow: inset 0px 0px 40px 20px rgba(0, 0, 0, 0.39);
 }
@@ -1505,4 +1512,19 @@ a.page-numbers:hover {
 
 #faq_form textarea {
   height: 125px;
+}
+
+.page-template-page-open #intro {
+  min-height: auto;
+  padding: 140px 0 0 0;
+}
+
+.page-template-page-open .intro_bg {
+  background: url('../img/open_bg.png')no-repeat;
+  background-position-x: right;
+  padding-bottom: 185px;
+}
+
+.page-template-page-open #intro::before {
+  display: none;
 }

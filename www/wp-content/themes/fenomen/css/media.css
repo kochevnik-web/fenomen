@@ -233,6 +233,11 @@
         padding: 15px;
     }
 
+    .page-template-page-open .intro_bg {
+        background-size: 63%;
+        background-position-y: 141px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -396,6 +401,10 @@
 
     #faq {
         padding: 70px 0 70px 0;
+    }
+
+    .page-template-page-open .intro_bg {
+        background: none;
     }
 }
 
