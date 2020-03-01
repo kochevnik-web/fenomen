@@ -68,19 +68,21 @@ Template Post Type: page
 
 				</div>
 			</section>
+			<?php if ( (bool)get_post_meta($post->ID, 'form_title', true ) ) { ?>
 			<section id="faq_form">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2 col-md-12">
-							<h2 class="text-center font-weight-bold">Остались вопросы?</h2>
+							<h2 class="text-center font-weight-bold"><?= get_post_meta($post->ID, 'form_title', true ); ?></h2>
 							<div class="sub_title text-center mb-4">
-								Расскажем все подробно по телефону или в письме
+								<?= get_post_meta($post->ID, 'form_subtitle', true ); ?>
 							</div>
-							<?php echo do_shortcode( '[contact-form-7 id="473" title="Вопросы и ответы"]' ); ?>
+							<?php echo do_shortcode( get_post_meta($post->ID, 'form', true ) ); ?>
 						</div>
 					</div>
 				</div>
 			</section>
+			<?php } ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
