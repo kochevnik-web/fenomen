@@ -203,7 +203,7 @@ header {
   z-index: 1;
 }
 
-.home header.slideup, header.slideup {
+.home header.slideup, .page-template .slideup, header.slideup {
   background: #27a4ff;
   box-shadow: 0px 2px 14px 3px rgba(0, 0, 0, 0.27);
   z-index: 10;
@@ -1245,7 +1245,7 @@ footer .contacts_link:hover {
   background: #27a4ff;
 }
 
-.home header {
+.home header, .page-template header {
   background: transparent;
 }
 
@@ -1267,7 +1267,7 @@ footer .contacts_link:hover {
   padding-top: 180px;
 }
 
-.home #content {
+.home #content, .page-template #content {
   padding-top: 0;
 }
 
