@@ -1525,6 +1525,10 @@ a.page-numbers:hover {
   padding-bottom: 185px;
 }
 
+.page-template-page-online .intro_bg {
+  background: none;
+}
+
 .page-template-page-open #intro::before {
   display: none;
 }
