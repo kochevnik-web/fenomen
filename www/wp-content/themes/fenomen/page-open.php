@@ -33,7 +33,7 @@ Template Post Type: page
 							<?php echo get_post_meta( $post->ID, 'front_more_title', true ); ?>
 						</h3>
 						<div class="front_more_wrap">
-							<?php for ( $i = 1; $i <=5; $i++ ) { ?>
+							<?php for ( $i = 1; $i <=6; $i++ ) { ?>
 								<?php $more_class = $i%2 ? '' : ' flex-row-reverse'; ?>
 								<div class="front_more_item white_bg overflow-hidden">
 									<div class="row<?= $more_class; ?>">
