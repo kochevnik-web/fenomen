@@ -80,6 +80,10 @@
     .home #content, .page-template #content {
         padding-top: 0px;
     }
+
+    #faq {
+        padding: 230px 0 70px 0;
+    }
 }
 
 @media(max-width: 992px) {
@@ -388,6 +392,10 @@
 
     .page-numbers {
         margin-right: 5px;
+    }
+
+    #faq {
+        padding: 70px 0 70px 0;
     }
 }
 

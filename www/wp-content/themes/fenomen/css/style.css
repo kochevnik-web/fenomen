@@ -134,6 +134,21 @@ a,
   color: #000000;
 }
 
+.btn-primary.btn-yellow-border {
+  border: 2px solid #ffe600;
+  border-radius: 40px;
+  height: 40px;
+  color: #000;
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-primary.btn-yellow-border:hover {
+  border: 2px solid #ffe600;
+  background: #ffe600;
+
+}
+
 .btn-primary.btn-blue,
 .btn-primary.btn-blue:active:focus {
   min-height: 50px;
@@ -1249,6 +1264,10 @@ footer .contacts_link:hover {
   background: transparent;
 }
 
+.page-template-page-faq header {
+  background: #27a4ff;
+}
+
 .blog h1,
 .page h1,
 .single-post h1,
@@ -1426,4 +1445,64 @@ a.page-numbers:hover {
   left: 0;
   background: #ffffff;
   opacity: 0.8;
+}
+
+#faq {
+  padding: 200px 0 70px 0;
+}
+
+.faq_buttons a {
+  font-size: 14px;
+  line-height: 23px;
+  padding: 7px 20px;
+}
+
+.ans_ans {
+  box-shadow: 0px -0.0322407px 17.9191px rgba(0, 0, 0, 0.0131911), 0px 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.ans_ans.arrow-down:after, .ans_ans.arrow-up:after {
+  opacity: .3;
+  right: 15px;
+}
+
+.ans_qvest {
+  background: #FFFBD5;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  display: none;
+}
+
+.faq_sidebar {
+  background: #F7F7F7;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#faq_form {
+  background: #EFEFEF;
+  padding: 70px 0;
+}
+
+#faq_form input[type="text"], #faq_form textarea {
+  width: 100%;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+#faq_form input[type="text"] {
+  min-height: 50px;
+}
+
+#faq_form textarea {
+  height: 125px;
 }
