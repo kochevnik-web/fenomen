@@ -1525,10 +1525,45 @@ a.page-numbers:hover {
   padding-bottom: 185px;
 }
 
+.page-template-page-online #intro {
+  min-height: auto;
+  padding: 140px 0 70px 0;
+}
+
 .page-template-page-online .intro_bg {
   background: none;
 }
 
 .page-template-page-open #intro::before {
   display: none;
+}
+
+.intro_online {
+  background: #fff;
+  padding: 30px 37px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.27);
+}
+
+.intro_online .btn {
+  padding: 7px 20px;
+}
+
+.page-template-page-online #front_words {
+  background: none;
+  min-height: auto;
+  margin-top: 0;
+  z-index: 0;
+  padding: 70px 0 70px 0;
+}
+
+.page-template-page-online #front_words:before {
+  background-size: 37%;
+  top: -236px;
+  height: 103%;
+  width: 97%;
+}
+ 
+.page-template-page-online .front_video_img  {
+  background: url(../img/online_bg.png) no-repeat top left;
 }
