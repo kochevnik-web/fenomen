@@ -64,27 +64,55 @@ Template Post Type: page
 			</div>
         </section>
         
-        <section id="turnirs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="text-center font-weight-bold">Участвуй в турнирах с другими учениками школы</h2>
-                        <div class="sub_title text-center mb-5">
-                            Школы открыты уже в <span class="color-blue">20 городах России</span>, и с нами играют ученики со всего мира
+        <?php if ( (bool)get_post_meta( $post->ID, 'tur_tittle', true ) ){ ?>
+            <section id="turnirs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-center font-weight-bold"><?= get_post_meta( $post->ID, 'tur_tittle', true ); ?></h2>
+                            <div class="sub_title text-center mb-5">
+                                <?= get_post_meta( $post->ID, 'tur_subtitle', true ); ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="turnirs_item">
-                            <a href="" class="display-block" data-fancybox="">
-                                <img src="" alt="">
-                            </a>
-                            <h4>Игры в онлайне</h4>
-                            <p>Играй в шахматы в клубе Феномен</p>
-                        </div>
+                        <?php if( get_post_meta( $post->ID, 'elems', true ) > 0 ) { ?>
+                            <?php for ( $m = 0; $m < get_post_meta( $post->ID, 'elems', true ); $m++ ) { ?>
+                                <div class="col-lg-4">
+                                    <div class="turnirs_item">
+                                        <a href="<?= get_post_meta( $post->ID, 'elems_' . $m . '_video', true ); ?>" class="d-block mb-4 position-relative" data-fancybox="">
+                                            <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'elems_' . $m . '_img', true ), 'full' ); ?>" alt="<?= get_post_meta( $post->ID, 'elems_' . $m . '_title', true ); ?>" class="w-100">
+                                        </a>
+                                        <h4 class="color-blue font-weight-bold"><?= get_post_meta( $post->ID, 'elems_' . $m . '_title', true ); ?></h4>
+                                        <p><?= get_post_meta( $post->ID, 'elems_' . $m . '_text', true ); ?></p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
+
+        <?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
+            <section id="main_form" class="form gray_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-center">
+                                <?php echo get_post_meta( $post->ID, 'form_titile', true ); ?>
+                            </h3>
+                            <div class="sub_title text-center col-md-10 offset-md-1 mb-4 mb-md-5">
+                                <?php echo get_post_meta( $post->ID, 'form_subtitle', true ); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        if ( (bool)get_post_meta( $post->ID, 'form_shortcode', true ) ) {
+                            echo do_shortcode( get_post_meta( $post->ID, 'form_shortcode', true ) );
+                        }
+                    ?>
+                </div>
+            </section>
+        <?php } ?>
 
         <section id="contacts_section" class="color-white position-relative">
 			<div class="container">

@@ -1567,3 +1567,35 @@ a.page-numbers:hover {
 .page-template-page-online .front_video_img  {
   background: url(../img/online_bg.png) no-repeat top left;
 }
+
+#turnirs {
+  padding: 70px 0;
+}
+
+#turnirs .sub_title {
+  font-size: 20px;
+}
+
+.turnirs_item a {
+  border-radius: 10px;
+}
+
+.turnirs_item a:after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: #27A4FF;
+  background-image: url(../img/arrow_play.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  margin-left: -38px;
+  margin-top: -38px;
+}
+
+.turnirs_item a:hover {
+  opacity: .8;
+}
