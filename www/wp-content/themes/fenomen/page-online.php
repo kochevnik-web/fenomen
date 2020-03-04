@@ -114,6 +114,63 @@ Template Post Type: page
             </section>
         <?php } ?>
 
+		<?php if ( (bool)get_field( 'car_title' ) && count( get_field( 'carousel' ) ) > 0 ) { ?>
+			<section id="citaty">
+				<div class="container">
+					<h2 class="text-center font-weight-bold mb-5"><?= get_field( 'car_title' ); ?></h2>
+					<div class="row">
+						<div class="col-12">
+							<div class="owl-carousel owl-carousel-citaty">
+							<?php foreach ( get_field( 'carousel' ) as $cat ) { ?>
+								<div class="item text-center">
+									<div class="row">
+										<div class="col-md-3">
+											<img src="<?= wp_get_attachment_image_url( $cat['img'], 'full' ); ?>" alt="<?= $cat['name']; ?>">
+										</div>
+										<div class="col-md-9">
+											<div class="d-flex align-items-center position-relative">
+												<div class="px-4">
+													<?= $cat['text']; ?>
+												</div>
+												<div class="position-absolute">
+													<?= $cat['name']; ?>
+													<?= $cat['subname']; ?>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div><!-- #item -->
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php } ?>
+
+		<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
+            <section id="main_form" class="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-center">
+                                <?php echo get_post_meta( $post->ID, 'form_titile', true ); ?>
+                            </h3>
+                            <div class="sub_title text-center col-md-10 offset-md-1 mb-4 mb-md-5">
+                                <?php echo get_post_meta( $post->ID, 'form_subtitle', true ); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        if ( (bool)get_post_meta( $post->ID, 'form_shortcode', true ) ) {
+                            echo do_shortcode( get_post_meta( $post->ID, 'form_shortcode', true ) );
+                        }
+                    ?>
+                </div>
+            </section>
+        <?php } ?>
+
         <section id="contacts_section" class="color-white position-relative">
 			<div class="container">
 				<div class="row">

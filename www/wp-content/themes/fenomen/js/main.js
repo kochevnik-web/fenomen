@@ -124,6 +124,15 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+  $(".owl-carousel-citaty").owlCarousel({
+    margin: 20,
+    items: 1,
+    navText: [
+      '<i class="fas fa-arrow-left"></i>',
+      '<i class="fas fa-arrow-right"></i>'
+    ],
+    nav: true,
+  });
 
   if ($("input").is(".datepicker")) {
     $(".datepicker").datepicker({
