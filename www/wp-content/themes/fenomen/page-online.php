@@ -122,20 +122,18 @@ Template Post Type: page
 						<div class="col-12">
 							<div class="owl-carousel owl-carousel-citaty">
 							<?php foreach ( get_field( 'carousel' ) as $cat ) { ?>
-								<div class="item text-center">
+								<div class="item">
 									<div class="row">
-										<div class="col-md-3">
+										<div class="col-md-4 mb-4 mb-md-0">
 											<img src="<?= wp_get_attachment_image_url( $cat['img'], 'full' ); ?>" alt="<?= $cat['name']; ?>">
 										</div>
-										<div class="col-md-9">
-											<div class="d-flex align-items-center position-relative">
-												<div class="px-4">
-													<?= $cat['text']; ?>
-												</div>
-												<div class="position-absolute">
-													<?= $cat['name']; ?>
-													<?= $cat['subname']; ?>
-												</div>
+										<div class="col-md-8 position-relative d-block d-md-flex align-items-center">
+											<div class="px-4 text-left text">
+												<?= $cat['text']; ?>
+											</div>
+											<div class="autor text-left">
+												<h4 class="color-blue font-weight-bold"><?= $cat['name']; ?></h4>
+												<div><?= $cat['subname']; ?></div>
 											</div>
 										</div>
 									</div>

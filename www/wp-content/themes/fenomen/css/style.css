@@ -1603,3 +1603,67 @@ a.page-numbers:hover {
 #citaty {
   padding: 70px 0;
 }
+
+.owl-carousel-citaty .item {
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 20px 0 0 0;
+  overflow: hidden;
+}
+
+.owl-carousel-citaty .owl-item {
+  padding: 25px;
+}
+
+.owl-carousel-citaty .autor {
+  bottom: 15px;
+  right: 35px;
+  position: absolute;
+}
+
+.owl-carousel-citaty .text {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.owl-carousel-citaty .owl-nav button.owl-prev, .owl-carousel-citaty .owl-nav button.owl-next {
+  position: absolute;
+  width: 75px;
+  top: 35%;
+  height: 75px;
+  border-radius: 75px;
+  background: #ffffff;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.17);
+}
+
+.owl-carousel-citaty .owl-prev {
+  left: -25px;
+}
+.owl-carousel-citaty .owl-next {
+  right: -25px;
+}
+
+.owl-carousel-citaty .owl-dots {
+  display: none;
+  margin: 20px 0 0 0;
+  justify-content: center;
+}
+
+.owl-carousel-citaty button.owl-dot {
+  background: #ffe600;
+  width: 8px;
+  height: 8px;
+  opacity: 0.6;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.owl-carousel-citaty button.owl-dot.active {
+  opacity: 1;
+  box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.6);
+}
+
+.owl-carousel-citaty button.owl-dot:last-child {
+  margin-right: 0;
+}

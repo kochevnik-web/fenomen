@@ -238,6 +238,12 @@
         background-position-y: 141px;
     }
 
+    .owl-carousel-citaty .text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 78px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -406,6 +412,31 @@
     .page-template-page-open .intro_bg {
         background: none;
     }
+
+    .owl-carousel-citaty .owl-item {
+        padding: 0;
+    }
+
+    .owl-carousel-citaty .text {
+        margin-bottom: 20px;
+    }
+
+    .owl-carousel-citaty .autor {
+        position: relative;
+        padding: 0 20px 20px 20px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .owl-carousel-citaty .owl-nav button.owl-prev, .owl-carousel-citaty .owl-nav button.owl-next {
+        display: none;
+    }
+
+    .owl-carousel-citaty .owl-dots {
+        display: flex;
+        margin: 20px 0 0 0;
+        justify-content: center;
+      }
 }
 
 @media (max-width: 480px) {
