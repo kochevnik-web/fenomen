@@ -20,6 +20,8 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  $('.email_hide').attr('value', fenomenData.realEmail);
+
   if ($(this).scrollTop() > 50) {
     $("header").addClass("slideup");
   } else {
@@ -140,6 +142,15 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  $("a[href*='#']").bind("click", function (e) {
+    var anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $(anchor.attr('href')).offset().top
+    }, 500);
+    e.preventDefault();
+    return false;
+  });
+
   $(document).on("change", ".datepicker", function () {
     const dateDefault = eventDates.dataNow;
     const from = $('[name="event_data_from"]').val()
@@ -195,3 +206,5 @@ jQuery(document).ready(function ($) {
     parent.find('.ans_ans:not([data-ans="' + data + '"])').removeClass('arrow-up').addClass('arrow-down')
   });
 });
+
+

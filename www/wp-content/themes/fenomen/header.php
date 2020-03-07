@@ -32,7 +32,7 @@
 							<div class="select_city_title">
 								Выберите город:
 							</div>
-							<span class="select_city_move cursor-pointer color arrow-down font-weight-bold hover_amime">Новосибирск, м. Заельцовская</span>
+							<button class="select_city_move cursor-pointer color arrow-down font-weight-bold hover_amime" data-toggle="modal" data-target="#selectCity"><?= filialData() ? filialData()['name'] : get_option( 'options_fenomen_short_adress' ); ?></button>
 						</div>
 					</div>
 					<div class="col-md-6 col-xl-4 mb-2 mb-md-0">
@@ -41,8 +41,8 @@
 								<img src="<?= get_template_directory_uri() . '/img/marker_header.svg' ?>" alt="Смотреть на карте">
 							</div>
 							<div class="select_city_map_header-text">
-								<p>Адрес школы: <span class="color cursor-pointer font-weight-bold select_city_map_header-link hover_amime">Смотреть на карте</span></p>
-								<p><?= get_option( 'options_fenomen_adress' ); ?></p>
+								<p>Адрес школы: <a href="#contacts_section" class="color cursor-pointer font-weight-bold select_city_map_header-link hover_amime">Смотреть на карте</a></p>
+								<p><?= filialData() ? filialData()['adres'] : get_option( 'options_fenomen_adress' ); ?></p>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 					</div>
 					<div class="col-md-6 col-xl-2">
 						<div class="header_phone_number font-weight-bold text-center text-md-right">
-							<?= get_option( 'options_header_fenomen_phone' ); ?>
+							<?= filialData() ? filialData()['phone'] : get_option( 'options_header_fenomen_phone' ); ?>
 						</div>
 					</div>
 				</div>

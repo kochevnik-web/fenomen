@@ -38,6 +38,15 @@
                         ),
                     ),
                     array(
+                        'key'     => 'field_fenomen_short_adress',
+                        'label'   => 'Короткий адрес',
+                        'name'    => 'fenomen_short_adress',
+                        'type'    => 'text',
+                        'wrapper' => array(
+                            'width' => '33.33',
+                        ),
+                    ),
+                    array(
                         'key'     => 'field_header_fenomen_phone',
                         'label'   => 'Номер телефона',
                         'name'    => 'header_fenomen_phone',
@@ -75,7 +84,7 @@
                     ),
                     array(
                         'key'     => 'field_fenomen_facebok',
-                        'label'   => 'Ссылка на В Контакте',
+                        'label'   => 'Ссылка на В Facebook',
                         'name'    => 'fenomen_facebook',
                         'type'    => 'text',
                         'wrapper' => array(

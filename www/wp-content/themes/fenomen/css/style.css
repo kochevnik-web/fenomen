@@ -206,6 +206,10 @@ a,
   margin-top: -4px;
 }
 
+.email_hide {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   .container.container-big {
     max-width: 1280px;
@@ -239,6 +243,8 @@ header {
   font-size: 14px;
   line-height: 18px;
   padding: 0 15px 0 0;
+  background: no-repeat;
+  border: none;
 }
 
 .select_city_move:hover {
@@ -265,6 +271,12 @@ header {
 
 .select_city_map_header-text {
   font-size: 12px;
+}
+
+.select_city_map_header-text a:hover {
+  text-decoration: none;
+  opacity: .8;
+  color: #ffe600;
 }
 
 .select_city_map_header-text p {
@@ -1740,4 +1752,23 @@ a.page-numbers:hover {
 .page-template-page-invest .intro_bg {
   background: url(../img/invest_bg.png)no-repeat right center;
   padding: 100px 0;
+}
+
+#selectCity a {
+  color: #000;
+  font-weight: bold;
+}
+
+#selectCity a:hover {
+  text-decoration: none;
+  color: #27a4ff;
+}
+
+#selectCity a.open {
+  color: #27a4ff;
+  border-bottom: 1px dashed #27a4ff;
+}
+
+#selectCity a.open:hover {
+  opacity: .8;
 }

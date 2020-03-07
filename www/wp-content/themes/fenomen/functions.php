@@ -7,6 +7,23 @@
  * @package fenomen
  */
 
+	function filialData() {
+		$arr = array();
+		if ( isset( $_GET ) && isset( $_GET['filial'] ) ) {
+			$filial = get_post( $_GET['filial'] );
+			$arr['name'] = $filial->post_title;
+			$arr['adres'] = get_post_meta( $filial->ID, 'filial_adres', true );
+			$arr['phone'] = get_post_meta( $filial->ID, 'filial_phone', true );
+			$arr['email'] = get_post_meta( $filial->ID, 'filial_email', true );
+			$arr['insta'] = get_post_meta( $filial->ID, 'filial_insta', true );
+			$arr['vk'] = get_post_meta( $filial->ID, 'filial_vk', true );
+			$arr['fb'] = get_post_meta( $filial->ID, 'filial_fb', true );
+			$arr['cords'] = get_post_meta( $filial->ID, 'filial_cords', true );
+			return $arr;
+		}
+		return false;
+	}
+
 	/**
 	 * Вспомогательная функция вывода данных на экран для проверки
 	 */
@@ -142,6 +159,10 @@ function fenomen_scripts() {
 			'ajaxurl' => admin_url('admin-ajax.php'),
 		) );
 	}
+
+	wp_localize_script( 'jquery', 'fenomenData', array( 
+		'realEmail' => filialData() ? filialData()['email'] : get_option( 'options_fenomen_email' )
+	) );
 	
 	wp_enqueue_style( 'fenomen-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
@@ -369,3 +390,5 @@ function add_post_type_filial() {
 		'supports'           => array( 'title','editor', 'revisions' ),
 	) );
 }
+
+

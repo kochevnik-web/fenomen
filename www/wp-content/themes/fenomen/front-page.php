@@ -360,15 +360,15 @@ get_header();
 								<div class="col-md-6">
 									<div class="contact_info py-3">
 										<div class="title mb-1">Номер телефона:</div>
-										<div class="format mb-1"><?= get_option( 'options_header_fenomen_phone' ); ?></div>
-										<a href="tel:<?= get_option( 'options_header_fenomen_phone' ); ?>">позвонить нам</a>
+										<div class="format mb-1"><?= filialData() ? filialData()['phone'] : get_option( 'options_header_fenomen_phone' ); ?></div>
+										<a href="tel:<?= filialData() ? filialData()['phone'] : get_option( 'options_header_fenomen_phone' ); ?>">позвонить нам</a>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="contact_info py-3">
 										<div class="title mb-1">Электронная почта:</div>
-										<div class="format mb-1"><?= get_option( 'options_fenomen_email' ); ?></div>
-										<a href="mailto:<?= get_option( 'options_fenomen_email' ); ?>">написать нам</a>
+										<div class="format mb-1"><?= filialData() ? filialData()['email'] : get_option( 'options_fenomen_email' ); ?></div>
+										<a href="mailto:<?= filialData() ? filialData()['email'] : get_option( 'options_fenomen_email' ); ?>">написать нам</a>
 									</div>
 								</div>
 							</div>
@@ -378,16 +378,16 @@ get_header();
 								<div class="col-lg-8">
 									<div class="contact_info pb-3">
 										<div class="title">Адрес школы:</div>
-										<div class="format"><?= get_option( 'options_fenomen_adress' ); ?></div>
+										<div class="format"><?= filialData() ? filialData()['adres'] : get_option( 'options_fenomen_adress' ); ?></div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="d-flex">
 							<div class="title mr-2">Мы в соцсетях:</div>
-							<a href="<?= get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>
-							<a href="<?= get_option( 'options_fenomen_instagram' ); ?>" class="contacts_link"><i class="fab fa-instagram"></i></a>
-							<a href="<?= get_option( 'options_fenomen_vk' ); ?>" class="contacts_link"><i class="fab fa-vk"></i></a>
+							<a href="<?= filialData() ? filialData()['fb'] : get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>
+							<a href="<?= filialData() ? filialData()['insta'] : get_option( 'options_fenomen_instagram' ); ?>" class="contacts_link"><i class="fab fa-instagram"></i></a>
+							<a href="<?= filialData() ? filialData()['vk'] : get_option( 'options_fenomen_vk' ); ?>" class="contacts_link"><i class="fab fa-vk"></i></a>
 						</div>
 					</div>
 				</div>
@@ -395,7 +395,7 @@ get_header();
 			<script type="text/javascript">
 				ymaps.ready(function () {
 					var myMap = new ymaps.Map('map', {
-							center: [55.055847, 82.898080],
+							center: [<?= filialData() ? filialData()['cords'] : get_option( 'options_fenomen_coord' ); ?>],
 							zoom: 16
 						});
 

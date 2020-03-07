@@ -475,3 +475,15 @@
         width: 100%;
     }
 }
+
+@media (min-width: 576px){
+
+}
+
+.modal-dialog {
+    margin: 6.75rem auto;
+}
+
+#selectCity .modal-dialog {
+    max-width: 600px;
+}
