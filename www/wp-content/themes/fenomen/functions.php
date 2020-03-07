@@ -336,3 +336,36 @@ function fenomen_event_sort_date() {
 
 	wp_die();
 }
+
+add_action( 'init', 'add_post_type_filial' );
+function add_post_type_filial() {
+	register_post_type( 'filial', array(
+		'labels'             => array(
+			'name'               => 'Филиалы', // Основное название типа записи
+			'singular_name'      => 'Филиал', // отдельное название записи типа Book
+			'add_new'            => 'Добавить филиал',
+			'add_new_item'       => 'Добавить новый филиал',
+			'edit_item'          => 'Редактировать филиал',
+			'new_item'           => 'Новый филиал',
+			'view_item'          => 'Посмотреть филиал',
+			'search_items'       => 'Найти филиал',
+			'not_found'          => 'Филиалов не найдено',
+			'not_found_in_trash' => 'В корзине филиалов не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Филиалы'
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => false,
+		'exclude_from_search' => true,
+		'show_in_nav_menus'  => false,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'menu_icon'          => 'dashicons-location-alt',
+		'supports'           => array( 'title','editor', 'revisions' ),
+	) );
+}
