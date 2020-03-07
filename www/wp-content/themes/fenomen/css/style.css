@@ -1667,3 +1667,52 @@ a.page-numbers:hover {
 .owl-carousel-citaty button.owl-dot:last-child {
   margin-right: 0;
 }
+
+#geo {
+  padding: 70px 0;
+  background: url(../img/geo_bg.png)no-repeat top center;
+  background-size: cover;
+}
+
+.geo_first, .geo_item {
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 20px;
+  width: 100%;
+}
+
+.geo_item {
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.geo_first p {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.geo_item .number {
+  margin-bottom: 15px;
+  color: #27A4FF;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Cera Pro Medium";
+}
+
+.geo_item p {
+  margin-bottom: 0;
+}
+
+.geo_item.ico_1 {
+  background-image: url(../img/geo_ico_1.png);
+}
+.geo_item.ico_2 {
+  background-image: url(../img/geo_ico_2.png);
+}
+.geo_item.ico_3 {
+  background-image: url(../img/geo_ico_3.png);
+}
+.geo_item.ico_4 {
+  background-image: url(../img/geo_ico_4.png);
+}

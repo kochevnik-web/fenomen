@@ -62,7 +62,7 @@ Template Post Type: page
 					</div>
 				</div>
 			</div>
-        </section>
+        </section><!-- #front_words -->
         
         <?php if ( (bool)get_post_meta( $post->ID, 'tur_tittle', true ) ){ ?>
             <section id="turnirs">
@@ -89,7 +89,7 @@ Template Post Type: page
                         <?php } ?>
                     </div>
                 </div>
-            </section>
+            </section><!-- #turnirs -->
         <?php } ?>
 
         <?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
@@ -147,6 +147,48 @@ Template Post Type: page
 			</section>
 		<?php } ?>
 
+		<?php if ( (bool)get_field( 'geo_title' ) ) { ?>
+		<section id="geo">
+			<div class="container">
+				<h2 class="text-center color-white mb-5">
+					<?= get_field( 'geo_title' ); ?>
+				</h2>
+				<div class="row">
+					<div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0 d-flex mb-4 mb-lg-0">
+						<div class="geo_first">
+							<img src="<?= get_template_directory_uri() . '/img/geo_l.png' ?>" alt="<?= get_field( 'geo_title' ); ?>" class="w-100 mb-3">
+							<p class="color-blue font-weight-bold">Образовательная лиценция</p>
+						</div>
+					</div>
+					<div class="col-lg-8 d-flex">
+						<div class="row">
+							<div class="col-md-6 d-flex mb-4">
+								<div class="geo_item ico_1 d-flex flex-column justify-content-center">
+									<?= get_field( 'geo_text_1' ); ?> 
+								</div>
+							</div>
+							<div class="col-md-6 d-flex mb-4">
+								<div class="geo_item ico_2 d-flex flex-column justify-content-center">
+									<?= get_field( 'geo_text_2' ); ?>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex mb-4 mb-md-0">
+								<div class="geo_item ico_3 d-flex flex-column justify-content-center">
+									<?= get_field( 'geo_text_3' ); ?>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex">
+								<div class="geo_item ico_4 d-flex flex-column justify-content-center">
+									<?= get_field( 'geo_text_4' ); ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #geo -->
+		<?php } ?>
+
 		<?php if ( (bool)get_post_meta( $post->ID, 'form_titile', true ) ) { ?>
             <section id="main_form" class="form">
                 <div class="container">
@@ -166,7 +208,7 @@ Template Post Type: page
                         }
                     ?>
                 </div>
-            </section>
+            </section><!-- #main_form -->
         <?php } ?>
 
         <section id="contacts_section" class="color-white position-relative">
