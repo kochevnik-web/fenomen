@@ -15,8 +15,9 @@ Template Post Type: page
 				<div class="container">
 					<div class="intro_bg">
 						<div class="row">
-							<div class="col-lg-7 mb-2 mb-md-5">
-								<h1 class="color-white text-center text-lg-left"><?php echo get_post_meta( $post->ID, 'main_tittle', true ); ?></h1>
+							<div class="col-lg-7 mb-2 mb-md-5 text-center text-lg-left">
+								<h1 class="color-white text-center text-lg-left mb-5"><?php echo get_post_meta( $post->ID, 'main_tittle', true ); ?></h1>
+								<a href="" class="btn btn-primary btn-yellow">Организовать класс</a>
 							</div>
 						</div>
 					</div>
@@ -79,7 +80,7 @@ Template Post Type: page
 					</div>
 				</div>
 			</div>
-		</section>
+		</section><!-- #front_words --
 
 		</main><!-- #main -->
 

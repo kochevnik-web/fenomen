@@ -1522,7 +1522,7 @@ a.page-numbers:hover {
 .page-template-page-open .intro_bg {
   background: url('../img/open_bg.png')no-repeat;
   background-position-x: right;
-  padding-bottom: 185px;
+  padding-bottom: 103px;
 }
 
 .page-template-page-online #intro {
@@ -1536,6 +1536,12 @@ a.page-numbers:hover {
 
 .page-template-page-open #intro::before {
   display: none;
+}
+
+.page-template-page-open #intro a {
+  height: 50px;
+  padding: 10px 25px;
+  border-radius: 50px;
 }
 
 .intro_online {
@@ -1715,4 +1721,23 @@ a.page-numbers:hover {
 }
 .geo_item.ico_4 {
   background-image: url(../img/geo_ico_4.png);
+}
+
+.page-template-page-invest h1 {
+  font-size: 46px;
+}
+
+.page-template-page-invest #intro a {
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px 25px;
+}
+
+.page-template-page-invest #intro {
+  padding: 140px 0 0px 0;
+}
+
+.page-template-page-invest .intro_bg {
+  background: url(../img/invest_bg.png)no-repeat right center;
+  padding: 100px 0;
 }
