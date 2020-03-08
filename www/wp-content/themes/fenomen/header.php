@@ -47,7 +47,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-xl-3 text-center text-md-left text-xl-right mb-2 mb-md-0">
-						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold">Записаться на бесплатный урок</button>
+						<button class="btn_header_phone btn btn-prymery hover_amime font-weight-bold" data-toggle="modal" data-target="#allForm">Записаться на бесплатный урок</button>
 					</div>
 					<div class="col-md-6 col-xl-2">
 						<div class="header_phone_number font-weight-bold text-center text-md-right">

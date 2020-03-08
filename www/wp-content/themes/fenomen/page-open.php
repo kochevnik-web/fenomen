@@ -17,7 +17,7 @@ Template Post Type: page
 						<div class="row">
 							<div class="col-lg-7 mb-2 mb-md-5 text-center text-lg-left">
 								<h1 class="color-white text-center text-lg-left mb-5"><?php echo get_post_meta( $post->ID, 'main_tittle', true ); ?></h1>
-								<a href="" class="btn btn-primary btn-yellow">Организовать класс</a>
+								<a href="" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">Организовать класс</a>
 							</div>
 						</div>
 					</div>
@@ -75,7 +75,7 @@ Template Post Type: page
 						<div class="col-lg-6 text-center text-lg-left">
                             <h2 class="color-white mb-2 pt-3 pt-lg-5"><?= get_post_meta( $post->ID, 'front_words_title', true ); ?></h2>
                             <p class="color-white mb-4"><?= get_post_meta( $post->ID, 'front_words_title_2', true ); ?></p>
-							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0">Организовать класс</a>
+							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0" data-toggle="modal" data-target="#allForm">Организовать класс</a>
 						</div>
 					</div>
 				</div>

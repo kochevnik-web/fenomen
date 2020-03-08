@@ -391,4 +391,21 @@ function add_post_type_filial() {
 	) );
 }
 
+add_filter( 'pre_post_link', 'filter_function_name_filial', 10, 3 );
+function filter_function_name_filial( $permalink, $post, $leavename ){
+	if ( isset( $_GET ) && isset( $_GET['filial'] ) ) {
+		return $permalink . '?filial=' . $_GET['filial'];
+	}
+
+	return $permalink;
+}
+add_filter( 'page_link', 'filter_function_page_filial', 10, 3 );
+function filter_function_page_filial( $permalink, $post, $leavename ){
+	if ( isset( $_GET ) && isset( $_GET['filial'] ) ) {
+		return $permalink . '?filial=' . $_GET['filial'];
+	}
+
+	return $permalink;
+}
+
 

@@ -25,8 +25,8 @@ Template Post Type: page
 						</div>
 						<div class="col-lg-6">
 							<div class="faq_buttons text-lg-right">
-								<a href="" class="btn btn-primary btn-yellow-border mr-3 mb-3 mb-md-0">Задать вопрос</a>
-								<a href="" class="btn btn-primary btn-yellow mb-3 mb-md-0">Записаться на бесплатное занятие</a>
+								<a href="" class="btn btn-primary btn-yellow-border mr-3 mb-3 mb-md-0" data-toggle="modal" data-target="#allForm">Задать вопрос</a>
+								<a href="" class="btn btn-primary btn-yellow mb-3 mb-md-0" data-toggle="modal" data-target="#allForm">Записаться на бесплатное занятие</a>
 							</div>
 						</div>
 					</div>

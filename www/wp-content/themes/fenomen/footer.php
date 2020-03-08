@@ -84,7 +84,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- #modal -->
+
+<div class="modal fide" tabindex="-1" role="dialog" id="allForm" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="text-center">Оставьте заявку</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="px-3 px-md-5 pt-4 pb-3 text-center">
+  				<?= do_shortcode( '[contact-form-7 id="625" title="Записаться на занятие (Модальное окно)"]' ); ?>
+			</div>
+		</div>
+	</div>
+</div><!-- #modal -->
 
 <?php wp_footer(); ?>
 

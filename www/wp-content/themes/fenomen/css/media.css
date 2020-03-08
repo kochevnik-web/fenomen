@@ -441,7 +441,12 @@
         display: flex;
         margin: 20px 0 0 0;
         justify-content: center;
-      }
+    }
+
+    #allForm .modal-content {
+        margin: 0 15px;
+        width: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -477,6 +482,13 @@
 }
 
 @media (min-width: 576px){
+    #selectCity .modal-dialog {
+        max-width: 600px;
+    }
+
+    #allForm .modal-dialog {
+        max-width: 450px;
+    }
 
 }
 
@@ -484,6 +496,3 @@
     margin: 6.75rem auto;
 }
 
-#selectCity .modal-dialog {
-    max-width: 600px;
-}

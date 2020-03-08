@@ -62,7 +62,7 @@ Template Post Type: page
 							<h5 class="mb-3 color-blue font-weight-bold"><?= get_post_meta( $post->ID, 'format_' . $fo . '_name', true ); ?></h5>
 							<div class="title font-weight-bold">Где проходят занятия:</div>
 							<p class="mb-3"><?= get_post_meta( $post->ID, 'format_' . $fo . '_p', true ); ?></p>
-							<a href="" class="btn btn-primary btn-yellow">Записаться на занятие</a>
+							<a href="" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">Записаться на занятие</a>
 						</div>
 					</div>
 					<?php } ?>
@@ -98,7 +98,7 @@ Template Post Type: page
 				</div>
 				<?php } ?>
 				<div class="text-center">
-					<a href="#" class="btn btn-primary btn-yellow">Записаться на бесплатное занятие</a>
+					<a href="#" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">Записаться на бесплатное занятие</a>
 				</div>
 			</div>
 		</section><!-- #tale -->
@@ -117,7 +117,7 @@ Template Post Type: page
 							<?= get_post_meta( $post->ID, 'prog_text_2', true ); ?>
 						</div>
 						<div class="text-center mb-4">
-							<a href="#" class="btn btn-primary btn-yellow">Узнать стоимость и расписание занятий</a>
+							<a href="#" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">Узнать стоимость и расписание занятий</a>
 						</div>
 						<div class="sub_title text-center">
 							<?= get_post_meta( $post->ID, 'prog_sub_title', true ); ?>
@@ -145,7 +145,7 @@ Template Post Type: page
 						<div class="mb-4">
 							<span class="desc"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_count', true ); ?></span>
 						</div>
-						<a href="#" class="btn btn-primary">Задать вопрос тренеру</a>
+						<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#allForm">Задать вопрос тренеру</a>
 					</div><!-- #item -->
 					<?php } ?>
 				</div>
@@ -281,7 +281,7 @@ Template Post Type: page
 			</div>
 		</section><!-- #reviews -->
 		<?php } ?>
-
+		
 		<section id="contacts_section" class="color-white position-relative">
 			<div class="container">
 				<div class="row">
@@ -295,15 +295,15 @@ Template Post Type: page
 								<div class="col-md-6">
 									<div class="contact_info py-3">
 										<div class="title mb-1">Номер телефона:</div>
-										<div class="format mb-1"><?= get_option( 'options_header_fenomen_phone' ); ?></div>
-										<a href="tel:<?= get_option( 'options_header_fenomen_phone' ); ?>">позвонить нам</a>
+										<div class="format mb-1"><?= filialData() ? filialData()['phone'] : get_option( 'options_header_fenomen_phone' ); ?></div>
+										<a href="tel:<?= filialData() ? filialData()['phone'] : get_option( 'options_header_fenomen_phone' ); ?>">позвонить нам</a>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="contact_info py-3">
 										<div class="title mb-1">Электронная почта:</div>
-										<div class="format mb-1"><?= get_option( 'options_fenomen_email' ); ?></div>
-										<a href="mailto:<?= get_option( 'options_fenomen_email' ); ?>">написать нам</a>
+										<div class="format mb-1"><?= filialData() ? filialData()['email'] : get_option( 'options_fenomen_email' ); ?></div>
+										<a href="mailto:<?= filialData() ? filialData()['email'] : get_option( 'options_fenomen_email' ); ?>">написать нам</a>
 									</div>
 								</div>
 							</div>
@@ -313,16 +313,16 @@ Template Post Type: page
 								<div class="col-lg-8">
 									<div class="contact_info pb-3">
 										<div class="title">Адрес школы:</div>
-										<div class="format"><?= get_option( 'options_fenomen_adress' ); ?></div>
+										<div class="format"><?= filialData() ? filialData()['adres'] : get_option( 'options_fenomen_adress' ); ?></div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="d-flex">
 							<div class="title mr-2">Мы в соцсетях:</div>
-							<a href="<?= get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>
-							<a href="<?= get_option( 'options_fenomen_instagram' ); ?>" class="contacts_link"><i class="fab fa-instagram"></i></a>
-							<a href="<?= get_option( 'options_fenomen_vk' ); ?>" class="contacts_link"><i class="fab fa-vk"></i></a>
+							<a href="<?= filialData() ? filialData()['fb'] : get_option( 'options_fenomen_facebook' ); ?>" class="contacts_link"><i class="fab fa-facebook"></i></a>
+							<a href="<?= filialData() ? filialData()['insta'] : get_option( 'options_fenomen_instagram' ); ?>" class="contacts_link"><i class="fab fa-instagram"></i></a>
+							<a href="<?= filialData() ? filialData()['vk'] : get_option( 'options_fenomen_vk' ); ?>" class="contacts_link"><i class="fab fa-vk"></i></a>
 						</div>
 					</div>
 				</div>
@@ -330,7 +330,7 @@ Template Post Type: page
 			<script type="text/javascript">
 				ymaps.ready(function () {
 					var myMap = new ymaps.Map('map', {
-							center: [55.055847, 82.898080],
+							center: [<?= filialData() ? filialData()['cords'] : get_option( 'options_fenomen_coord' ); ?>],
 							zoom: 16
 						});
 

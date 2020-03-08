@@ -789,6 +789,7 @@ ul.corona-list li .icon {
 .front_instagram_wrap .btn-yellow {
   width: 80%;
   margin-left: 21px;
+  z-index: 100;
 }
 
 .front_instagram_phone {
@@ -1771,4 +1772,17 @@ a.page-numbers:hover {
 
 #selectCity a.open:hover {
   opacity: .8;
+}
+
+#allForm input[type="text"], #allForm input[type="email"] {
+  height: 50px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#allForm input[type="submit"] {
+  height: 50px;
 }

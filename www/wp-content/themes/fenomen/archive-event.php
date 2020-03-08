@@ -29,7 +29,7 @@
                         ?>
                             <div class="col-md-6 col-lg-4 mb-4">
                                 <article id="post-<?php the_ID(); ?>" class="d-flex h-100">
-                                    <a href="<?php the_permalink(); ?>" class="post-list-item d-block position-relative w-100">
+                                    <a href="<?php echo get_permalink(); ?><?= ( isset( $_GET ) && isset( $_GET['filial'] ) ) ? '?filial=' . $_GET['filial'] : '';?>" class="post-list-item d-block position-relative w-100">
                                     <?php the_post_thumbnail( '274x140', array( 'class' => 'w-100 mb-3' ) ); ?>
                                         <div class="post-list-item-title mb-3 color-blue font-weight-bold text-center"><?php the_title(); ?></div>
                                         <?php $eventDate = get_field( 'event_date' ); ?>

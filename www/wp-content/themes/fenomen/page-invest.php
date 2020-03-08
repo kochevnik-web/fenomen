@@ -18,7 +18,7 @@ Template Post Type: page
 							<div class="col-lg-7 mb-2 mb-md-5 text-center text-lg-left">
                                 <h1 class="color-white text-center text-lg-left mb-5"><?php echo get_post_meta( $post->ID, 'main_title', true ); ?></h1>
                                 <div class="color-white mb-3"><?php echo get_post_meta( $post->ID, 'sub_title', true ); ?></div>
-								<a href="" class="btn btn-primary btn-yellow">Получить предложение</a>
+								<a href="" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">Получить предложение</a>
 							</div>
 						</div>
 					</div>

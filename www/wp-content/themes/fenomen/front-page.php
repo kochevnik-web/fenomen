@@ -38,7 +38,7 @@ get_header();
 									<div class="h4"><?php echo get_post_meta( $post->ID, 'intro_prog_name_' . $i, true ); ?></div>
 									<p class="mb-4"><?php echo get_post_meta( $post->ID, 'intro_prog_desc_' . $i, true ); ?></p>
 								</div>
-								<a href="<?php echo get_post_meta( $post->ID, 'intro_prog_link_' . $i, true ); ?>" class="btn btn-primary intro_item_btn">Подробнее о программе</a>
+								<a href="<?php echo get_post_meta( $post->ID, 'intro_prog_link_' . $i, true ); ?><?= filialData() ? '?filial=' . $_GET['filial'] : ''; ?>" class="btn btn-primary intro_item_btn">Подробнее о программе</a>
 							</div>
 							<?php } ?>
 						</div>
@@ -94,7 +94,7 @@ get_header();
 									<?= get_post_meta( $post->ID, 'front_video_content', true ); ?>
 								</div>
 								<div class="text-md-left text-center">
-									<a href="#" class="btn btn-primary btn-yellow">
+									<a href="#" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#allForm">
 										Записаться на бесплатное занятие
 									</a>
 								</div>
@@ -149,7 +149,7 @@ get_header();
 						</div>
 						<div class="col-lg-6 text-center text-lg-left">
 							<h2 class="color-white text-uppercase mb-5 pt-3 pt-lg-5"><?= get_post_meta( $post->ID, 'front_words_title', true ); ?></h2>
-							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0">Записаться на бесплатное занятие</a>
+							<a href="#" class="btn btn-primary btn-yellow mb-5 mb-lg-0" data-toggle="modal" data-target="#allForm">Записаться на бесплатное занятие</a>
 						</div>
 					</div>
 				</div>
@@ -341,7 +341,7 @@ get_header();
 			<div class="front_instagram_wrap position-relative">
 				<div class="front_instagram_phone position-absolute d-flex flex-column">
 					<img src="<?= get_template_directory_uri() . '/img/phone.png' ?>" alt="" class="mb-4">
-					<a href="<?= get_option( 'options_fenomen_instagram' ) ?>" class="btn btn-primary btn-yellow" target="_blank">Подписаться</a>
+					<a href="<?= filialData() ? filialData()['insta'] : get_option( 'options_fenomen_instagram' ); ?>" class="btn btn-primary btn-yellow" target="_blank">Подписаться</a>
 				</div>
 			</div>
 		</section><!-- #front_instagram -->
