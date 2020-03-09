@@ -19,6 +19,7 @@
 			$arr['vk'] = get_post_meta( $filial->ID, 'filial_vk', true );
 			$arr['fb'] = get_post_meta( $filial->ID, 'filial_fb', true );
 			$arr['cords'] = get_post_meta( $filial->ID, 'filial_cords', true );
+			$arr['carousel'] = get_field( 'carousel', $_GET['filial'] );
 			return $arr;
 		}
 		return false;

@@ -209,22 +209,23 @@ Template Post Type: page
             </section><!-- #programm -->
             <?php } ?>
 
-            <?php if ( (bool)get_post_meta( $post->ID, 'carousel_title', true ) ) { ?>
+            <?php if ( (bool)get_field( 'carousel_title' ) ) { ?>
             <section id="slider" class="blue_bg">
                 <div class="container">
-                    <h3 class="text-center color-white mb-5"><?= get_post_meta( $post->ID, 'carousel_title', true ); ?></h3>
-                    <?php if (  get_post_meta( $post->ID, 'carousel', true ) > 0 ) { ?>
+                    <h3 class="text-center color-white mb-5"><?= get_field( 'carousel_title' ); ?></h3>
+                    <?php $carousel = filialData() && count( filialData()['carousel'] ) > 0 ? filialData()['carousel'] : get_field( 'carousel' ); ?>
+                    <?php if (  count( $carousel ) > 0 ) { ?>
                     <div class="owl-carousel owl-carousel-teacher">
-                        <?php for ( $car = 0; $car < get_post_meta( $post->ID, 'carousel', true ); $car++ ) { ?>
+                        <?php foreach ( $carousel as $carousel_item ) { ?>
                         <div class="item text-center">
-                            <img src="<?= wp_get_attachment_image_url( get_post_meta( $post->ID, 'carousel_' . $car . '_img', true ), 'medium' ); ?>" alt="<?= get_post_meta( $post->ID, 'carousel_' . $car . '_name', true ); ?>">
-                            <h4><?= get_post_meta( $post->ID, 'carousel_' . $car . '_name', true ); ?></h4>
-                            <div class="subtitle color-blue"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_titul', true ); ?></div>
+                            <img src="<?= wp_get_attachment_image_url( $carousel_item['img'], 'medium' ); ?>" alt="<?= $carousel_item['name']; ?>">
+                            <h4><?= $carousel_item['name']; ?></h4>
+                            <div class="subtitle color-blue"><?= $carousel_item['titul']; ?></div>
                             <div class="my-3">
-                                <span class="text"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_opit', true ); ?></span>
+                                <span class="text"><?= $carousel_item['opit']; ?></span>
                             </div>
                             <div class="mb-4">
-                                <span class="desc"><?= get_post_meta( $post->ID, 'carousel_' . $car . '_count', true ); ?></span>
+                                <span class="desc"><?= $carousel_item['count']; ?></span>
                             </div>
                             <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#allForm">Задать вопрос тренеру</a>
                         </div><!-- #item -->
